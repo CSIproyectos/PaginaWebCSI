@@ -1,0 +1,93 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  type?: 'website' | 'article';
+  canonical?: string;
+  noindex?: boolean;
+  schema?: Record<string, any>;
+}
+
+const {
+  title,
+  description,
+  image = '/images/og-default.jpg',
+  type = 'website',
+  canonical,
+  noindex = false,
+  schema,
+} = Astro.props;
+
+const siteUrl = 'https://proyectoscsi.mx';
+const fullCanonical = canonical || Astro.url.pathname;
+const canonicalURL = new URL(fullCanonical, siteUrl).href;
+const imageURL = new URL(image, siteUrl).href;
+
+// Schema.org base para Organization
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Proyectos CSI',
+  url: siteUrl,
+  logo: `${siteUrl}/images/logo.png`,
+  description: 'Soluciones tecnológicas y proyectos de integración en México',
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'MX',
+  },
+  sameAs: [
+    // Agregar redes sociales aquí
+  ],
+};
+
+const schemaData = schema || organizationSchema;
+---
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Robots -->
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={imageURL} />
+<meta property="og:locale" content="es_MX" />
+<meta property="og:site_name" content="Proyectos CSI" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={imageURL} />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+
+<!-- Preconnect to external domains for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- Google Fonts - Inter & Poppins -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- Viewport meta tag -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Theme color for mobile browsers -->
+<meta name="theme-color" content="#2563eb" />

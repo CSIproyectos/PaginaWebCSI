@@ -1,0 +1,137 @@
+---
+const navItems = [
+  { name: 'Inicio', href: '/' },
+  { name: 'Soluciones', href: '/soluciones' },
+  { name: 'Nosotros', href: '/nosotros' },
+  { name: 'Sectores', href: '/sectores' },
+  { name: 'Financiamiento', href: '/financiamiento' },
+  { name: 'Contacto', href: '/contacto' },
+  { name: 'Soporte', href: '/soporte' },
+  { name: 'Blog', href: 'https://proyectoscsi.mx/blog' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
+  <nav class="container-custom">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="/" class="flex items-center space-x-2">
+          <img
+            src="/images/logo.svg"
+            alt="Proyectos CSI Logo"
+            class="h-10 w-auto md:h-12"
+            width="120"
+            height="48"
+          />
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex md:items-center md:space-x-8">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              'text-sm lg:text-base font-medium transition-colors',
+              currentPath === item.href
+                ? 'text-black font-semibold'
+                : 'text-gray-700 hover:text-black'
+            ]}
+            aria-current={currentPath === item.href ? 'page' : undefined}
+          >
+            {item.name}
+          </a>
+        ))}
+        <a href="/contacto" class="btn-primary text-sm lg:text-base">
+          Cotizar Proyecto
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button
+          type="button"
+          class="mobile-menu-toggle inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-black hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-700"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Abrir menú</span>
+          <svg
+            class="menu-icon h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <svg
+            class="close-icon hidden h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu hidden md:hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              'block px-3 py-2 rounded-md text-base font-medium',
+              currentPath === item.href
+                ? 'bg-gray-100 text-black font-semibold'
+                : 'text-gray-700 hover:bg-gray-100 hover:text-black'
+            ]}
+          >
+            {item.name}
+          </a>
+        ))}
+        <a href="/contacto" class="block w-full mt-4">
+          <span class="btn-primary w-full text-center">Cotizar Proyecto</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuIcon = document.querySelector('.menu-icon');
+    const closeIcon = document.querySelector('.close-icon');
+
+    if (toggleButton && mobileMenu) {
+      toggleButton.addEventListener('click', () => {
+        const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+        
+        toggleButton.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('hidden');
+        menuIcon?.classList.toggle('hidden');
+        closeIcon?.classList.toggle('hidden');
+      });
+    }
+  });
+</script>
