@@ -77,8 +77,8 @@ const isHomePage = currentPath === '/';
         
         <!-- Soluciones Dropdown -->
         <div class="relative soluciones-dropdown">
-          <button
-            type="button"
+          <a
+            href="/soluciones"
             class:list={[
               'nav-link text-sm lg:text-base font-medium transition-colors flex items-center gap-1',
               currentPath === '/soluciones'
@@ -90,7 +90,7 @@ const isHomePage = currentPath === '/';
             <svg class="w-4 h-4 transition-transform dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
-          </button>
+          </a>
           
           <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg py-2 opacity-0 invisible transition-all duration-200 border border-gray-200">
             {solucionesDropdown.map((item) => (
@@ -251,6 +251,12 @@ const isHomePage = currentPath === '/';
           </button>
           
           <div class="mobile-dropdown-content hidden pl-6 mt-1 space-y-1">
+            <a
+              href="/soluciones"
+              class="block px-3 py-2 rounded-md text-sm font-semibold text-gray-800 hover:bg-gray-100 hover:text-black"
+            >
+              Ver todas las soluciones
+            </a>
             {solucionesDropdown.map((item) => (
               <a
                 href={item.href}
@@ -379,11 +385,10 @@ const isHomePage = currentPath === '/';
 
     // Desktop Soluciones Dropdown
     const desktopDropdown = document.querySelector('.soluciones-dropdown');
-    const desktopButton = desktopDropdown?.querySelector('button');
     const desktopMenu = desktopDropdown?.querySelector('.dropdown-menu');
     const desktopArrow = desktopDropdown?.querySelector('.dropdown-arrow');
 
-    if (desktopDropdown && desktopButton && desktopMenu) {
+    if (desktopDropdown && desktopMenu) {
       desktopDropdown.addEventListener('mouseenter', () => {
         desktopMenu.classList.remove('opacity-0', 'invisible');
         desktopMenu.classList.add('opacity-100', 'visible');

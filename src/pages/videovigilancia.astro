@@ -1,0 +1,309 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../img/soluciones/videovigilancia/IMG_0192.webp';
+---
+
+<Layout 
+  title="Videovigilancia - CSI"
+  description="Sistemas de videovigilancia inteligente con cámaras IP de alta resolución, monitoreo remoto 24/7 y almacenamiento seguro."
+>
+  <!-- Hero Section -->
+  <section class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={heroImage}
+        alt="Sistema de videovigilancia"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-900/70"></div>
+    </div>
+    
+    <div class="container-custom relative z-10 text-white text-center px-6">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+        Sistemas de Videovigilancia Inteligente
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+        Protege tu empresa con tecnología de video IP de última generación, monitoreo 24/7 y análisis inteligente
+      </p>
+      <a href="/contacto" class="btn-primary bg-white text-primary-900 hover:bg-gray-100">
+        Solicitar Cotización
+      </a>
+    </div>
+  </section>
+
+  <!-- Introducción -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <h2 class="mb-6 text-primary-900">Vigilancia Profesional para tu Negocio</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Nuestros sistemas de videovigilancia combinan cámaras IP de alta resolución con software de análisis inteligente 
+          para brindarte control total sobre la seguridad de tus instalaciones. Accede a tus cámaras desde cualquier lugar 
+          y recibe alertas en tiempo real ante cualquier evento sospechoso.
+        </p>
+      </div>
+
+      <!-- Características Principales -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Cámaras IP 4K/8MP</h3>
+          <p class="text-gray-600">Imágenes ultra nítidas con resolución profesional</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Visión Nocturna</h3>
+          <p class="text-gray-600">Vigilancia continua incluso en oscuridad total</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Acceso Remoto</h3>
+          <p class="text-gray-600">Monitorea desde tu smartphone o computadora</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Almacenamiento Seguro</h3>
+          <p class="text-gray-600">En la nube o local con respaldo automático</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <h2 class="text-center mb-12 text-primary-900">Beneficios de Nuestro Sistema</h2>
+      
+      <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div class="bg-white rounded-xl p-8 shadow-lg">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-xl font-bold mb-2">Prevención de Pérdidas</h3>
+              <p class="text-gray-600">
+                Reduce significativamente robos, hurtos y actos vandálicos con vigilancia continua y disuasión visible.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-lg">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-xl font-bold mb-2">Respuesta Rápida</h3>
+              <p class="text-gray-600">
+                Recibe alertas instantáneas en tu dispositivo móvil ante detección de movimiento o eventos programados.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-lg">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-xl font-bold mb-2">Análisis Inteligente</h3>
+              <p class="text-gray-600">
+                Software de análisis de video con reconocimiento facial, conteo de personas y detección de comportamientos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-lg">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-xl font-bold mb-2">ROI Comprobado</h3>
+              <p class="text-gray-600">
+                Inversión recuperable rápidamente gracias a reducción de pérdidas y mejora operativa documentada.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aplicaciones -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <h2 class="text-center mb-12 text-primary-900">Aplicaciones y Sectores</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div class="border border-gray-200 rounded-xl p-6 hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Edificios Corporativos</h3>
+          <p class="text-gray-600 text-sm">Oficinas, lobbies, estacionamientos y áreas comunes</p>
+        </div>
+
+        <div class="border border-gray-200 rounded-xl p-6 hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Retail y Comercios</h3>
+          <p class="text-gray-600 text-sm">Tiendas, centros comerciales y puntos de venta</p>
+        </div>
+
+        <div class="border border-gray-200 rounded-xl p-6 hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Industrias y Fábricas</h3>
+          <p class="text-gray-600 text-sm">Plantas de producción, almacenes y bodegas</p>
+        </div>
+
+        <div class="border border-gray-200 rounded-xl p-6 hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Instituciones Educativas</h3>
+          <p class="text-gray-600 text-sm">Escuelas, universidades y centros de formación</p>
+        </div>
+
+        <div class="border border-gray-200 rounded-xl p-6 hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Bancos y Financieras</h3>
+          <p class="text-gray-600 text-sm">Sucursales bancarias y servicios financieros</p>
+        </div>
+
+        <div class="border border-gray-200 rounded-xl p-6 hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Condominios y Residencias</h3>
+          <p class="text-gray-600 text-sm">Conjuntos residenciales y viviendas privadas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tecnologías -->
+  <section class="section-padding bg-primary-900 text-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="mb-6">Tecnología de Vanguardia</h2>
+        <p class="text-xl mb-12 text-primary-100">
+          Trabajamos con las marcas líderes de la industria de seguridad electrónica
+        </p>
+        
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+            <h3 class="text-2xl font-bold mb-3">Hikvision</h3>
+            <p class="text-primary-100">Cámaras IP profesionales con IA</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+            <h3 class="text-2xl font-bold mb-3">Dahua</h3>
+            <p class="text-primary-100">Sistemas completos de videovigilancia</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+            <h3 class="text-2xl font-bold mb-3">Axis Communications</h3>
+            <p class="text-primary-100">Soluciones empresariales premium</p>
+          </div>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur rounded-xl p-8">
+          <h3 class="text-2xl font-bold mb-4">Especificaciones Técnicas</h3>
+          <div class="grid md:grid-cols-2 gap-6 text-left">
+            <div>
+              <h4 class="font-semibold mb-2 text-primary-100">✓ Resoluciones disponibles:</h4>
+              <p class="text-sm">2MP, 4MP, 5MP, 8MP (4K), hasta 12MP</p>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2 text-primary-100">✓ Almacenamiento:</h4>
+              <p class="text-sm">NVR local, servidores dedicados, nube híbrida</p>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2 text-primary-100">✓ Analítica de video:</h4>
+              <p class="text-sm">Detección facial, conteo, líneas virtuales, heat maps</p>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2 text-primary-100">✓ Integración:</h4>
+              <p class="text-sm">Control de acceso, alarmas, sistemas de gestión</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="section-padding bg-gradient-to-br from-primary-50 to-white">
+    <div class="container-custom text-center">
+      <h2 class="mb-6 text-primary-900">¿Listo para Proteger tu Empresa?</h2>
+      <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+        Solicita una evaluación gratuita de seguridad y recibe una propuesta personalizada para tu proyecto
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contacto" class="btn-primary">
+          Solicitar Evaluación Gratuita
+        </a>
+        <a href="/soluciones" class="btn-primary bg-white text-primary-900 border-2 border-primary-900 hover:bg-gray-50">
+          Ver Otras Soluciones
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
