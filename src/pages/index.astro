@@ -34,15 +34,24 @@ const schema = {
   schema={schema}
 >
   <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white min-h-screen flex items-center justify-center overflow-hidden">
-    <!-- Background pattern -->
-    <div class="absolute inset-0 opacity-20">
-      <div class="absolute inset-0 bg-[url('/pattern.svg')] bg-center"></div>
-    </div>
+  <section id="hero-section" class="relative text-white min-h-screen flex items-center justify-center overflow-hidden -mt-24 pt-24">
+    <!-- Video de fondo -->
+    <video 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+      <source src="/videos/bg_lights_earth_movil.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Overlay oscuro para mejor legibilidad -->
+    <div class="absolute inset-0 bg-black/40"></div>
     
     <div class="container-custom relative z-10">
       <div class="max-w-5xl mx-auto text-center">
-        <h1 class="mb-6 text-white text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+        <h1 class="mb-6 text-white text-5xl md:text-6xl lg:text-7xl font-bold leading-tight drop-shadow-lg">
           Seguridad Inteligente y Tecnología Avanzada para Proteger e Impulsar tu Empresa.
         </h1>
         
@@ -624,6 +633,58 @@ const schema = {
     </div>
   </section>
 </Layout>
+
+<style>
+  /* Fondo oscuro para la página de inicio */
+  :global(body) {
+    background-color: #111827;
+  }
+</style>
+
+<script>
+  // Scroll effect para cambiar navbar de transparente a blanca
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('main-header');
+    const heroSection = document.getElementById('hero-section');
+    const logoDark = document.getElementById('logo-dark');
+    const logoLight = document.getElementById('logo-light');
+
+    if (!header || !heroSection) return;
+
+    const handleScroll = () => {
+      const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+      const scrollPosition = window.scrollY + 100; // Offset de 100px
+
+      if (scrollPosition >= heroBottom) {
+        // Después de la sección héroe - navbar blanca con logo oscuro
+        header.classList.remove('navbar-transparent');
+        header.classList.add('navbar-scrolled');
+        
+        if (logoDark && logoLight) {
+          logoDark.classList.remove('opacity-0', 'absolute');
+          logoDark.classList.add('opacity-100');
+          logoLight.classList.remove('opacity-100');
+          logoLight.classList.add('opacity-0', 'absolute');
+        }
+      } else {
+        // En la sección héroe - navbar transparente con logo blanco
+        header.classList.add('navbar-transparent');
+        header.classList.remove('navbar-scrolled');
+        
+        if (logoDark && logoLight) {
+          logoDark.classList.remove('opacity-100');
+          logoDark.classList.add('opacity-0', 'absolute');
+          logoLight.classList.remove('opacity-0', 'absolute');
+          logoLight.classList.add('opacity-100');
+        }
+      }
+    };
+
+    // Ejecutar al cargar y al hacer scroll
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+  });
+</script>
 
 <style>
   @keyframes fade-in {
