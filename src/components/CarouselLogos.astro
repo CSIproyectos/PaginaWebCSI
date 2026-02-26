@@ -1,0 +1,38 @@
+---
+const { title, logos = [] } = Astro.props;
+---
+
+<section class="py-12 bg-white flex flex-col items-center overflow-hidden">
+  
+  <div class="bg-slate-800 text-white font-bold tracking-widest px-12 py-3 rounded-2xl shadow-[0_10px_20px_rgba(0,0,0,0.2)] mb-12 z-10">
+    {title}
+  </div>
+
+  <div class="relative w-full max-w-6xl mx-auto overflow-hidden group">
+    
+    <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+    <div class="flex w-max animate-marquee group-hover:[animation-play-state:paused]">
+      
+      <div class="flex w-1/2 shrink-0 items-center justify-around gap-16 px-8 min-w-[100vw] md:min-w-[1152px]">
+        {logos.map((logo) => (
+          <img 
+            src={logo} 
+            alt={`Logo de ${title}`} 
+            class="h-16 md:h-24 w-auto max-w-[40vw] md:max-w-[25vw] shrink-0 object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+          />       ))}
+      </div>
+
+      <div class="flex w-1/2 shrink-0 items-center justify-around gap-16 px-8 min-w-[100vw] md:min-w-[1152px]">
+        {logos.map((logo) => (
+          <img 
+            src={logo} 
+            alt={`Logo de ${title}`} 
+            class="h-16 md:h-24 w-auto max-w-[40vw] md:max-w-[25vw] shrink-0 object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+          />        ))}
+      </div>
+
+    </div>
+  </div>
+</section>

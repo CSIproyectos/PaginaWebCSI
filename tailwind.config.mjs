@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}'],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx,svelte,vue}'],
   theme: {
     extend: {
       colors: {
@@ -39,6 +39,21 @@ export default {
       backgroundColor: {
         'site': '#F1F1F1',
       },
+
+
+      animation: {
+        marquee: 'marquee 30s linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+
+
+
+
     },
   },
   plugins: [],

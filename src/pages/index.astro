@@ -1,5 +1,6 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import CarouselLogos from '../components/CarouselLogos.astro';
 
 const schema = {
   '@context': 'https://schema.org',
@@ -26,6 +27,22 @@ const schema = {
     'https://mx.linkedin.com/company/proyectos-csimx',
   ],
 };
+
+const imagenesClientes = [
+  '../images/inicio/logo_barceloresorts.webp'
+];
+
+const imagenesFabricantes = [
+  '/images/inicio/logo__dell.webp',
+  '/images/inicio/logo_cisco.webp',
+  '/images/inicio/logo_hikvision.webp',
+  '/images/inicio/logo_genetec.webp',
+  '/images/inicio/logo_atlona.webp',
+  '/images/inicio/logo_alliedtelesis.webp',
+  '/images/inicio/logo_ciscomeraki.webp',
+
+];
+
 ---
 
 <Layout
@@ -181,65 +198,16 @@ const schema = {
         </p>
       </div>
 
-      <!-- CLIENTES -->
-      <div class="mb-16">
-        <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">CLIENTES</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center max-w-4xl mx-auto">
-          <div class="flex items-center justify-center p-6 bg-white rounded-lg">
-            <div class="text-center">
-              <svg class="w-12 h-12 text-gray-900 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-              </svg>
-              <span class="text-xl font-bold text-gray-900">Barceló</span>
-            </div>
-          </div>
-          <div class="flex items-center justify-center p-6 bg-white rounded-lg">
-            <div class="text-center">
-              <svg class="w-12 h-12 text-gray-900 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-              </svg>
-              <span class="text-xl font-bold text-gray-900">Puerto JAP</span>
-            </div>
-          </div>
-          <div class="flex items-center justify-center p-6 bg-white rounded-lg">
-            <div class="text-center">
-              <svg class="w-12 h-12 text-gray-900 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-              </svg>
-              <span class="text-xl font-bold text-gray-900">Industrial</span>
-            </div>
-          </div>
-          <div class="flex items-center justify-center p-6 bg-white rounded-lg">
-            <div class="text-center">
-              <svg class="w-12 h-12 text-gray-900 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
-              <span class="text-xl font-bold text-gray-900">Hoteles</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="text-center max-w-5xl mx-auto mb-16">        
+        <CarouselLogos 
+          title="CLIENTES" 
+          logos={imagenesClientes} 
+        />
 
-      <!-- FABRICANTES -->
-      <div>
-        <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">FABRICANTES</h3>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center max-w-5xl mx-auto">
-          <div class="flex items-center justify-center p-6 bg-white rounded-lg">
-            <span class="text-2xl font-bold text-gray-900">Genetec</span>
-          </div>
-          <div class="flex items-center justify-center p-6 bg-white rounded-lg">
-            <span class="text-2xl font-bold text-gray-900">Avigilon</span>
-          </div>
-          <div class="flex items-center justify-center p-6 bg-white rounded-lg">
-            <span class="text-2xl font-bold text-gray-900">DELL</span>
-          </div>
-          <div class="flex items-center justify-center p-6 bg-white rounded-lg">
-            <span class="text-2xl font-bold text-gray-900">Allied Telesis</span>
-          </div>
-          <div class="flex items-center justify-center p-6 bg-white rounded-lg">
-            <span class="text-2xl font-bold text-gray-900">Cisco</span>
-          </div>
-        </div>
+        <CarouselLogos 
+          title="FABRICANTES" 
+          logos={imagenesFabricantes} 
+        />
       </div>
 
       <div class="text-center mt-12">
@@ -277,10 +245,13 @@ const schema = {
         <!-- Cobertura Nacional -->
         <div class="text-center">
           <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            
             <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
+            
           </div>
+
           <h3 class="text-xl font-bold mb-3">Cobertura Nacional</h3>
           <p class="text-gray-600">
             Oficina en Colima con alcance en CDMX, Guadalajara, Querétaro y toda la República Mexicana
@@ -320,8 +291,14 @@ const schema = {
   <section class="section-padding bg-white">
     <div class="container-custom">
     <h2 class="mb-6 text-center">Cobertura Nacional</h2>
+    <img 
+              src="/src/img/inicio/CoberturaNacional.webp" 
+              alt="Mapa de Cobertura en la republica" 
+              class="w-full h-full object-cover" 
+            />
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       
+        
         <div>
           <p class="text-xl text-gray-600 mb-8">
             Con oficina en Colima y presencia activa en CDMX, Guadalajara y Querétaro, atendemos proyectos llave en mano en toda la República Mexicana.
@@ -349,59 +326,13 @@ const schema = {
           </div>
         </div>
 
-        <div class="relative bg-gray-100 rounded-2xl p-8">
-          <!-- Mapa de México Simplificado con SVG -->
-          <div class="relative aspect-[4/3] flex items-center justify-center">
-            <svg viewBox="0 0 400 300" class="w-full h-full">
-              <!-- Contorno simplificado de México -->
-              <path d="M 50 100 L 80 80 L 120 70 L 160 75 L 200 85 L 240 90 L 280 95 L 320 110 L 340 130 L 350 160 L 340 190 L 320 210 L 280 220 L 240 225 L 200 220 L 160 210 L 130 200 L 100 180 L 70 150 L 50 120 Z" 
-                    fill="#e5e7eb" 
-                    stroke="#1a2559" 
-                    stroke-width="2" 
-                    opacity="0.8"/>
-              
-              <!-- Puntos de ubicación -->
-              <!-- Colima -->
-              <circle cx="140" cy="180" r="6" fill="#22c55e" class="animate-pulse">
-                <title>Colima - Oficina Principal</title>
-              </circle>
-              
-              <!-- CDMX -->
-              <circle cx="200" cy="170" r="5" fill="#1a2559">
-                <title>Ciudad de México</title>
-              </circle>
-              
-              <!-- Guadalajara -->
-              <circle cx="160" cy="160" r="5" fill="#1a2559">
-                <title>Guadalajara</title>
-              </circle>
-              
-              <!-- Querétaro -->
-              <circle cx="210" cy="150" r="5" fill="#1a2559">
-                <title>Querétaro</title>
-              </circle>
-              
-              <!-- Monterrey -->
-              <circle cx="240" cy="110" r="4" fill="#6b7280">
-                <title>Monterrey</title>
-              </circle>
-              
-              <!-- Veracruz -->
-              <circle cx="260" cy="170" r="4" fill="#6b7280">
-                <title>Veracruz</title>
-              </circle>
-            </svg>
-          </div>
-          
-          <div class="mt-6 flex items-center justify-center space-x-6 text-sm text-gray-700">
-            <div class="flex items-center">
-              <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-              <span>Oficina Principal</span>
-            </div>
-            <div class="flex items-center">
-              <div class="w-3 h-3 bg-gray-900 rounded-full mr-2"></div>
-              <span>Cobertura Activa</span>
-            </div>
+         <!-- Mapa de México-->
+        <div class="relative rounded-2xl ">
+            <img 
+              src="/src/img/inicio/Cobertura-Nacional.webp" 
+              alt="Mapa de México" 
+              class="w-full h-full object-cover" 
+            />
           </div>
         </div>
       </div>
@@ -576,14 +507,12 @@ const schema = {
         
         <div class="relative">
           <!-- Placeholder para imagen de persona con tablet -->
-          <div class="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl flex items-center justify-center">
-            <div class="text-center text-gray-900/40">
-              <svg class="w-24 h-24 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
-              <p class="text-sm font-medium">Imagen: Persona con tablet</p>
-            </div>
-          </div>
+          <img 
+              src="/src/img/inicio/visitBlog.webp" 
+              alt="Mapa de México" 
+              class="w-full h-full object-cover" 
+            />
+          
         </div>
       </div>
     </div>
@@ -595,14 +524,11 @@ const schema = {
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div class="relative order-2 lg:order-1">
           <!-- Placeholder para imagen de persona con laptop -->
-          <div class="aspect-[4/3] bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center">
-            <div class="text-center text-blue-900/40">
-              <svg class="w-24 h-24 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              <p class="text-sm font-medium">Imagen: Persona con laptop</p>
-            </div>
-          </div>
+          <img 
+              src="/src/img/inicio/financing.webp" 
+              alt="Mapa de México" 
+              class="w-full h-full object-cover" 
+            />
         </div>
         
         <div class="order-1 lg:order-2">
