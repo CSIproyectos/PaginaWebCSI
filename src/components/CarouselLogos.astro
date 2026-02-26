@@ -16,20 +16,20 @@ const { title, logos = [] } = Astro.props;
     <div class="flex w-max animate-marquee group-hover:[animation-play-state:paused]">
       
       <div class="flex w-1/2 shrink-0 items-center justify-around gap-16 px-8 min-w-[100vw] md:min-w-[1152px]">
-        {logos.map((logo) => (
+        {logos.map((logo : string) => (
           <img 
             src={logo} 
             alt={`Logo de ${title}`} 
-            class="h-16 md:h-24 w-auto max-w-[40vw] md:max-w-[25vw] shrink-0 object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+            class="h-16 md:h-24 w-auto max-w-[40vw] md:max-w-[25vw] shrink-0 object-contain transition-all duration-350" 
           />       ))}
       </div>
 
       <div class="flex w-1/2 shrink-0 items-center justify-around gap-16 px-8 min-w-[100vw] md:min-w-[1152px]">
-        {logos.map((logo) => (
+        {logos.map((logo : string) => (
           <img 
             src={logo} 
             alt={`Logo de ${title}`} 
-            class="h-16 md:h-24 w-auto max-w-[40vw] md:max-w-[25vw] shrink-0 object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+            class="h-16 md:h-24 w-auto max-w-[40vw] md:max-w-[25vw] shrink-0 object-contain transition-all duration-350" 
           />        ))}
       </div>
 

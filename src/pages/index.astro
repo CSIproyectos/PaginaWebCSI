@@ -29,17 +29,32 @@ const schema = {
 };
 
 const imagenesClientes = [
-  '../images/inicio/logo_barceloresorts.webp'
+  '/images/inicio/logo_barceloresorts.webp',
+  '/images/inicio/logo_biopappel.webp',
+  '/images/inicio/logo_cementosCruzAzul.webp',
+  '/images/inicio/logo_hilton.webp',
+  '/images/inicio/logo_holcim.webp',
+  '/images/inicio/logo_doehler.webp',
+  '/images/inicio/logo_ocupa.webp',
+  '/images/inicio/logo_tapterminal.webp',
+  '/images/inicio/logo_indorama.webp',
+  '/images/inicio/logo_urrea.webp'
 ];
 
 const imagenesFabricantes = [
-  '/images/inicio/logo__dell.webp',
-  '/images/inicio/logo_cisco.webp',
+  '/images/inicio/logo_extremeNetworks.webp',
   '/images/inicio/logo_hikvision.webp',
   '/images/inicio/logo_genetec.webp',
-  '/images/inicio/logo_atlona.webp',
+  '/images/inicio/logo_axis.webp',
   '/images/inicio/logo_alliedtelesis.webp',
   '/images/inicio/logo_ciscomeraki.webp',
+  '/images/inicio/logo_flir.webp',
+  '/images/inicio/logo_iss.webp',
+  '/images/inicio/logo_panduit.webp',
+  '/images/inicio/logo_hanwhaVision.webp',
+  '/images/inicio/logo_synology.webp',
+  '/images/inicio/logo_ubiquiti.webp',
+   '/images/inicio/logo_cisco.webp'
 
 ];
 
@@ -53,22 +68,31 @@ const imagenesFabricantes = [
   <!-- Hero Section -->
   <section id="hero-section" class="relative text-white min-h-screen flex items-center justify-center overflow-hidden -mt-24 pt-24">
     <!-- Video de fondo -->
-    <video 
-      autoplay 
-      muted 
-      loop 
-      playsinline
-      class="absolute inset-0 w-full h-full object-cover"
-    >
-      <source src="/videos/bg_lights_earth.mp4" type="video/mp4">
-    </video>
+    <img 
+    src="/src/img/fondoMovil.webp" 
+    alt="Fondo de luces de la tierra"
+    loading="eager"
+    fetchpriority="high"
+    class="absolute inset-0 w-full h-full object-cover block md:hidden z-0"
+  />
+
+  <video 
+    autoplay 
+    muted 
+    loop 
+    playsinline
+    poster="/videos/poster_earth.jpg"
+    class="absolute inset-0 w-full h-full object-cover hidden md:block z-0"
+  >
+    <source src="/videos/bg_lights_earth.mp4" type="video/mp4">
+  </video>
     
     <!-- Overlay oscuro para mejor legibilidad -->
     <div class="absolute inset-0 bg-black/40"></div>
     
     <div class="container-custom relative z-10">
       <div class="max-w-5xl mx-auto text-center">
-        <h1 class="mb-6 text-white text-5xl md:text-5xl lg:text-5xl font-normal leading-tight drop-shadow-lg">
+        <h1 class="mb-6 text-white lg:text-5xl font-normal leading-tight drop-shadow-lg">
           Seguridad Inteligente y Tecnología Avanzada para Proteger e Impulsar tu Empresa.
         </h1>
         
@@ -222,7 +246,7 @@ const imagenesFabricantes = [
   <section class="section-padding bg-gray-100">
     <div class="container-custom">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="mb-4">Nuestra Ventaja Competitiva</h2>
+        <h2 class="mb-4 section-text">Nuestra Ventaja Competitiva</h2>
         <p class="text-lg text-gray-600">
           Lo que nos hace diferentes en el mercado de seguridad electrónica y soluciones tecnológicas
         </p>
@@ -231,8 +255,8 @@ const imagenesFabricantes = [
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
         <!-- Experiencia Comprobada -->
         <div class="text-center">
-          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="w-16 h-16  rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-20 h-20 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
           </div>
@@ -244,9 +268,9 @@ const imagenesFabricantes = [
 
         <!-- Cobertura Nacional -->
         <div class="text-center">
-          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
             
-            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             
@@ -260,8 +284,8 @@ const imagenesFabricantes = [
 
         <!-- Soporte y Mantenimiento -->
         <div class="text-center">
-          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="w-16 h-16  rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
             </svg>
           </div>
@@ -273,8 +297,8 @@ const imagenesFabricantes = [
 
         <!-- Financiamiento Flexible -->
         <div class="text-center">
-          <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
           </div>
@@ -287,57 +311,61 @@ const imagenesFabricantes = [
     </div>
   </section>
 
-  <!-- Cobertura Nacional -->
-  <section class="section-padding bg-white">
-    <div class="container-custom">
-    <h2 class="mb-6 text-center">Cobertura Nacional</h2>
-    <img 
-              src="/src/img/inicio/CoberturaNacional.webp" 
-              alt="Mapa de Cobertura en la republica" 
-              class="w-full h-full object-cover" 
-            />
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      
-        
-        <div>
-          <p class="text-xl text-gray-600 mb-8">
-            Con oficina en Colima y presencia activa en CDMX, Guadalajara y Querétaro, atendemos proyectos llave en mano en toda la República Mexicana.
-          </p>
-          
-          <div class="space-y-4">
-            <div class="flex items-center">
-              <svg class="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-lg text-gray-700">Proyectos en más de 15 estados</span>
-            </div>
-            <div class="flex items-center">
-              <svg class="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-lg text-gray-700">Respuesta rápida a nivel nacional</span>
-            </div>
-            <div class="flex items-center">
-              <svg class="w-6 h-6 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-lg text-gray-700">Equipo técnico certificado</span>
-            </div>
-          </div>
-        </div>
 
-         <!-- Mapa de México-->
-        <div class="relative rounded-2xl ">
-            <img 
-              src="/src/img/inicio/Cobertura-Nacional.webp" 
-              alt="Mapa de México" 
-              class="w-full h-full object-cover" 
-            />
+
+
+  <section class="section-padding bg-white relative">
+  <div class="container-custom relative z-10">
+    <h2 class="mb-6 text-center section-text">Cobertura Nacional</h2>
+
+    
+    <div class="relative lg:overflow-hidden lg:rounded-2xl lg:shadow-slate-200">
+
+      <img 
+        src="/src/img/inicio/CoberturaNacional.webp" 
+        alt="Mapa de Cobertura en la republica" 
+        loading="lazy"
+        class="w-full h-auto object-cover lg:h-[650px] lg:scale-105" 
+      />
+
+      <div class="bg-gray-50 p-8 lg:p-8 mt-8 lg:mt-0 lg:absolute lg:top-16 lg:right-12 lg:w-[350px] lg:bg-white/90 lg:rounded-2xl lg:shadow-2xl lg:backdrop-blur-sm lg:z-10 lg:border lg:border-gray-100">
+        <p class="text-xl text-gray-600">
+          Con oficina en Colima y presencia activa en CDMX, Guadalajara y Querétaro, atendemos proyectos llave en mano en toda la República Mexicana.
+        </p>
+      </div>
+      
+
+      <div class="p-8 lg:p-8 mt-8 lg:mt-0 lg:absolute lg:bottom-10 lg:left-10 lg:max-w-xl lg:rounded-2xl lg:shadow-2xl lg:backdrop-blur-sm lg:z-10">
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <svg class="w-6 h-6 text-green-600 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-lg text-gray-700">Proyectos en más de 15 estados</span>
+          </div>
+          <div class="flex items-center">
+            <svg class="w-6 h-6 text-green-600 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-lg text-gray-700">Respuesta rápida a nivel nacional</span>
+          </div>
+          <div class="flex items-center">
+            <svg class="w-6 h-6 text-green-600 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-lg text-gray-700">Equipo técnico certificado</span>
           </div>
         </div>
       </div>
+
     </div>
-  </section>
+
+  </div>
+</section>
+
+
+
+
 
   <!-- FAQ Section -->
   <section class="section-padding bg-gray-100">
@@ -511,6 +539,7 @@ const imagenesFabricantes = [
               src="/src/img/inicio/visitBlog.webp" 
               alt="Mapa de México" 
               class="w-full h-full object-cover" 
+              loading="lazy"
             />
           
         </div>
@@ -525,7 +554,8 @@ const imagenesFabricantes = [
         <div class="relative order-2 lg:order-1">
           <!-- Placeholder para imagen de persona con laptop -->
           <img 
-              src="/src/img/inicio/financing.webp" 
+              src="/src/img/inicio/financing.webp"
+              loading="lazy" 
               alt="Mapa de México" 
               class="w-full h-full object-cover" 
             />
