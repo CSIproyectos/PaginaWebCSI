@@ -1,49 +1,740 @@
 ﻿---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../img/soluciones/cableadoEstructurado/cableadoEstructurado.webp';
+import logoCisco from '../img/soluciones/cableadoEstructurado/ciscoM.png';
+import logoAllied from '../img/soluciones/cableadoEstructurado/allied.png';
+import logoOptronics from '../img/soluciones/cableadoEstructurado/optronics.jpg';
+import logoPanduit from '../img/soluciones/cableadoEstructurado/Paduit.png';
+import casoCedis from '../img/soluciones/cableadoEstructurado/b351ea3a-d66d-4c08-b348-1cd9f875ab2c.webp';
+import casoHotel from '../img/soluciones/cableadoEstructurado/Hotel-Guadalajara.webp';
+import casoTerminal from '../img/casos/Termina-Manzanillo.webp';
+import casoPlanta from '../img/soluciones/cableadoEstructurado/Planta-de-cemento-Puebla-1.webp';
+import imageElegirnos from '../img/soluciones/cableadoEstructurado/elegirnos.webp';
 ---
 
 <Layout 
   title="Cableado Estructurado - CSI"
   description="Diseño e instalación de cableado estructurado Cat6, Cat6A y fibra óptica para redes empresariales e industriales."
 >
-  <!-- Página en Desarrollo -->
-  <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900">
-    <div class="container-custom px-6 py-20 text-center">
-      <div class="max-w-3xl mx-auto">
-        <!-- Icono -->
-        <div class="mb-8 flex justify-center">
-          <div class="w-32 h-32 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
-            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <!-- Hero Section -->
+  <section class="relative h-[60vh] min-h-[500px] flex items-center justify-start overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <Image
+        src={heroImage}
+        alt="Cableado estructurado"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+    </div>
+    
+    <div class="container-custom relative z-10 text-white px-6">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+        Cableado Estructurado
+      </h1>
+      <p class="text-xl md:text-2xl max-w-2xl">
+        e Infraestructura de Red para Ambientes Críticos
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección: Redes diseñadas para entornos que exigen más -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <h2 class="text-center mb-8 text-gray-900">Redes diseñadas para entornos que exigen más</h2>
+      
+      <div class="text-center text-gray-700 text-base md:text-lg mb-16 max-w-5xl mx-auto">
+        <p class="leading-relaxed">
+          Diseñamos e implementamos soluciones completas de cableado estructurado e infraestructura de red para empresas que operan en condiciones críticas. Creamos redes que habilitan tecnología, impulsan la productividad y aseguran la conectividad de sistemas estratégicos como CCTV, control de acceso, ERP, SCADA y voz sobre IP.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Nuestra oferta incluye -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <h2 class="text-center mb-16 text-gray-900">Nuestra oferta incluye</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto">
+        <!-- Cableado Estructurado -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
+            <svg class="w-10 h-10 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-gray-900">Cableado Estructurado</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Cat6, Cat6A y fibra óptica (OM3 y OM4).
+          </p>
+        </div>
+
+        <!-- Certificación Enlaces -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
+            <svg class="w-10 h-10 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-gray-900">Certificación Enlaces</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Garantía con Fluke Networks.
+          </p>
+        </div>
+
+        <!-- Proyectos Llave Mano -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
+            <svg class="w-10 h-10 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-gray-900">Proyectos Llave Mano</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Con memorias técnicas y soporte continuo.
+          </p>
+        </div>
+
+        <!-- Switches y Energía -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
+            <svg class="w-10 h-10 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-gray-900">Switches y Energía</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Administrables, distribución de energía y UPS.
+          </p>
+        </div>
+
+        <!-- Racks y Gabinetes -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
+            <svg class="w-10 h-10 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
             </svg>
           </div>
+          <h3 class="text-lg font-bold mb-3 text-gray-900">Racks y Gabinetes</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Canalización, patch panels y gabinetes.
+          </p>
         </div>
-        
-        <!-- Título -->
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-          Cableado Estructurado
-        </h1>
-        
-        <!-- Badge -->
-        <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
-          <div class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-          <span class="text-white font-semibold">Página en Desarrollo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carrusel de Aliados estratégicos -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <h2 class="text-center mb-12 text-gray-900">Aliados estratégicos</h2>
+      
+      <div class="max-w-5xl mx-auto relative">
+        <!-- Carrusel -->
+        <div class="carousel-container relative overflow-hidden">
+          <div class="carousel-track flex transition-transform duration-500 ease-in-out">
+            <!-- Slide 1: Fluke Networks -->
+            <div class="carousel-slide min-w-full flex-shrink-0">
+              <div class="bg-gradient-to-br from-blue-700 to-blue-900 rounded-xl p-12 md:p-16 shadow-lg text-center min-h-[320px] flex flex-col items-center justify-center">
+                <div class="mb-8">
+                  <div class="text-white text-5xl md:text-6xl font-bold mb-2">FLUKE</div>
+                  <div class="text-white text-3xl md:text-4xl font-light">networks</div>
+                  <div class="flex justify-center gap-2 mt-4">
+                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                </div>
+                <p class="text-white text-lg md:text-xl">
+                  Certificación de red física conforme a estándares TIA/EIA e ISO.
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 2: Eaton + Total Ground -->
+            <div class="carousel-slide min-w-full flex-shrink-0">
+              <div class="bg-gradient-to-br from-slate-600 to-slate-800 rounded-xl p-12 md:p-16 shadow-lg text-center min-h-[320px] flex flex-col items-center justify-center">
+                <div class="mb-8 flex items-center justify-center gap-8">
+                  <div class="text-white">
+                    <div class="text-5xl md:text-6xl font-bold">EATON</div>
+                  </div>
+                  <div class="text-white text-6xl font-thin">+</div>
+                  <div class="text-white">
+                    <div class="text-3xl md:text-4xl font-bold flex items-center gap-2">
+                      <span class="text-red-500">⚡</span>
+                      <div>
+                        <div class="text-2xl">TOTAL</div>
+                        <div class="text-2xl font-light">GROUND</div>
+                      </div>
+                    </div>
+                    <div class="text-xs mt-1">An Electrical Company</div>
+                  </div>
+                </div>
+                <p class="text-white text-lg md:text-xl">
+                  Soluciones para respaldo de energía, UPS industriales y tierras físicas de calidad.
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 3: optronics -->
+            <div class="carousel-slide min-w-full flex-shrink-0">
+              <div class="bg-white rounded-xl p-12 md:p-16 shadow-lg text-center min-h-[320px] flex flex-col items-center justify-center">
+                <div class="mb-8">
+                  <Image src={logoOptronics} alt="Optronics" class="h-40 w-auto mx-auto object-contain" />
+                </div>
+                <p class="text-gray-800 text-lg md:text-xl">
+                  Fibra óptica certificada y accesorios de instalación confiables.
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 4: Cisco Meraki -->
+            <div class="carousel-slide min-w-full flex-shrink-0">
+              <div class="bg-white rounded-xl p-12 md:p-16 shadow-lg text-center min-h-[320px] flex flex-col items-center justify-center">
+                <div class="mb-8">
+                  <Image src={logoCisco} alt="Cisco Meraki" class="h-40 w-auto mx-auto object-contain" />
+                </div>
+                <p class="text-gray-800 text-lg md:text-xl">
+                  Switching, redes empresariales, wireless y SD-WAN para control centralizado
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 5: Allied Telesis -->
+            <div class="carousel-slide min-w-full flex-shrink-0">
+              <div class="bg-white rounded-xl p-12 md:p-16 shadow-lg text-center min-h-[320px] flex flex-col items-center justify-center">
+                <div class="mb-8">
+                  <Image src={logoAllied} alt="Allied Telesis" class="h-40 w-auto mx-auto object-contain" />
+                </div>
+                <p class="text-gray-800 text-lg md:text-xl">
+                  Alternativa robusta para redes industriales de bajo mantenimiento y alta disponibilidad.
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 6: Panduit -->
+            <div class="carousel-slide min-w-full flex-shrink-0">
+              <div class="bg-gradient-to-br from-cyan-600 to-cyan-800 rounded-xl p-12 md:p-16 shadow-lg text-center min-h-[320px] flex flex-col items-center justify-center">
+                <div class="mb-8">
+                  <Image src={logoPanduit} alt="Panduit" class="h-40 w-auto mx-auto object-contain" />
+                </div>
+                <p class="text-white text-lg md:text-xl">
+                  Soluciones de infraestructura física para centros de datos y redes empresariales.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <!-- Descripción -->
-        <p class="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed">
-          Estamos trabajando en brindarte la mejor experiencia. Pronto encontrarás aquí información detallada sobre nuestras soluciones de cableado estructurado.
-        </p>
-        
-        <!-- Botones -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/contacto" class="btn-primary bg-white text-primary-900 hover:bg-gray-100">
-            Solicitar Información
-          </a>
-          <a href="/soluciones" class="btn-primary bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm">
-            Ver Otras Soluciones
-          </a>
+
+        <!-- Controles del carrusel -->
+        <button 
+          onclick="moveCarousel(-1)" 
+          class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all z-10"
+          aria-label="Anterior"
+        >
+          <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button 
+          onclick="moveCarousel(1)" 
+          class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all z-10"
+          aria-label="Siguiente"
+        >
+          <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        <!-- Indicadores -->
+        <div class="flex justify-center gap-2 mt-6">
+          <button onclick="goToSlide(0)" class="carousel-indicator w-3 h-3 rounded-full bg-primary-900 transition-all" data-index="0"></button>
+          <button onclick="goToSlide(1)" class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="1"></button>
+          <button onclick="goToSlide(2)" class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="2"></button>
+          <button onclick="goToSlide(3)" class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="3"></button>
+          <button onclick="goToSlide(4)" class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="4"></button>
+          <button onclick="goToSlide(5)" class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="5"></button>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Casos reales de implementación -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <h2 class="text-center mb-8 text-gray-900">Casos reales de implementación</h2>
+      <p class="text-center text-gray-600 mb-16 text-base leading-relaxed">
+        <span class="hidden md:inline">Pasa el cursor sobre las tarjetas para ver más detalles</span>
+        <span class="md:hidden">Toca las tarjetas para ver más detalles</span>
+      </p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
+        <!-- CEDIS logístico en Querétaro -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <!-- Frente -->
+            <div class="flip-card-front">
+              <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
+                <Image src={casoCedis} alt="CEDIS Querétaro" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+                  <h3 class="text-white text-lg md:text-xl font-bold mb-2">CEDIS logístico en Querétaro</h3>
+                  <div class="mt-4 text-white/90 text-sm">
+                    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Reverso -->
+            <div class="flip-card-back">
+              <div class="h-full bg-white rounded-2xl p-5 md:p-6 flex flex-col justify-between shadow-xl border-2 border-blue-600">
+                <div>
+                  <h3 class="text-blue-700 text-base md:text-lg font-bold mb-3">CEDIS - Querétaro</h3>
+                  <div class="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-700">
+                    <div>
+                      <p class="font-semibold text-gray-900">Alcance:</p>
+                      <p>Backbone de fibra y segmentación para CCTV, control de acceso y telefonía IP.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Tecnología:</p>
+                      <p>Certificación Fluke Networks, switches Cisco Meraki.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Resultado:</p>
+                      <p>Red escalable lista para Industria 4.0 y trazabilidad logística.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-3">
+                  <span class="text-xs text-gray-500">
+                    <span class="hidden md:inline">Mueve el cursor fuera</span>
+                    <span class="md:hidden">Toca nuevamente</span>
+                    para regresar
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hotel en Guadalajara -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <!-- Frente -->
+            <div class="flip-card-front">
+              <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
+                <Image src={casoHotel} alt="Hotel Guadalajara" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+                  <h3 class="text-white text-lg md:text-xl font-bold mb-2">Hotel en Guadalajara</h3>
+                  <div class="mt-4 text-white/90 text-sm">
+                    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Reverso -->
+            <div class="flip-card-back">
+              <div class="h-full bg-white rounded-2xl p-5 md:p-6 flex flex-col justify-between shadow-xl border-2 border-amber-600">
+                <div>
+                  <h3 class="text-amber-700 text-base md:text-lg font-bold mb-3">Hotel - Guadalajara</h3>
+                  <div class="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-700">
+                    <div>
+                      <p class="font-semibold text-gray-900">Alcance:</p>
+                      <p>Red para 100+ cámaras, video wall, automatización y WiFi de alta densidad.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Tecnología:</p>
+                      <p>Fibra óptica certificada, switches PoE+, documentación técnica completa.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Resultado:</p>
+                      <p>Experiencia del huésped mejorada y gestión centralizada.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-3">
+                  <span class="text-xs text-gray-500">
+                    <span class="hidden md:inline">Mueve el cursor fuera</span>
+                    <span class="md:hidden">Toca nuevamente</span>
+                    para regresar
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal portuaria en Manzanillo -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <!-- Frente -->
+            <div class="flip-card-front">
+              <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
+                <Image src={casoTerminal} alt="Terminal Manzanillo" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+                  <h3 class="text-white text-lg md:text-xl font-bold mb-2">Terminal portuaria en Manzanillo</h3>
+                  <div class="mt-4 text-white/90 text-sm">
+                    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Reverso -->
+            <div class="flip-card-back">
+              <div class="h-full bg-white rounded-2xl p-5 md:p-6 flex flex-col justify-between shadow-xl border-2 border-slate-700">
+                <div>
+                  <h3 class="text-slate-800 text-base md:text-lg font-bold mb-3">Terminal - Manzanillo</h3>
+                  <div class="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-700">
+                    <div>
+                      <p class="font-semibold text-gray-900">Alcance:</p>
+                      <p>Red inalámbrica Cisco Catalyst para mayor eficiencia en patios y almacenes.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Tecnología:</p>
+                      <p>Fibra monomodo certificada, empalmes de fusión, pruebas OTDR.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Resultado:</p>
+                      <p>Alta disponibilidad para control de acceso y videovigilancia CTPAT.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-3">
+                  <span class="text-xs text-gray-500">
+                    <span class="hidden md:inline">Mueve el cursor fuera</span>
+                    <span class="md:hidden">Toca nuevamente</span>
+                    para regresar
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Planta Cementera en tecoman -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <!-- Frente -->
+            <div class="flip-card-front">
+              <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
+                <Image src={casoPlanta} alt="Planta Tecoman" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+                  <h3 class="text-white text-lg md:text-xl font-bold mb-2">Planta Cementera en Tecoman</h3>
+                  <div class="mt-4 text-white/90 text-sm">
+                    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Reverso -->
+            <div class="flip-card-back">
+              <div class="h-full bg-white rounded-2xl p-5 md:p-6 flex flex-col justify-between shadow-xl border-2 border-gray-600">
+                <div>
+                  <h3 class="text-gray-800 text-base md:text-lg font-bold mb-3">Planta Industrial - Tecoman</h3>
+                  <div class="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-700">
+                    <div>
+                      <p class="font-semibold text-gray-900">Alcance:</p>
+                      <p>Migración de fibra OM1 a OS2, renovación de switches, red para videoseguridad y control de acceso.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Tecnología:</p>
+                      <p>Cable industrial grado IP67, switches industriales Allied Telesis.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Resultado:</p>
+                      <p>Alta disponibilidad para SCADA y monitoreo térmico continuo.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-3">
+                  <span class="text-xs text-gray-500">
+                    <span class="hidden md:inline">Mueve el cursor fuera</span>
+                    <span class="md:hidden">Toca nuevamente</span>
+                    para regresar
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿Qué desafíos ayudamos a resolver? -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <h2 class="text-center mb-16 text-gray-900">¿Qué desafíos ayudamos a resolver?</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Redes no documentadas -->
+        <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow text-center">
+          <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-gray-900">Redes no documentadas ni certificadas</h3>
+        </div>
+
+        <!-- Riesgos de seguridad -->
+        <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow text-center">
+          <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-gray-900">Riesgos de seguridad por falta de segmentación lógica o redundancia</h3>
+        </div>
+
+        <!-- Cuartos de red -->
+        <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow text-center">
+          <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-gray-900">Cuartos de red sin organización ni trazabilidad</h3>
+        </div>
+
+        <!-- Latencia -->
+        <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow text-center md:col-span-2 lg:col-span-1">
+          <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-gray-900">Latencia y pérdida de paquetes en producción o monitoreo en tiempo real</h3>
+        </div>
+
+        <!-- Limitación en despliegue -->
+        <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow text-center md:col-span-2 lg:col-span-2">
+          <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-gray-900">Limitación en despliegue de nuevas soluciones por cableado obsoleto</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿Por qué elegirnos? -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <h2 class="text-center mb-16 text-gray-900">¿Por qué elegirnos?</h2>
+      
+      <div class="flex flex-col lg:flex-row gap-12 items-center max-w-6xl mx-auto">
+        <!-- Izquierda: Lista de beneficios -->
+        <div class="flex-1 space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 mt-1">
+              <svg class="w-6 h-6 text-primary-900" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <p class="text-gray-700 text-lg"><span class="font-semibold">Proyectos llave en mano</span> con supervisión técnica e ingeniería experta</p>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 mt-1">
+              <svg class="w-6 h-6 text-primary-900" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <p class="text-gray-700 text-lg"><span class="font-semibold">Certificación con Fluke Networks</span> y memoria técnica entregable</p>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 mt-1">
+              <svg class="w-6 h-6 text-primary-900" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <p class="text-gray-700 text-lg"><span class="font-semibold">Alineación con estándares internacionales:</span> TIA/EIA, ISO/IEC, NOM-001</p>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 mt-1">
+              <svg class="w-6 h-6 text-primary-900" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <p class="text-gray-700 text-lg"><span class="font-semibold">Diseño escalable</span> para Industria 4.0 y servicios críticos</p>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 mt-1">
+              <svg class="w-6 h-6 text-primary-900" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <p class="text-gray-700 text-lg"><span class="font-semibold">Soporte técnico local</span> en las principales zonas industriales del país</p>
+          </div>
+        </div>
+
+        <!-- Derecha: Imagen -->
+        <div class="flex-1">
+          <div class="rounded-2xl overflow-hidden shadow-xl">
+            <Image src={imageElegirnos} alt="Por qué elegirnos" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Flip Card Styles */
+    .flip-card {
+      perspective: 1000px;
+      cursor: pointer;
+      min-height: 400px;
+      position: relative;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    @media (hover: hover) {
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+    }
+
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      top: 0;
+      left: 0;
+    }
+
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card:hover,
+    .flip-card.flipped {
+      z-index: 10;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 0.7;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    .flip-card-front svg:last-child {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @media (max-width: 640px) {
+      .flip-card,
+      .flip-card-inner,
+      .flip-card-front,
+      .flip-card-back {
+        min-height: 450px;
+      }
+    }
+  </style>
+
+  <script>
+    // Carrusel functionality
+    let currentSlide = 0;
+    const totalSlides = 6;
+
+    // @ts-ignore
+    function moveCarousel(direction: number) {
+      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+
+    // @ts-ignore
+    function goToSlide(index: number) {
+      currentSlide = index;
+      updateCarousel();
+    }
+
+    function updateCarousel() {
+      const track = document.querySelector('.carousel-track') as HTMLElement;
+      const indicators = document.querySelectorAll('.carousel-indicator');
+      
+      if (track) {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+      
+      indicators.forEach((indicator, index) => {
+        if (index === currentSlide) {
+          indicator.classList.remove('bg-gray-300');
+          indicator.classList.add('bg-primary-900');
+        } else {
+          indicator.classList.remove('bg-primary-900');
+          indicator.classList.add('bg-gray-300');
+        }
+      });
+    }
+
+    // Auto-advance carousel every 5 seconds
+    setInterval(() => {
+      moveCarousel(1);
+    }, 5000);
+
+    // Make functions globally available
+    // @ts-ignore
+    window.moveCarousel = moveCarousel;
+    // @ts-ignore
+    window.goToSlide = goToSlide;
+  </script>
+
+  <!-- CTA Final -->
+  <section class="section-padding bg-primary-900 text-white">
+    <div class="container-custom text-center">
+      <h2 class="text-white mb-8">¿Listo para modernizar tu infraestructura de red?</h2>
+      <p class="text-xl mb-10 max-w-2xl mx-auto text-gray-200 leading-relaxed">
+        Solicita una evaluación gratuita y recibe una propuesta personalizada para tu proyecto
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contacto" class="btn-primary bg-white text-primary-900 hover:bg-gray-100">
+          Solicitar Cotización
+        </a>
+        <a href="/soluciones" class="btn-primary bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm">
+          Ver Todas las Soluciones
+        </a>
       </div>
     </div>
   </section>
