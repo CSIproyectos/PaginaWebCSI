@@ -1,0 +1,50 @@
+﻿---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Desarrollo de Software - CSI"
+  description="Soluciones digitales a medida: aplicaciones web, móviles, ERP/CRM, dashboards y automatización de procesos."
+>
+  <!-- Página en Desarrollo -->
+  <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900">
+    <div class="container-custom px-6 py-20 text-center">
+      <div class="max-w-3xl mx-auto">
+        <!-- Icono -->
+        <div class="mb-8 flex justify-center">
+          <div class="w-32 h-32 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+        </div>
+        
+        <!-- Título -->
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          Desarrollo de Software
+        </h1>
+        
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
+          <div class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+          <span class="text-white font-semibold">Página en Desarrollo</span>
+        </div>
+        
+        <!-- Descripción -->
+        <p class="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed">
+          Estamos trabajando en brindarte la mejor experiencia. Pronto encontrarás aquí información detallada sobre nuestras soluciones de desarrollo de software.
+        </p>
+        
+        <!-- Botones -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contacto" class="btn-primary bg-white text-primary-900 hover:bg-gray-100">
+            Solicitar Información
+          </a>
+          <a href="/soluciones" class="btn-primary bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm">
+            Ver Otras Soluciones
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
