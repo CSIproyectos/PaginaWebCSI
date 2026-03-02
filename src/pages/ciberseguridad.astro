@@ -1,50 +1,705 @@
 ﻿---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../img/soluciones/ciberseguridad/cibersecurity.webp';
+import fortinetImage from '../img/soluciones/ciberseguridad/fortinet.png';
+import checkpointImage from '../img/soluciones/ciberseguridad/quantum-3600-security-gateway-appliance-hero-new-1-350x100.webp';
+import ciscoImage from '../img/soluciones/ciberseguridad/cisco meraki y ciscofirepower.png';
+import recintoManzanillo from '../img/soluciones/ciberseguridad/recintoFiscalManzanillo.webp';
+import aifaTerminal from '../img/soluciones/ciberseguridad/AIFA.webp';
+import manufacturera from '../img/soluciones/ciberseguridad/Empresa-Manufacturera.webp';
+import logistico from '../img/soluciones/ciberseguridad/Terminal-Logistics.webp';
 ---
 
 <Layout 
-  title="Ciberseguridad - CSI"
+  title="Ciberseguridad Empresarial - CSI"
   description="Protección integral de redes y activos digitales con firewalls, IDS/IPS y cumplimiento de estándares internacionales."
 >
-  <!-- Página en Desarrollo -->
-  <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900">
-    <div class="container-custom px-6 py-20 text-center">
-      <div class="max-w-3xl mx-auto">
-        <!-- Icono -->
-        <div class="mb-8 flex justify-center">
-          <div class="w-32 h-32 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
-            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+  <!-- Hero Section -->
+  <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <Image 
+        src={heroImage}
+        alt="Ciberseguridad Empresarial"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70"></div>
+    </div>
+    
+    <div class="container-custom px-6 relative z-10 text-center text-white">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+        Ciberseguridad Empresarial
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
+        Protección Integral para Activos Críticos
+      </p>
+    </div>
+  </section>
+
+  <!-- Seguridad Alineada -->
+  <section class="section-padding bg-white">
+    <div class="container-custom px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">
+        Seguridad alineada a tus riesgos operativos
+      </h2>
+      
+      <p class="text-lg text-gray-700 max-w-4xl mx-auto text-center mb-12">
+        Diseñamos e implementamos soluciones de ciberseguridad perimetral y de red, enfocadas en mantener la continuidad operativa, proteger activos digitales y cumplir con los marcos normativos que rigen a industrias sensibles.
+      </p>
+
+      <p class="text-lg text-gray-700 max-w-4xl mx-auto text-center mb-16">
+        Nuestros proyectos están pensados para TI, Seguridad Informática y Compliance, integrando tecnologías líderes como:
+      </p>
+
+      <!-- Tecnologías -->
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Fortinet -->
+        <div class="bg-white rounded-xl p-8 text-center shadow-md">
+          <div class="h-40 flex items-center justify-center mb-4">
+            <Image 
+              src={fortinetImage}
+              alt="Fortinet (FortiGate)"
+              class="h-36 w-auto object-contain"
+              style="mix-blend-mode: darken;"
+            />
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Fortinet (FortiGate)</h3>
+          <p class="text-gray-600">
+            Inspección profunda de paquetes, filtrado web, defensa contra amenazas persistentes.
+          </p>
+        </div>
+
+        <!-- Checkpoint -->
+        <div class="bg-white rounded-xl p-8 text-center shadow-md">
+          <div class="h-40 flex items-center justify-center mb-4">
+            <Image 
+              src={checkpointImage}
+              alt="Checkpoint"
+              class="h-36 w-auto object-contain"
+              style="mix-blend-mode: darken;"
+            />
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Checkpoint</h3>
+          <p class="text-gray-600">
+            Control de acceso basado en identidad, detección de amenazas, enfoque Zero Trust y cumplimiento SOC/NIST.
+          </p>
+        </div>
+
+        <!-- Cisco Meraki y Cisco Firepower -->
+        <div class="bg-white rounded-xl p-8 text-center shadow-md">
+          <div class="h-40 flex items-center justify-center mb-4">
+            <Image 
+              src={ciscoImage}
+              alt="Cisco Meraki y Cisco Firepower"
+              class="h-36 w-auto object-contain"
+              style="mix-blend-mode: darken;"
+            />
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Cisco Meraki y Cisco Firepower</h3>
+          <p class="text-gray-600">
+            Firewalls de nueva generación, segmentación, análisis de tráfico y gestión cloud.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Soluciones a Problemas -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+        Soluciones a problemas reales en seguridad
+      </h2>
+
+      <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <!-- Problema 1 -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           </div>
+          <h3 class="font-bold text-lg mb-3">Infraestructura con tiempos de respuesta altos ante incidentes</h3>
         </div>
-        
-        <!-- Título -->
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-          Ciberseguridad
-        </h1>
-        
-        <!-- Badge -->
-        <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
-          <div class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-          <span class="text-white font-semibold">Página en Desarrollo</span>
+
+        <!-- Problema 2 -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-3">Segmentación deficiente entre redes críticas (TI, CCTV, OT)</h3>
         </div>
+
+        <!-- Problema 3 -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-3">Tráfico sospechoso no detectado (sin IDS/IPS)</h3>
+        </div>
+
+        <!-- Problema 4 -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-3">Falta de visibilidad sobre vulnerabilidades en red y dispositivos</h3>
+        </div>
+
+        <!-- Problema 5 -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-3">Riesgos en auditorías por incumplimiento de marcos como NIST, ISO 27001, CTPAT</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Casos Reales -->
+  <section class="section-padding bg-white">
+    <div class="container-custom px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+        Casos reales de implementación
+      </h2>
+
+      <p class="text-center text-gray-600 mb-16 text-base leading-relaxed">
+        <span class="hidden md:inline">Pasa el cursor sobre las tarjetas para ver más detalles</span>
+        <span class="md:hidden">Toca las tarjetas para ver más detalles</span>
+      </p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Caso 1: Recinto Fiscal Manzanillo -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
+                <Image 
+                  src={recintoManzanillo}
+                  alt="Recinto Fiscal Manzanillo"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+                  <h3 class="text-white text-lg md:text-xl font-bold mb-2">Recinto Fiscal Manzanillo</h3>
+                  <div class="mt-4 text-white/90 text-sm">
+                    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="h-full bg-white rounded-2xl p-5 md:p-6 flex flex-col justify-between shadow-xl border-2 border-slate-700">
+                <div>
+                  <h3 class="text-slate-800 text-base md:text-lg font-bold mb-3">Recinto Fiscal Manzanillo</h3>
+                  <div class="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-700">
+                    <div>
+                      <p class="font-semibold text-gray-900">Alcance:</p>
+                      <p>Implementación Fortinet NGFW con IDS/IPS, segmentación avanzada y monitoreo 24/7.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Tecnología:</p>
+                      <p>Fortinet FortiGate, segmentación VLAN, monitoreo centralizado.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Resultado:</p>
+                      <p>Cumplimiento CTPAT y visibilidad total del tráfico de red.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-3">
+                  <span class="text-xs text-gray-500">
+                    <span class="hidden md:inline">Mueve el cursor fuera</span>
+                    <span class="md:hidden">Toca nuevamente</span>
+                    para regresar
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Caso 2: Terminal AIFA -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
+                <Image 
+                  src={aifaTerminal}
+                  alt="Terminal Internacional AIFA"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+                  <h3 class="text-white text-lg md:text-xl font-bold mb-2">Terminal internacional AIFA</h3>
+                  <div class="mt-4 text-white/90 text-sm">
+                    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="h-full bg-white rounded-2xl p-5 md:p-6 flex flex-col justify-between shadow-xl border-2 border-blue-600">
+                <div>
+                  <h3 class="text-blue-700 text-base md:text-lg font-bold mb-3">Terminal Internacional AIFA</h3>
+                  <div class="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-700">
+                    <div>
+                      <p class="font-semibold text-gray-900">Alcance:</p>
+                      <p>Despliegue de solución de ciberseguridad Cisco Meraki con videoseguridad integrada y políticas por usuario.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Tecnología:</p>
+                      <p>Cisco Firepower, IPS avanzado, segmentación de red, monitoreo continuo.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Resultado:</p>
+                      <p>Protección integral y cumplimiento de estándares aeroportuarios.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-3">
+                  <span class="text-xs text-gray-500">
+                    <span class="hidden md:inline">Mueve el cursor fuera</span>
+                    <span class="md:hidden">Toca nuevamente</span>
+                    para regresar
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Caso 3: Empresa Manufacturera -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
+                <Image 
+                  src={manufacturera}
+                  alt="Empresa Manufacturera"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+                  <h3 class="text-white text-lg md:text-xl font-bold mb-2">Empresa manufacturera</h3>
+                  <p class="text-sm text-gray-300 mt-1">Michoacán/Celaya/Mérida</p>
+                  <div class="mt-4 text-white/90 text-sm">
+                    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="h-full bg-white rounded-2xl p-5 md:p-6 flex flex-col justify-between shadow-xl border-2 border-green-600">
+                <div>
+                  <h3 class="text-green-700 text-base md:text-lg font-bold mb-3">Empresa Manufacturera</h3>
+                  <div class="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-700">
+                    <div>
+                      <p class="font-semibold text-gray-900">Alcance:</p>
+                      <p> Implementación de Checkpoint NGFW, control de aplicaciones y cumplimiento corporativo.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Tecnología:</p>
+                      <p>Checkpoint Security Gateway, NAC, segmentación industrial.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Resultado:</p>
+                      <p>Cumplimiento ISO 27001 y protección sin interrumpir operación.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-3">
+                  <span class="text-xs text-gray-500">
+                    <span class="hidden md:inline">Mueve el cursor fuera</span>
+                    <span class="md:hidden">Toca nuevamente</span>
+                    para regresar
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Caso 4: Operador Logístico -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
+                <Image 
+                  src={logistico}
+                  alt="Operador Logístico Querétaro"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+                  <h3 class="text-white text-lg md:text-xl font-bold mb-2">Operador logístico</h3>
+                  <p class="text-sm text-gray-300 mt-1">Querétaro</p>
+                  <div class="mt-4 text-white/90 text-sm">
+                    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="h-full bg-white rounded-2xl p-5 md:p-6 flex flex-col justify-between shadow-xl border-2 border-orange-600">
+                <div>
+                  <h3 class="text-orange-700 text-base md:text-lg font-bold mb-3">Operador Logístico Querétaro</h3>
+                  <div class="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-700">
+                    <div>
+                      <p class="font-semibold text-gray-900">Alcance:</p>
+                      <p>Solución integral de seguridad perimetral y de red con protección de sistemas ERP, ANPR y videovigilancia.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Tecnología:</p>
+                      <p>Fortinet FortiGate, VPN site-to-site, protección DDoS.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Resultado:</p>
+                      <p>Operación continua 24/7 con protección empresarial completa.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-3">
+                  <span class="text-xs text-gray-500">
+                    <span class="hidden md:inline">Mueve el cursor fuera</span>
+                    <span class="md:hidden">Toca nuevamente</span>
+                    para regresar
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Componentes Carrusel -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+        Componentes de nuestra solución
+      </h2>
+
+      <div class="relative max-w-5xl mx-auto">
+        <!-- Carrusel Container -->
+        <div class="carousel-container relative overflow-hidden rounded-2xl">
+          <div class="carousel-track flex transition-transform duration-500 ease-in-out">
+            <!-- Slide 1: Diagnóstico -->
+            <div class="carousel-slide min-w-full flex-shrink-0 flex items-center justify-center p-12">
+              <div class="text-center max-w-md">
+                <div class="w-32 h-32 mx-auto mb-8 flex items-center justify-center">
+                  <svg class="w-full h-full text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  Diagnóstico de arquitectura de red
+                </h3>
+              </div>
+            </div>
+
+            <!-- Slide 2: Informes ejecutivos -->
+            <div class="carousel-slide min-w-full flex-shrink-0 flex items-center justify-center p-12">
+              <div class="text-center max-w-md">
+                <div class="w-32 h-32 mx-auto mb-8 flex items-center justify-center">
+                  <svg class="w-full h-full text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z M9 3v2m0 4h6m-6 4h6" />
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  Informes ejecutivos para dirección de TI y Compliance
+                </h3>
+              </div>
+            </div>
+
+            <!-- Slide 3: Firewall -->
+            <div class="carousel-slide min-w-full flex-shrink-0 flex items-center justify-center p-12">
+              <div class="text-center max-w-md">
+                <div class="w-32 h-32 mx-auto mb-8 flex items-center justify-center">
+                  <svg class="w-full h-full text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  Firewall de nueva generación adaptado al entorno
+                </h3>
+              </div>
+            </div>
+
+            <!-- Slide 4: Sistemas IDS/IPS -->
+            <div class="carousel-slide min-w-full flex-shrink-0 flex items-center justify-center p-12">
+              <div class="text-center max-w-md">
+                <div class="w-32 h-32 mx-auto mb-8 flex items-center justify-center">
+                  <svg class="w-full h-full text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <circle cx="7" cy="8" r="1" fill="currentColor"/>
+                    <circle cx="12" cy="8" r="1" fill="currentColor"/>
+                    <circle cx="17" cy="8" r="1" fill="currentColor"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 11h8M9 14h6" />
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  Sistemas IDS/IPS y segmentación de tráfico
+                </h3>
+              </div>
+            </div>
+
+            <!-- Slide 5: Acompañamiento -->
+            <div class="carousel-slide min-w-full flex-shrink-0 flex items-center justify-center p-12">
+              <div class="text-center max-w-md">
+                <div class="w-32 h-32 mx-auto mb-8 flex items-center justify-center">
+                  <svg class="w-full h-full text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  Acompañamiento en cumplimiento normativo
+                </h3>
+              </div>
+            </div>
+
+            <!-- Slide 6: Pruebas de penetración -->
+            <div class="carousel-slide min-w-full flex-shrink-0 flex items-center justify-center p-12">
+              <div class="text-center max-w-md">
+                <div class="w-32 h-32 mx-auto mb-8 flex items-center justify-center">
+                  <svg class="w-full h-full text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z M4 12c0-1.85.63-3.55 1.69-4.9l1.41 1.41A5.98 5.98 0 006 12c0 3.31 2.69 6 6 6s6-2.69 6-6-2.69-6-6-6c-1.74 0-3.31.74-4.4 1.93L6.19 6.52C7.82 4.95 9.79 4 12 4c4.41 0 8 3.59 8 8s-3.59 8-8 8-8-3.59-8-8z"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  Pruebas de penetración controladas
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles del carrusel -->
+        <button 
+          onclick="moveComponentesCarousel(-1)" 
+          class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all z-10"
+          aria-label="Anterior"
+        >
+          <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
         
-        <!-- Descripción -->
-        <p class="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed">
-          Estamos trabajando en brindarte la mejor experiencia. Pronto encontrarás aquí información detallada sobre nuestras soluciones de ciberseguridad.
-        </p>
-        
-        <!-- Botones -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/contacto" class="btn-primary bg-white text-primary-900 hover:bg-gray-100">
-            Solicitar Información
-          </a>
-          <a href="/soluciones" class="btn-primary bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm">
-            Ver Otras Soluciones
-          </a>
+        <button 
+          onclick="moveComponentesCarousel(1)" 
+          class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all z-10"
+          aria-label="Siguiente"
+        >
+          <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        <!-- Indicadores -->
+        <div class="flex justify-center gap-2 mt-6">
+          <button onclick="goToComponenteSlide(0)" class="carousel-indicator-componentes w-3 h-3 rounded-full bg-gray-900 transition-all" data-index="0"></button>
+          <button onclick="goToComponenteSlide(1)" class="carousel-indicator-componentes w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="1"></button>
+          <button onclick="goToComponenteSlide(2)" class="carousel-indicator-componentes w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="2"></button>
+          <button onclick="goToComponenteSlide(3)" class="carousel-indicator-componentes w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="3"></button>
+          <button onclick="goToComponenteSlide(4)" class="carousel-indicator-componentes w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="4"></button>
+          <button onclick="goToComponenteSlide(5)" class="carousel-indicator-componentes w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="5"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sectores y Enfoque -->
+  <section class="section-padding bg-white">
+    <div class="container-custom px-6">
+      <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <!-- Sectores -->
+        <div class="bg-gray-50 rounded-2xl p-8 md:p-10">
+          <h2 class="text-2xl md:text-3xl font-bold mb-8">
+            Sectores con alta exigencia en ciberseguridad
+          </h2>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-gray-900 mt-1">•</span>
+              <div>
+                <span class="font-bold">Logística y transporte:</span> Protección de videovigilancia, ERP y ANPR
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-gray-900 mt-1">•</span>
+              <div>
+                <span class="font-bold">Manufactura:</span> Seguridad en redes OT, integración con sistemas industriales
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-gray-900 mt-1">•</span>
+              <div>
+                <span class="font-bold">Recintos fiscales y aduanas:</span> Monitoreo, cumplimiento estricto y disponibilidad
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-gray-900 mt-1">•</span>
+              <div>
+                <span class="font-bold">Retail y oficinas corporativas:</span> Seguridad en redes WiFi, BYOD y nube
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Nuestro Enfoque -->
+        <div class="bg-gray-50 rounded-2xl p-8 md:p-10">
+          <h2 class="text-2xl md:text-3xl font-bold mb-8">
+            Nuestro enfoque
+          </h2>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-gray-900 mt-1">•</span>
+              <span>Integración de seguridad lógica y física</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-gray-900 mt-1">•</span>
+              <span>Soporte técnico local con proyectos llave en mano</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-gray-900 mt-1">•</span>
+              <span>Documentación técnica y certificación de cumplimiento</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="font-bold text-gray-900 mt-1">•</span>
+              <span>Experiencia en ambientes con alta criticidad operativa y regulatoria</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 </Layout>
+
+<script>
+  // Carrusel de componentes
+  let currentComponenteSlide = 0;
+  const totalComponenteSlides = 6;
+
+  // @ts-ignore
+  function moveComponentesCarousel(direction: number) {
+    currentComponenteSlide = (currentComponenteSlide + direction + totalComponenteSlides) % totalComponenteSlides;
+    updateComponentesCarousel();
+  }
+
+  // @ts-ignore
+  function goToComponenteSlide(index: number) {
+    currentComponenteSlide = index;
+    updateComponentesCarousel();
+  }
+
+  function updateComponentesCarousel() {
+    const track = document.querySelector('.carousel-track') as HTMLElement;
+    const indicators = document.querySelectorAll('.carousel-indicator-componentes');
+    
+    if (track) {
+      track.style.transform = `translateX(-${currentComponenteSlide * 100}%)`;
+    }
+    
+    indicators.forEach((indicator, index) => {
+      if (index === currentComponenteSlide) {
+        indicator.classList.remove('bg-gray-300');
+        indicator.classList.add('bg-gray-900');
+      } else {
+        indicator.classList.remove('bg-gray-900');
+        indicator.classList.add('bg-gray-300');
+      }
+    });
+  }
+
+  // Auto-advance carousel every 5 seconds
+  setInterval(() => {
+    moveComponentesCarousel(1);
+  }, 5000);
+
+  // Make functions globally available
+  // @ts-ignore
+  window.moveComponentesCarousel = moveComponentesCarousel;
+  // @ts-ignore
+  window.goToComponenteSlide = goToComponenteSlide;
+</script>
+
+<style>
+  .flip-card {
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner,
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    top: 0;
+    left: 0;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card:hover,
+  .flip-card.flipped {
+    z-index: 10;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .flip-card-front svg:last-child {
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @media (max-width: 640px) {
+    .flip-card,
+    .flip-card-inner,
+    .flip-card-front,
+    .flip-card-back {
+      min-height: 450px;
+    }
+  }
+</style>

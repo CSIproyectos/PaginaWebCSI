@@ -1,51 +1,608 @@
 ﻿---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../img/soluciones/deteccionDeIncendios/20170118_185417_Original.webp';
+import fireLiteLogo from '../img/soluciones/deteccionDeIncendios/logo_firelite.webp';
+import flirLogo from '../img/inicio/logo_flir.webp';
+import plantaTecoman from '../img/soluciones/deteccionDeIncendios/Planta-Industrial-Tecoman.webp';
+import mantenimientoQueretaro from '../img/soluciones/deteccionDeIncendios/Mantenimiento-integral-en-planta-industrial-queretaro.webp';
+import terminalManzanillo from '../img/soluciones/deteccionDeIncendios/Timsa.webp';
+import controlEvacuacion from '../img/soluciones/deteccionDeIncendios/Control de evacuación .png';
+import dashboardVuwall from '../img/soluciones/deteccionDeIncendios/dashboard-vuwall.webp';
+import nomStps from '../img/soluciones/deteccionDeIncendios/NOM-002-STPS.png';
+import tiempoRespuesta from '../img/soluciones/deteccionDeIncendios/Mejora en el tiempo de respuesta.png';
+import camaraVigilancia from '../img/soluciones/deteccionDeIncendios/IMG_0195.webp';
+import controlAcceso from '../img/soluciones/deteccionDeIncendios/IMG_0220.webp';
 ---
 
 <Layout 
   title="Detección de Incendios - CSI"
   description="Sistemas de detección temprana de incendios con monitoreo térmico y cumplimiento de normativas NFPA y NOM."
 >
-  <!--Página en Desarrollo -->
-  <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900">
-    <div class="container-custom px-6 py-20 text-center">
-      <div class="max-w-3xl mx-auto">
-        <!-- Icono -->
-        <div class="mb-8 flex justify-center">
-          <div class="w-32 h-32 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
-            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+  <!-- Hero Section -->
+  <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <Image 
+        src={heroImage}
+        alt="Detección de Incendios"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70"></div>
+    </div>
+    
+    <div class="container-custom px-6 relative z-10 text-center text-white">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+        Detección de Incendios
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
+        y Evacuación Inteligente
+      </p>
+    </div>
+  </section>
+
+  <!-- Seguridad Proactiva -->
+  <section class="section-padding bg-white">
+    <div class="container-custom px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">
+        Seguridad proactiva en zonas de alto riesgo
+      </h2>
+      
+      <p class="text-lg text-gray-700 max-w-4xl mx-auto text-center mb-12">
+        En Proyectos CSI desarrollamos soluciones de detección de incendios diseñadas para proteger instalaciones críticas, activos, procesos y personal. Integramos tecnologías avanzadas para prevención temprana, notificación rápida y evacuación eficiente en industrias con alto nivel de exigencia operativa.
+      </p>
+    </div>
+  </section>
+
+  <!-- Detección y Evacuación de Incendios -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+        Detección y evacuación de incendios
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Detección -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
             </svg>
           </div>
+          <h3 class="font-bold text-lg mb-3">Detección</h3>
+          <p class="text-gray-600 text-sm">Convencional y direccionable con dispositivos ópticos, térmicos y estaciones manuales.</p>
         </div>
-        
-        <!-- Título -->
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-          Detección de Incendios
-        </h1>
-        
-        <!-- Badge -->
-        <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
-          <div class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-          <span class="text-white font-semibold">Página en Desarrollo</span>
+
+        <!-- Monitoreo -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-3">Monitoreo</h3>
+          <p class="text-gray-600 text-sm">Cámaras térmicas radiométricas FLIR para monitoreo de temperatura en áreas críticas.</p>
         </div>
-        
-        <!-- Descripción -->
-        <p class="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed">
-          Estamos trabajando en brindarte la mejor experiencia. Pronto encontrarás aquí información detallada sobre nuestras soluciones de detección de incendios.
-        </p>
-        
-        <!-- Botones -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/contacto" class="btn-primary bg-white text-primary-900 hover:bg-gray-100">
-            Solicitar Información
-          </a>
-          <a href="/soluciones" class="btn-primary bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm">
-            Ver Otras Soluciones
-          </a>
+
+        <!-- Notificación -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-3">Notificación</h3>
+          <p class="text-gray-600 text-sm">Sistemas de notificación visual y sonora, incluyendo estrobos y bocinas.</p>
+        </div>
+
+        <!-- Evacuación -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-3">Evacuación</h3>
+          <p class="text-gray-600 text-sm">Evacuación inteligente con control de personal, listado en tiempo real y puntos de reunión digitales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aliados Estratégicos -->
+  <section class="section-padding bg-white">
+    <div class="container-custom px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+        Nuestros aliados estratégicos
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Fire-Lite Alarms -->
+        <div class="bg-white rounded-xl p-8 shadow-md border border-gray-100">
+          <div class="h-48 flex items-center justify-center mb-6">
+            <Image 
+              src={fireLiteLogo}
+              alt="Fire-Lite Alarms by Honeywell"
+              class="h-40 w-auto object-contain"
+              style="mix-blend-mode: darken;"
+            />
+          </div>
+          <p class="text-gray-600 text-center italic">
+            Sistemas de alarma contra incendios confiables y económicos para instalaciones pequeñas y medianas.
+          </p>
+        </div>
+
+        <!-- Notifier -->
+        <div class="bg-white rounded-xl p-8 shadow-md border border-gray-100">
+          <div class="h-48 flex items-center justify-center mb-6">
+            <div class="text-center">
+              <h3 class="text-5xl font-bold text-red-600 mb-2">NOTIFIER</h3>
+              <p class="text-base text-gray-500">by Honeywell</p>
+            </div>
+          </div>
+          <p class="text-gray-600 text-center italic">
+            Soluciones de detección de incendios con integración inteligente para proyectos complejos y de gran escala.
+          </p>
+        </div>
+
+        <!-- Edwards -->
+        <div class="bg-white rounded-xl p-8 shadow-md border border-gray-100">
+          <div class="h-48 flex items-center justify-center mb-6">
+            <div class="text-center">
+              <h3 class="text-5xl font-bold text-gray-700 mb-2">EDWARDS</h3>
+            </div>
+          </div>
+          <p class="text-gray-600 text-center italic">
+            Tecnología de detección y notificación de incendios con enfoque en entornos industriales y comerciales exigentes.
+          </p>
+        </div>
+
+        <!-- Teledyne FLIR -->
+        <div class="bg-white rounded-xl p-8 shadow-md border border-gray-100">
+          <div class="h-48 flex items-center justify-center mb-6">
+            <Image 
+              src={flirLogo}
+              alt="Teledyne FLIR"
+              class="h-40 w-auto object-contain"
+              style="mix-blend-mode: darken;"
+            />
+          </div>
+          <p class="text-gray-600 text-center italic">
+            Cámaras térmicas y sensores infrarrojos para detección temprana de calor y monitoreo en tiempo real.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problemáticas -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+        ¿Qué problemáticas resolvemos?
+      </h2>
+
+      <div class="max-w-5xl mx-auto space-y-6">
+        <!-- Problema 1 -->
+        <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Sistemas de Detección:</h3>
+              <p class="text-gray-600">Retrasos en la detección o falsas alarmas por sistemas obsoletos o sin mantenimiento.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Problema 2 -->
+        <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Evacuación y Personal:</h3>
+              <p class="text-gray-600">Falta de trazabilidad en evacuaciones y asistencia de personal.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Problema 3 -->
+        <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Riesgo Operativo:</h3>
+              <p class="text-gray-600">Riesgo operativo en líneas de producción con materiales combustibles.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Problema 4 -->
+        <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Cumplimiento Normativo:</h3>
+              <p class="text-gray-600">Incumplimiento normativo frente a auditorías o certificaciones internas y externas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Problema 5 -->
+        <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12M8 12h12m-12 5h12m-16 0h.01M4 12h.01M4 7h.01" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Coordinación y Respuesta:</h3>
+              <p class="text-gray-600">Descoordinación entre seguridad, H&S y mantenimiento ante incidentes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Casos Reales -->
+  <section class="section-padding bg-white">
+    <div class="container-custom px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+        Casos reales de implementación
+      </h2>
+
+      <p class="text-center text-gray-600 mb-16 text-base leading-relaxed">
+        <span class="hidden md:inline">Pasa el cursor sobre las tarjetas para ver más detalles</span>
+        <span class="md:hidden">Toca las tarjetas para ver más detalles</span>
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Caso 1: Planta Industrial Tecomán -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
+                <Image 
+                  src={plantaTecoman}
+                  alt="Planta industrial en Tecomán, Colima"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+                  <h3 class="text-white text-lg md:text-xl font-bold mb-2">Planta industrial</h3>
+                  <p class="text-sm text-gray-300">Tecomán, Colima</p>
+                  <div class="mt-4 text-white/90 text-sm">
+                    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="h-full bg-white rounded-2xl p-5 md:p-6 flex flex-col justify-between shadow-xl border-2 border-red-600">
+                <div>
+                  <h3 class="text-red-700 text-base md:text-lg font-bold mb-3">Planta Industrial Tecomán</h3>
+                  <div class="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-700">
+                    <div>
+                      <p class="font-semibold text-gray-900">Alcance:</p>
+                      <p>Se implementaron cámaras radiométricas FLIR para monitorear zonas de alto riesgo, detectando incrementos de temperatura y previniendo incendios.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Tecnología:</p>
+                      <p>Fire-Lite Alarms, notificación visual y sonora integrada.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Resultado:</p>
+                      <p>Detección confiable y cumplimiento con normativas locales de seguridad.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-3">
+                  <span class="text-xs text-gray-500">
+                    <span class="hidden md:inline">Mueve el cursor fuera</span>
+                    <span class="md:hidden">Toca nuevamente</span>
+                    para regresar
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Caso 2: Mantenimiento Integral Querétaro -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
+                <Image 
+                  src={mantenimientoQueretaro}
+                  alt="Mantenimiento integral en planta industrial – Querétaro"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+                  <h3 class="text-white text-lg md:text-xl font-bold mb-2">Mantenimiento integral</h3>
+                  <p class="text-sm text-gray-300">Planta industrial – Querétaro</p>
+                  <div class="mt-4 text-white/90 text-sm">
+                    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="h-full bg-white rounded-2xl p-5 md:p-6 flex flex-col justify-between shadow-xl border-2 border-blue-600">
+                <div>
+                  <h3 class="text-blue-700 text-base md:text-lg font-bold mb-3">Mantenimiento Querétaro</h3>
+                  <div class="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-700">
+                    <div>
+                      <p class="font-semibold text-gray-900">Alcance:</p>
+                      <p>Servicio de mantenimiento preventivo y correctivo para sistemas de detección y notificación, que incluye revisión de cableado y pruebas funcionales.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Tecnología:</p>
+                      <p>Notifier by Honeywell, sensores inteligentes direccionables.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Resultado:</p>
+                      <p>Continuidad operativa y cumplimiento NFPA72 certificado anualmente.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-3">
+                  <span class="text-xs text-gray-500">
+                    <span class="hidden md:inline">Mueve el cursor fuera</span>
+                    <span class="md:hidden">Toca nuevamente</span>
+                    para regresar
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Caso 3: Terminal Manzanillo -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
+                <Image 
+                  src={terminalManzanillo}
+                  alt="Terminal Internacional de Manzanillo, Colima"
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
+                  <h3 class="text-white text-lg md:text-xl font-bold mb-2">Terminal Internacional</h3>
+                  <p class="text-sm text-gray-300">Manzanillo, Colima</p>
+                  <div class="mt-4 text-white/90 text-sm">
+                    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="h-full bg-white rounded-2xl p-5 md:p-6 flex flex-col justify-between shadow-xl border-2 border-green-600">
+                <div>
+                  <h3 class="text-green-700 text-base md:text-lg font-bold mb-3">Terminal Manzanillo</h3>
+                  <div class="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-700">
+                    <div>
+                      <p class="font-semibold text-gray-900">Alcance:</p>
+                      <p>Se instaló un sistema de detección de incendios en un almacén para proteger activos y cumplir normativas, resultando en detección oportuna y menos falsas alarmas.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Tecnología:</p>
+                      <p>Notifier direccionable, cámaras térmicas FLIR, integración con control de acceso.</p>
+                    </div>
+                    <div>
+                      <p class="font-semibold text-gray-900">Resultado:</p>
+                      <p>Detección temprana en zonas críticas y respuesta coordinada ante emergencias.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-3">
+                  <span class="text-xs text-gray-500">
+                    <span class="hidden md:inline">Mueve el cursor fuera</span>
+                    <span class="md:hidden">Toca nuevamente</span>
+                    para regresar
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios Clave -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+        Beneficios clave
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Beneficio 1 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+          <div class="h-48 overflow-hidden">
+            <Image 
+              src={controlAcceso}
+              alt="Detección temprana"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-gray-900 mb-2 text-center">
+              Detección temprana y monitoreo térmico continuo
+            </h3>
+          </div>
+        </div>
+
+        <!-- Beneficio 2 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+          <div class="h-48 overflow-hidden">
+            <Image 
+              src={camaraVigilancia}
+              alt="Integración con control de acceso"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-gray-900 mb-2 text-center">
+              Integración con control de acceso y video vigilancia
+            </h3>
+          </div>
+        </div>
+
+        <!-- Beneficio 3 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+          <div class="h-48 overflow-hidden">
+            <Image 
+              src={dashboardVuwall}
+              alt="Paneles de operación"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-gray-900 mb-2 text-center">
+              Paneles de fácil operación y escalabilidad modular
+            </h3>
+          </div>
+        </div>
+
+        <!-- Beneficio 4 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+          <div class="h-48 overflow-hidden">
+            <Image 
+              src={nomStps}
+              alt="Cumplimiento normativo"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-gray-900 mb-2 text-center">
+              Compatible con NOM-002-STPS, NFPA72 y políticas de auditoría
+            </h3>
+          </div>
+        </div>
+
+        <!-- Beneficio 5 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+          <div class="h-48 overflow-hidden">
+            <Image 
+              src={controlEvacuacion}
+              alt="Control de evacuación"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-gray-900 mb-2 text-center">
+              Control de evacuación con Mustering (personas presentes y ausentes)
+            </h3>
+          </div>
+        </div>
+
+        <!-- Beneficio 6 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+          <div class="h-48 overflow-hidden">
+            <Image 
+              src={tiempoRespuesta}
+              alt="Mejora en tiempo de respuesta"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-gray-900 mb-2 text-center">
+              Mejora en el tiempo de respuesta y coordinación interdepartamental
+            </h3>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </Layout>
+
+<style>
+  .flip-card {
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner,
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    top: 0;
+    left: 0;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card:hover,
+  .flip-card.flipped {
+    z-index: 10;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .flip-card-front svg:last-child {
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @media (max-width: 640px) {
+    .flip-card,
+    .flip-card-inner,
+    .flip-card-front,
+    .flip-card-back {
+      min-height: 450px;
+    }
+  }
+</style>
