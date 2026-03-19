@@ -1,24 +1,393 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import portadaImg from '@/img/sectores/contacto/portada.jpg';
 ---
 
 <Layout
-  title="Contacto - Proyectos CSI"
-  description="Página en desarrollo."
+  title="Contacto | Proyectos CSI"
+  description="Contáctanos para soluciones tecnológicas personalizadas. Estamos disponibles para atender tus consultas y ayudarte a transformar tu negocio."
 >
-  <section class="min-h-screen flex items-center justify-center bg-gray-50">
-    <div class="container-custom text-center">
-      <div class="max-w-2xl mx-auto">
-        <h1 class="mb-6 text-primary-900">Página en Desarrollo</h1>
-        <p class="text-xl text-gray-600 mb-8">
-          Estamos trabajando en esta sección. Pronto estará disponible.
+  <!-- Hero -->
+  <section class="relative h-80 md:h-96 flex items-center justify-center overflow-hidden" style={`background-image: url(${portadaImg.src}); background-size: cover; background-position: center;`}>
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative text-center text-white px-4 max-w-3xl z-10">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">Contacto</h1>
+      <p class="text-lg md:text-xl text-gray-100 drop-shadow">Estamos aquí para ayudarte. Ponte en contacto con nuestro equipo</p>
+    </div>
+  </section>
+
+  <!-- Información de Contacto -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="text-center max-w-4xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-5">Información de Contacto</h2>
+        <p class="text-lg text-gray-600">
+          Contáctanos de la manera que prefieras. Nos comprometeremos a responder lo antes posible.
         </p>
-        <a href="/" class="btn-primary">
-          Volver al Inicio
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <!-- Teléfono -->
+        <div class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
+          <div class="flex justify-center mb-4">
+            <svg class="w-12 h-12 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Teléfono</h3>
+          <a href="tel:+523341708104" class="text-lg text-gray-700 hover:text-gray-900 font-semibold underline">
+            +52 33 4170 8104
+          </a>
+        </div>
+
+        <!-- Dirección -->
+        <div class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
+          <div class="flex justify-center mb-4">
+            <svg class="w-12 h-12 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Dirección</h3>
+          <a href="https://maps.google.com/?q=Nicolás+Bravo+527A+Colima+Centro+Colima" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-gray-900 underline">
+            <p class="font-semibold">Nicolás Bravo 527A</p>
+            <p>Colima Centro, Colima</p>
+          </a>
+        </div>
+
+        <!-- Email -->
+        <div class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
+          <div class="flex justify-center mb-4">
+            <svg class="w-12 h-12 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Email</h3>
+          <a href="mailto:info@proyectoscsi.mx" class="text-lg text-gray-700 hover:text-gray-900 font-semibold underline">
+            info@proyectoscsi.mx
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapa de Ubicación -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center max-w-4xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-5">Ubicación</h2>
+        <p class="text-lg text-gray-600">
+          Visítanos en nuestra oficina en Colima. Contamos con personal disponible para atenderte presencialmente.
+        </p>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden shadow-lg" style="height: 450px;">
+        <iframe 
+          width="100%" 
+          height="100%" 
+          frameborder="0" 
+          style="border:0" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.6236569385253!2d-103.73387!3d19.2426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842b5d4d7d7d7d7d%3A0x7d7d7d7d7d7d7d7d!2sNicol%C3%A1s%20Bravo%20527A%2C%20Centro%2C%2028000%20Colima%2C%20Col.!5e0!3m2!1ses!2smx!4v1234567890" 
+          allowfullscreen="" 
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de Contacto -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <!-- Lado Izquierdo: Texto -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            ¿Tienes algo en mente?
+          </h2>
+          <p class="text-lg text-gray-600 leading-relaxed mb-8">
+            Cuéntanos cómo podemos ayudarte. Nuestro equipo de especialistas está listo para analizar tu situación y ofrecerte soluciones tecnológicas adaptadas a tus necesidades.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <svg class="h-6 w-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-gray-900">Respuesta Rápida</h3>
+                <p class="text-gray-600">Respondemos en menos de 24 horas</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <svg class="h-6 w-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-gray-900">Asesoría Gratuita</h3>
+                <p class="text-gray-600">Consultoría inicial sin costo</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <svg class="h-6 w-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-gray-900">Soluciones Personalizadas</h3>
+                <p class="text-gray-600">Adaptamos nuestros servicios a tu negocio</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Redes Sociales -->
+          <div class="mt-10">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Síguenos en Redes Sociales</h3>
+            <div class="flex space-x-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="bg-black hover:bg-gray-900 text-white p-3 rounded-lg transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="bg-black hover:bg-gray-900 text-white p-3 rounded-lg transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="bg-black hover:bg-gray-900 text-white p-3 rounded-lg transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lado Derecho: Formulario -->
+        <div>
+          <div class="bg-gray-50 rounded-2xl p-8 md:p-10">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Cuéntanos cómo podemos ayudarte</h3>
+            
+            <form id="contactForm" class="space-y-5" method="POST" action="https://api.hsforms.com/submissions/v3/integration/submit/48200776/1f9de24a-9e8a-4c7c-8c5e-4d9cf2356f20">
+              <!-- Nombre -->
+              <div>
+                <label for="nombre" class="block text-sm font-semibold text-gray-900 mb-2">
+                  Nombre <span class="text-red-600">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Nombre y Apellido"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
+                />
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label for="email" class="block text-sm font-semibold text-gray-900 mb-2">
+                  Email <span class="text-red-600">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="correo@example.com"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
+                />
+              </div>
+
+              <!-- Teléfono -->
+              <div>
+                <label for="telefono" class="block text-sm font-semibold text-gray-900 mb-2">
+                  Teléfono <span class="text-red-600">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  placeholder="+52 33 4170 8104"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
+                />
+              </div>
+
+              <!-- Asunto -->
+              <div>
+                <label for="asunto" class="block text-sm font-semibold text-gray-900 mb-2">
+                  Asunto <span class="text-red-600">*</span>
+                </label>
+                <select
+                  id="asunto"
+                  name="asunto"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent appearance-none bg-white"
+                >
+                  <option value="">Selecciona un asunto</option>
+                  <option value="Consultoría DevOps">Consultoría DevOps</option>
+                  <option value="Videoseguridad">Videoseguridad</option>
+                  <option value="Ciberseguridad">Ciberseguridad</option>
+                  <option value="Cableado Estructurado">Cableado Estructurado</option>
+                  <option value="Control de Acceso">Control de Acceso</option>
+                  <option value="Desarrollo de Software">Desarrollo de Software</option>
+                  <option value="Detección de Incendios">Detección de Incendios</option>
+                  <option value="Energías Alternativas">Energías Alternativas</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+
+              <!-- Mensaje -->
+              <div>
+                <label for="mensaje" class="block text-sm font-semibold text-gray-900 mb-2">
+                  Mensaje <span class="text-red-600">*</span>
+                </label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  placeholder="Por favor escribe tu mensaje"
+                  required
+                  rows="5"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent resize-none"
+                ></textarea>
+              </div>
+
+              <p class="text-sm text-gray-600">
+                <span class="text-red-600">*</span> Campos obligatorios
+              </p>
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                class="w-full bg-black text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-900 transition-colors mt-6"
+              >
+                ENVIAR
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="section-padding bg-gray-900 text-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          ¿Listo para Transformar tu Negocio?
+        </h2>
+        <p class="text-xl text-gray-300 mb-10">
+          Contáctanos hoy y descubre cómo nuestras soluciones pueden ayudarte a alcanzar tus objetivos.
+        </p>
+        <a href="#contactForm" class="inline-block bg-white text-gray-900 px-8 py-3 md:px-10 md:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg">
+          Ir al Formulario
         </a>
       </div>
     </div>
   </section>
 </Layout>
 
-    
+<script type="module">
+  const contactForm = document.getElementById('contactForm');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+      
+      try {
+        const formData = {
+          nombre: document.getElementById('nombre').value.trim(),
+          email: document.getElementById('email').value.trim(),
+          telefono: document.getElementById('telefono').value.trim(),
+          asunto: document.getElementById('asunto').value.trim(),
+          mensaje: document.getElementById('mensaje').value.trim(),
+        };
+        
+        // Validar que no estén vacíos
+        if (!formData.nombre || !formData.email || !formData.telefono || !formData.asunto || !formData.mensaje) {
+          alert('Por favor completa todos los campos requeridos.');
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+          return;
+        }
+        
+        const nombreParts = formData.nombre.split(' ');
+        const firstname = nombreParts[0];
+        const lastname = nombreParts.slice(1).join(' ') || '';
+        
+        const hsData = {
+          fields: [
+            { name: 'firstname', value: firstname },
+            { name: 'lastname', value: lastname },
+            { name: 'email', value: formData.email },
+            { name: 'phone', value: formData.telefono },
+            { name: 'subject', value: formData.asunto },
+            { name: 'message', value: formData.mensaje },
+          ],
+          context: {
+            pageUri: window.location.href,
+            pageName: 'Contacto - Proyectos CSI',
+          },
+        };
+        
+        const portalId = '48200776';
+        const formId = '1f9de24a-9e8a-4c7c-8c5e-4d9cf2356f20';
+        
+        const response = await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(hsData),
+          mode: 'cors',
+        });
+        
+        if (response.ok) {
+          alert('¡Gracias! Hemos recibido tu mensaje. Nos pondremos en contacto pronto.');
+          contactForm.reset();
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        } else if (response.status === 400) {
+          // Error de validación en HubSpot
+          const errorData = await response.json().catch(() => ({}));
+          console.error('Error de validación:', errorData);
+          alert('Hubo un error con los datos. Por favor verifica y intenta de nuevo.');
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        } else {
+          alert('Hubo un error al enviar el formulario. Por favor intenta de nuevo.');
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }
+      } catch (error) {
+        console.error('Error al enviar:', error);
+        alert('Error de conexión. Por favor verifica tu conexión a internet e intenta de nuevo.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  }
+</script>
+
+<style>
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+</style>

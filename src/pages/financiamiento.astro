@@ -1,24 +1,348 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import portadaImg from '@/img/sectores/financiamiento/portada.jpg';
+
+export const prerender = true;
 ---
 
-<Layout
-  title="Financiamiento - Proyectos CSI"
-  description="Página en desarrollo."
->
-  <section class="min-h-screen flex items-center justify-center bg-gray-50">
-    <div class="container-custom text-center">
-      <div class="max-w-2xl mx-auto">
-        <h1 class="mb-6 text-primary-900">Página en Desarrollo</h1>
-        <p class="text-xl text-gray-600 mb-8">
-          Estamos trabajando en esta sección. Pronto estará disponible.
+<Layout title="Financiamiento y Arrendamiento | Proyectos CSI" description="Opciones de financiamiento y arrendamiento flexible para soluciones tecnológicas. Tasas competitivas, plazos accesibles y sin pago inicial.">
+  <!-- Hero -->
+  <section class="relative h-96 md:h-[28rem] flex items-center justify-center overflow-hidden" style={`background-image: url(${portadaImg.src}); background-size: cover; background-position: center;`}>
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative text-center text-white px-4 max-w-3xl z-10">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">Financiamiento y Arrendamiento de Soluciones Tecnológicas</h1>
+      <p class="text-lg md:text-xl text-primary-100 drop-shadow">Tasas competitivas, plazos flexibles y acceso inmediato a tecnología de vanguardia</p>
+    </div>
+  </section>
+
+  <!-- Introducción -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Inversión Tecnológica Accesible</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          En Proyectos CSI sabemos que la tecnología es una inversión importante. Por eso contamos con <strong>servicios financieros mediante socios especializados</strong> que ofrecen planes de financiamiento y arrendamiento con las mejores tasas del mercado.
         </p>
-        <a href="/" class="btn-primary">
-          Volver al Inicio
+        <p class="text-lg text-gray-600 leading-relaxed">
+          No solo buscamos ofrecerte las mejores condiciones económicas, sino también demostrar cómo nuestras soluciones te ayudarán a mejorar la eficiencia operativa, reducir costos y proteger tu inversión a largo plazo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opciones de Financiamiento y Arrendamiento -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center max-w-4xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-5">Opciones de Pago Flexibles</h2>
+        <p class="text-xl text-gray-700">
+          Elige la opción que mejor se adapte a tu modelo de negocio y flujo de caja.
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <!-- Financiamiento Accordion -->
+        <div class="accordion-item border border-gray-300 rounded-lg mb-4 overflow-hidden">
+          <button class="accordion-header w-full px-6 py-4 bg-white text-left hover:bg-gray-50 transition-colors flex items-center justify-between" data-accordion="financiamiento">
+            <span class="text-xl font-bold text-primary-900">Financiamiento</span>
+            <svg class="w-6 h-6 text-primary-900 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </button>
+          <div class="accordion-content hidden bg-gray-50 px-6 py-6" id="content-financiamiento">
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-primary-900 font-bold mr-3">•</span>
+                <span><strong>Monto mínimo:</strong> De $10,000 USD en adelante.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-900 font-bold mr-3">•</span>
+                <span><strong>Plazos:</strong> 18, 24, 30 y 36 meses adaptados a tu necesidad.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-900 font-bold mr-3">•</span>
+                <span><strong>Cobertura:</strong> 100% de la solución (hardware, software y servicios de instalación).</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-900 font-bold mr-3">•</span>
+                <span><strong>Flexibilidad:</strong> Planes personalizados según tus necesidades y capacidad de pago.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-900 font-bold mr-3">•</span>
+                <span><strong>Tasas competitivas:</strong> Entre las mejores del mercado, ajustadas a tu perfil e historial crediticio.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Arrendamiento Accordion -->
+        <div class="accordion-item border border-gray-300 rounded-lg mb-4 overflow-hidden">
+          <button class="accordion-header w-full px-6 py-4 bg-white text-left hover:bg-gray-50 transition-colors flex items-center justify-between" data-accordion="arrendamiento">
+            <span class="text-xl font-bold text-primary-900">Arrendamiento</span>
+            <svg class="w-6 h-6 text-primary-900 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </button>
+          <div class="accordion-content hidden bg-gray-50 px-6 py-6" id="content-arrendamiento">
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-primary-900 font-bold mr-3">•</span>
+                <span><strong>Montos:</strong> Desde $10,000 USD, sin límite de inversión.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-900 font-bold mr-3">•</span>
+                <span><strong>Plazos estándar:</strong> 24 y 36 meses con opción a renovar.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-900 font-bold mr-3">•</span>
+                <span><strong>Aplicabilidad:</strong> Para productos tecnológicos, hardware y soluciones de infraestructura.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-900 font-bold mr-3">•</span>
+                <span><strong>Sin pago inicial:</strong> Comienza a usar la tecnología sin desembolso upfront.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-900 font-bold mr-3">•</span>
+                <span><strong>Mantenimiento incluido:</strong> Soporte técnico y actualizaciones durante el arrendamiento.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Capacitación Accordion -->
+        <div class="accordion-item border border-gray-300 rounded-lg mb-4 overflow-hidden">
+          <button class="accordion-header w-full px-6 py-4 bg-white text-left hover:bg-gray-50 transition-colors flex items-center justify-between" data-accordion="capacitacion">
+            <span class="text-xl font-bold text-primary-900">Capacitación y Soporte</span>
+            <svg class="w-6 h-6 text-primary-900 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </button>
+          <div class="accordion-content hidden bg-gray-50 px-6 py-6" id="content-capacitacion">
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-primary-900 font-bold mr-3">•</span>
+                <span><strong>Entrenamiento inicial:</strong> Incluido en instalación de la solución.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-900 font-bold mr-3">•</span>
+                <span><strong>Soporte técnico 24/7:</strong> Assistencia continua durante todo el contrato.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-900 font-bold mr-3">•</span>
+                <span><strong>Actualizaciones:</strong> Acceso a nuevas funcionalidades y mejoras de seguridad.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary-900 font-bold mr-3">•</span>
+                <span><strong>Asesoría continua:</strong> Acompañamiento durante la implementación y operación.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparativa -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="text-center max-w-4xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-5">Financiamiento vs Arrendamiento</h2>
+        <p class="text-xl text-gray-700">
+          Elige la opción que mejor se adapte a tu negocio
+        </p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-black text-white">
+              <th class="border border-black px-4 py-3 text-left font-bold">Característica</th>
+              <th class="border border-black px-4 py-3 text-center font-bold">Financiamiento</th>
+              <th class="border border-black px-4 py-3 text-center font-bold">Arrendamiento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-semibold text-gray-900">Propiedad del Activo</td>
+              <td class="border border-gray-300 px-4 py-3 text-center text-gray-700">Tuya al final del plazo</td>
+              <td class="border border-gray-300 px-4 py-3 text-center text-gray-700">Del proveedor</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-semibold text-gray-900">Pago Inicial</td>
+              <td class="border border-gray-300 px-4 py-3 text-center text-gray-700">Opcional</td>
+              <td class="border border-gray-300 px-4 py-3 text-center text-gray-700">Sin pago inicial</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-semibold text-gray-900">Mantenimiento</td>
+              <td class="border border-gray-300 px-4 py-3 text-center text-gray-700">Tu responsabilidad</td>
+              <td class="border border-gray-300 px-4 py-3 text-center text-gray-700">Incluido</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-semibold text-gray-900">Plazos</td>
+              <td class="border border-gray-300 px-4 py-3 text-center text-gray-700">18 a 36 meses</td>
+              <td class="border border-gray-300 px-4 py-3 text-center text-gray-700">24 a 36 meses</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-semibold text-gray-900">Actualizaciones</td>
+              <td class="border border-gray-300 px-4 py-3 text-center text-gray-700">Costo adicional</td>
+              <td class="border border-gray-300 px-4 py-3 text-center text-gray-700">Incluidas</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-semibold text-gray-900">Riesgo Obsolescencia</td>
+              <td class="border border-gray-300 px-4 py-3 text-center text-gray-700">Para ti</td>
+              <td class="border border-gray-300 px-4 py-3 text-center text-gray-700">Para el proveedor</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso de Solicitud -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center max-w-4xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-5">Proceso Simple y Rápido</h2>
+        <p class="text-xl text-gray-700">
+          Aprobación en menos de 48 horas
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+        <div class="text-center">
+          <div class="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Consulta Inicial</h3>
+          <p class="text-gray-600">Nos contactas y analizamos tu necesidad específica.</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Propuesta Personalizada</h3>
+          <p class="text-gray-600">Recibe cotización y opciones de financiamiento adaptadas.</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Aprobación</h3>
+          <p class="text-gray-600">Aprobación rápida con nuestros socios financieros.</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Implementación</h3>
+          <p class="text-gray-600">Instalación, capacitación y puesta en operación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="section-padding bg-primary-900 text-white">
+    <div class="container-custom">
+      <div class="text-center max-w-4xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-5">Ventajas de Financiar tu Solución</h2>
+        <p class="text-xl text-primary-100">
+          Invierte en tecnología sin impacto inmediato a tu caja
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="bg-white/10 rounded-xl p-6">
+          <svg class="w-12 h-12 text-primary-200 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">Preserva Flujo de Caja</h3>
+          <p class="text-primary-100">Distribuye el costo en cuotas manejables sin afectar tu capital de trabajo.</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6">
+          <svg class="w-12 h-12 text-primary-200 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">Acceso Inmediato</h3>
+          <p class="text-primary-100">Comienza a usar la tecnología desde el primer día sin esperar a acumular capital.</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6">
+          <svg class="w-12 h-12 text-primary-200 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">Tasas Competitivas</h3>
+          <p class="text-primary-100">Entre las mejores del mercado, con transparencia en todos los términos.</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6">
+          <svg class="w-12 h-12 text-primary-200 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">Plazos Flexibles</h3>
+          <p class="text-primary-100">Elige entre múltiples opciones de plazo según tu capacidad de pago.</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6">
+          <svg class="w-12 h-12 text-primary-200 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">Soporte Continuo</h3>
+          <p class="text-primary-100">Acompañamiento técnico y comercial durante toda la relación.</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6">
+          <svg class="w-12 h-12 text-primary-200 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">ROI Rápido</h3>
+          <p class="text-primary-100">Las soluciones se pagan solas con la eficiencia y ahorros que generan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          ¿Necesitas Financiar tu Solución Tecnológica?
+        </h2>
+        <p class="text-xl text-gray-600 mb-10">
+          Contacta con nuestro equipo para conocer las opciones que se adaptan mejor a tu negocio. Aprobación rápida, términos flexibles y atención personalizada.
+        </p>
+        <a href="/contacto" class="inline-block bg-primary-900 text-white px-8 py-3 md:px-10 md:py-4 rounded-lg font-semibold hover:bg-primary-800 transition-colors text-lg">
+          Solicitar Información de Financiamiento
         </a>
       </div>
     </div>
   </section>
 </Layout>
 
- 
+<script>
+  document.querySelectorAll('.accordion-header').forEach(button => {
+    button.addEventListener('click', () => {
+      const accordionId = button.getAttribute('data-accordion');
+      const content = document.getElementById(`content-${accordionId}`);
+      const svg = button.querySelector('svg');
+      
+      // Cerrar otros acordeones
+      document.querySelectorAll('.accordion-header').forEach(otherButton => {
+        const otherAccordionId = otherButton.getAttribute('data-accordion');
+        if (otherAccordionId !== accordionId) {
+          const otherContent = document.getElementById(`content-${otherAccordionId}`);
+          const otherSvg = otherButton.querySelector('svg');
+          if (otherContent && otherSvg) {
+            otherContent.classList.add('hidden');
+            otherSvg.style.transform = 'rotate(0deg)';
+          }
+        }
+      });
+      
+      // Toggle actual
+      if (content && svg) {
+        content.classList.toggle('hidden');
+        svg.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
+      }
+    });
+  });
+</script>
+
+<style>
+  .accordion-content {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .accordion-header svg {
+    transition: transform 0.3s ease-in-out;
+  }
+</style>
