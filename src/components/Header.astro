@@ -5,7 +5,7 @@ const navItems = [
   { name: 'Financiamiento', href: '/financiamiento' },
   { name: 'Contacto', href: '/contacto' },
   { name: 'Soporte', href: '/soporte' },
-  { name: 'Blog', href: 'https://proyectoscsi.mx/blog' },
+  { name: 'Blog', href: 'https://blog.proyectoscsi.mx/' },
 ];
 
 const solucionesDropdown = [
@@ -19,9 +19,9 @@ const solucionesDropdown = [
 
 const sectoresDropdown = [
   { name: 'Corporativo', href: '/sectores/corporativo' },
-  { name: 'Hotelería', href: '/sectores/hoteleria' },
+  { name: 'Hospitalidad', href: '/sectores/hospitalidad' },
   { name: 'Logística y Recintos Fiscales', href: '/sectores/logistica-recintos-fiscales' },
-  { name: 'Manufactura', href: '/sectores/manufactura' },
+  { name: 'Industria y Producción', href: '/sectores/industria-y-produccion' },
   { name: 'Minería', href: '/sectores/mineria' },
 ];
 
@@ -157,6 +157,8 @@ const isHomePage = currentPath === '/';
         {navItems.slice(2).map((item) => (
           <a
             href={item.href}
+            target={item.href.startsWith('http') ? '_blank' : undefined}
+            rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
             class:list={[
               'nav-link text-sm lg:text-base font-medium transition-colors',
               currentPath === item.href
@@ -213,7 +215,7 @@ const isHomePage = currentPath === '/';
         
         <!-- YouTube -->
         <a 
-          href="https://www.youtube.com/@proyectoscsi" 
+          href="https://www.youtube.com/@ProyectosCSI-x7e" 
           target="_blank"
           rel="noopener noreferrer"
           class="nav-link text-gray-700 hover:text-red-600 transition-colors"
@@ -369,6 +371,8 @@ const isHomePage = currentPath === '/';
         {navItems.slice(2).map((item) => (
           <a
             href={item.href}
+            target={item.href.startsWith('http') ? '_blank' : undefined}
+            rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
             class:list={[
               'block px-3 py-2 rounded-md text-base font-medium',
               currentPath === item.href

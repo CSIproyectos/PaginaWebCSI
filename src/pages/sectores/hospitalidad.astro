@@ -1,0 +1,343 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import portadaImg from '@/img/sectores/hospitalidad/portada.jpg';
+import infraestructuraImg from '@/img/sectores/hospitalidad/infrastructuraRed.png';
+---
+
+<Layout
+  title="Sector Hospitalidad - Proyectos CSI"
+  description="Soluciones innovadoras de seguridad, conectividad y tecnología para transformar la experiencia en hoteles y el sector de hospitalidad."
+>
+  <!-- Hero -->
+  <section class="relative text-white py-32 md:py-40 overflow-hidden">
+    <div class="absolute inset-0">
+      <img 
+        src={portadaImg.src} 
+        alt="Sector Hospitalidad" 
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+    <div class="relative container-custom text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-2xl">Sector Hospitalidad</h1>
+      <p class="text-xl md:text-2xl text-white max-w-3xl mx-auto drop-shadow-lg">
+        Transformamos la experiencia de hospitalidad con tecnología innovadora que garantiza seguridad, eficiencia y confort
+      </p>
+    </div>
+  </section>
+
+  <!-- Introducción -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="text-xl text-gray-700 leading-relaxed mb-6">
+          En Proyectos CSI nos dedicamos a ofrecer soluciones innovadoras que transforman la experiencia en el <strong>sector de la hospitalidad</strong>. 
+          Desde el instante en que sus huéspedes cruzan la puerta, nuestro objetivo es que su estancia sea verdaderamente <strong>inolvidable y memorable</strong>.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Nuestra tecnología de video seguridad con análisis inteligente, conectividad inalámbrica de alta calidad y sistemas de ciberseguridad 
+          crean un entorno seguro, cómodo y eficiente para huéspedes y personal.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Soluciones de WiFi -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="inline-flex items-center justify-center mb-6">
+            <svg class="w-20 h-20 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+            </svg>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Soluciones de WiFi de Alta Calidad</h2>
+          <p class="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+            Nuestra conectividad inalámbrica proporciona todas las herramientas necesarias para que tanto los huéspedes 
+            como el personal disfruten de un entorno conectado y eficiente.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+            <div class="flex items-center mb-4">
+              <svg class="w-12 h-12 text-primary-900 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              <h3 class="text-xl font-bold text-gray-900">Experiencia del Huésped</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Conexión de alta velocidad en todas las áreas del hotel, permitiendo a los huéspedes mantenerse conectados 
+              con streaming, videollamadas y navegación sin interrupciones.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+            <div class="flex items-center mb-4">
+              <svg class="w-12 h-12 text-primary-900 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <h3 class="text-xl font-bold text-gray-900">Eficiencia Operativa</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Red robusta que permite al personal acceder a sistemas de gestión hotelera, procesar reservaciones 
+              y coordinar servicios en tiempo real desde cualquier ubicación.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+            <div class="flex items-center mb-4">
+              <svg class="w-12 h-12 text-primary-900 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <h3 class="text-xl font-bold text-gray-900">Seguridad de Red</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Redes segregadas que separan el tráfico de huéspedes del tráfico operativo, 
+              protegiendo datos sensibles y garantizando privacidad.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+            <div class="flex items-center mb-4">
+              <svg class="w-12 h-12 text-primary-900 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <h3 class="text-xl font-bold text-gray-900">Cobertura Total</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              WiFi mesh que elimina zonas muertas en habitaciones, salones, áreas comunes, 
+              exteriores y estacionamientos con cobertura uniforme.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Infraestructura y Ciberseguridad -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1 relative h-96 rounded-2xl shadow-2xl overflow-hidden">
+          <img 
+            src={infraestructuraImg.src} 
+            alt="Infraestructura de Red" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="inline-flex items-center justify-center mb-6">
+            <svg class="w-16 h-16 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+            </svg>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Infraestructura y Ciberseguridad</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            Nuestras soluciones de cableado estructurado y ciberseguridad aseguran que las operaciones de administración 
+            y producción se realicen de manera <strong>segura y confiable</strong>.
+          </p>
+          <div class="space-y-4 mb-6">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-primary-900 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-1">Cableado Estructurado</h4>
+                <p class="text-gray-600">Infraestructura de red robusta y escalable que soporta todas las operaciones críticas del hotel.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-primary-900 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-1">Protección de Datos</h4>
+                <p class="text-gray-600">Medidas avanzadas de ciberseguridad que protegen datos sensibles y la privacidad de los huéspedes.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-primary-900 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-1">Entorno Digital Seguro</h4>
+                <p class="text-gray-600">Protección contra amenazas cibernéticas, garantizando transacciones seguras y confianza del cliente.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sistemas de Seguridad Electrónica -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center justify-center mb-6">
+            <svg class="w-16 h-16 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Sistemas de Seguridad Electrónica</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            Nuestras soluciones integran alarmas, control de acceso y monitoreo remoto con <strong>análisis inteligente</strong> 
+            y detección de incidentes en tiempo real.
+          </p>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Tecnología Avanzada:</h3>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-gray-900 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700"><strong>Monitoreo de ocupación:</strong> Prevención de hacinamiento y control de aforo</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-gray-900 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700"><strong>Cámaras de alta definición:</strong> Vigilancia completa con analíticos de video</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-gray-900 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700"><strong>Protección de perímetros:</strong> Detección automática de intrusiones</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-gray-900 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700"><strong>Seguimiento de contactos:</strong> Facilita trazabilidad en caso necesario</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-gray-900 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700"><strong>Optimización de recursos:</strong> Monitoreo de niveles de limpieza y energía</span>
+            </li>
+          </ul>
+          <p class="text-gray-600 leading-relaxed">
+            La integración de estos sistemas permite una respuesta rápida ante cualquier eventualidad, 
+            garantizando la seguridad de huéspedes y personal en todo momento.
+          </p>
+        </div>
+        <div class="relative h-96 rounded-2xl shadow-2xl overflow-hidden">
+          <video 
+            src="/videos/hospitalidad/sistemasSeguridad.mov" 
+            autoplay 
+            loop 
+            muted 
+            playsinline
+            class="w-full h-full object-cover"
+          >
+            Tu navegador no soporta videos.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="section-padding bg-primary-900 text-white">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Beneficios de trabajar con Proyectos CSI</h2>
+        <p class="text-xl text-primary-100 max-w-3xl mx-auto">
+          Al elegir nuestras soluciones, transformarás tu hotel en un espacio más seguro, eficiente y memorable
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-colors">
+          <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Seguridad Mejorada</h3>
+          <p class="text-primary-100">Protección completa de huéspedes, personal e instalaciones con monitoreo 24/7 y respuesta inmediata.</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-colors">
+          <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Experiencia Excepcional</h3>
+          <p class="text-primary-100">Conectividad de alta calidad y ambiente seguro que crea estancias memorables e inolvidables.</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-colors">
+          <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Eficiencia Operativa</h3>
+          <p class="text-primary-100">Gestión optimizada de recursos, personal más productivo y reducción de costos operativos.</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-colors">
+          <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Privacidad Garantizada</h3>
+          <p class="text-primary-100">Ciberseguridad avanzada que protege datos sensibles y garantiza la confianza de tus huéspedes.</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-colors">
+          <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Reputación Fortalecida</h3>
+          <p class="text-primary-100">Mayor tranquilidad y confianza que se traduce en mejores reseñas y recomendaciones.</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-colors">
+          <div class="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Gestión Inteligente</h3>
+          <p class="text-primary-100">Análisis de datos en tiempo real para optimizar limpieza, energía y control de aforo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="section-padding bg-gray-50 relative overflow-hidden">
+    <div class="container-custom text-center relative z-10">
+      <div class="max-w-4xl mx-auto">
+        <div class="inline-flex items-center justify-center mb-6">
+          <svg class="w-20 h-20 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          </svg>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight text-gray-900">
+          ¿Listo para transformar tu establecimiento en un espacio más seguro y eficiente?
+        </h2>
+        <p class="text-xl md:text-2xl text-gray-700 mb-10 leading-relaxed">
+          Contáctanos hoy mismo y descubre cómo podemos crear una experiencia de hospitalidad inigualable. <br class="hidden md:block"/>
+          <span class="font-semibold">¡Da el primer paso hacia la excelencia en hospitalidad!</span>
+        </p>
+        <a href="/contacto" class="inline-flex items-center gap-3 bg-primary-900 text-white px-12 py-5 rounded-xl font-bold text-lg hover:bg-primary-800 transition-all shadow-2xl hover:shadow-3xl transform hover:scale-105 hover:-translate-y-1">
+          <span>Solicitar Consultoría Gratuita</span>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

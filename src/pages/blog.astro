@@ -1,0 +1,147 @@
+---
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout
+  title="Blog | Proyectos CSI"
+  description="Accede a nuestro blog para leer artículos sobre soluciones tecnológicas, seguridad, ciberseguridad, videovigilancia y más."
+>
+  <!-- Redirección automática al blog -->
+  <script>
+    // Abrir el blog en una nueva ventana después de 2 segundos
+    setTimeout(() => {
+      window.open('https://blog.proyectoscsi.mx/', '_blank');
+    }, 2000);
+  </script>
+
+  <!-- Hero Section -->
+  <section class="relative h-80 md:h-96 flex items-center justify-center overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800">
+    <div class="relative text-center text-white px-4 max-w-3xl z-10">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">Blog</h1>
+      <p class="text-lg md:text-xl text-gray-200 drop-shadow">Artículos, noticias e información relevante sobre soluciones tecnológicas</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="section-padding bg-white">
+    <div class="container-custom max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Bienvenido a Nuestro Blog</h2>
+        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+          En nuestro blog encontrarás artículos especializados sobre ciberseguridad, soluciones tecnológicas, videovigilancia, 
+          control de acceso y muchos otros temas de interés relacionados con tu negocio. Mantente informado con las mejores prácticas 
+          y tendencias del sector.
+        </p>
+        
+        <div class="bg-gray-50 rounded-lg p-8 mb-8">
+          <p class="text-gray-700 mb-4">
+            <strong class="text-gray-900">Te estamos redirigiendo al blog...</strong>
+          </p>
+          <p class="text-sm text-gray-600 mb-6">
+            Si no eres redirigido automáticamente en unos momentos, haz clic en el botón de abajo.
+          </p>
+          <a 
+            href="https://blog.proyectoscsi.mx/" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
+          >
+            Ir al Blog →
+          </a>
+        </div>
+      </div>
+
+      <!-- Contenido Destacado -->
+      <div class="mt-16">
+        <h3 class="text-2xl font-bold text-gray-900 mb-8">Temas que Encontrará en Nuestro Blog</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Ciberseguridad -->
+          <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start mb-4">
+              <svg class="w-8 h-8 text-gray-900 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              <h4 class="text-lg font-bold text-gray-900">Ciberseguridad</h4>
+            </div>
+            <p class="text-gray-600">Artículos sobre protección de datos, seguridad en la nube y mejores prácticas.</p>
+          </div>
+
+          <!-- Videovigilancia -->
+          <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start mb-4">
+              <svg class="w-8 h-8 text-gray-900 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              <h4 class="text-lg font-bold text-gray-900">Videovigilancia</h4>
+            </div>
+            <p class="text-gray-600">Guías sobre sistemas de vigilancia, cámaras IP y monitoreo profesional.</p>
+          </div>
+
+          <!-- Control de Acceso -->
+          <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start mb-4">
+              <svg class="w-8 h-8 text-gray-900 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+              </svg>
+              <h4 class="text-lg font-bold text-gray-900">Control de Acceso</h4>
+            </div>
+            <p class="text-gray-600">Información sobre sistemas biométricos y soluciones de acceso avanzadas.</p>
+          </div>
+
+          <!-- Tecnología -->
+          <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start mb-4">
+              <svg class="w-8 h-8 text-gray-900 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5.36 0a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z" />
+              </svg>
+              <h4 class="text-lg font-bold text-gray-900">Soluciones Tecnológicas</h4>
+            </div>
+            <p class="text-gray-600">Tendencias, innovación y mejores prácticas en el mundo de la tecnología.</p>
+          </div>
+
+          <!-- Infraestructura -->
+          <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start mb-4">
+              <svg class="w-8 h-8 text-gray-900 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+              <h4 class="text-lg font-bold text-gray-900">Infraestructura</h4>
+            </div>
+            <p class="text-gray-600">Cableado estructurado, redes y diseño de infraestructura profesional.</p>
+          </div>
+
+          <!-- Noticias y Actualizaciones -->
+          <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start mb-4">
+              <svg class="w-8 h-8 text-gray-900 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v4m-9 8h4" />
+              </svg>
+              <h4 class="text-lg font-bold text-gray-900">Noticias e Industria</h4>
+            </div>
+            <p class="text-gray-600">Últimas noticias, actualizaciones y cambios en el sector de la tecnología.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        Mantente Informado
+      </h2>
+      <p class="text-xl text-gray-600 mb-10">
+        Accede ahora a nuestro blog y descubre contenido de valor para tu empresa.
+      </p>
+      <a 
+        href="https://blog.proyectoscsi.mx/" 
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors text-lg"
+      >
+        Ir al Blog de Proyectos CSI →
+      </a>
+    </div>
+  </section>
+</Layout>

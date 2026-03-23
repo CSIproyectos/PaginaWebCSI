@@ -1,0 +1,273 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import portadaImg from '@/img/sectores/industria y produccion/portada.jpg';
+import videoSeguridad from '@/img/sectores/industria y produccion/videoseguridad.mp4';
+import redImg from '@/img/sectores/industria y produccion/red.jpg';
+---
+
+<Layout
+  title="Sector Industria y Produccion - Proyectos CSI"
+  description="Soluciones para industria y produccion: videoseguridad, control de acceso, redes industriales, ciberseguridad, energia y comunicaciones unificadas para una operacion segura y eficiente."
+>
+  <!-- Hero -->
+  <section class="relative text-white py-32 md:py-40 overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src={portadaImg.src}
+        alt="Sector Industria y Produccion"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+    <div class="relative container-custom text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-2xl">Sector Industria y Producción</h1>
+      <p class="text-xl md:text-2xl text-white max-w-4xl mx-auto drop-shadow-lg">
+        Mejoramos la seguridad, trazabilidad y continuidad operativa en plantas de manufactura con tecnología integral.
+      </p>
+    </div>
+  </section>
+
+  <!-- Introduccion -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-5xl mx-auto text-center">
+        <p class="text-xl text-gray-700 leading-relaxed mb-6">
+          En manufactura, la eficiencia y la seguridad son claves para competir. En Proyectos CSI integramos
+          <strong>videoseguridad, control de acceso, redes empresariales, ciberseguridad y comunicaciones unificadas</strong>
+          para optimizar procesos, prevenir riesgos y acelerar la toma de decisiones.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Diseñamos soluciones escalables para que su operacion mantenga continuidad, reduzca tiempos de inactividad
+          y eleve la productividad con informacion en tiempo real.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Soluciones clave -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center max-w-4xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-5">Soluciones Clave Para Plantas de Producción</h2>
+        <p class="text-xl text-gray-700">
+          Tecnología conectada para proteger activos, automatizar operaciones y fortalecer la resiliencia industrial.
+        </p>
+      </div>
+
+      <div class="max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+            <svg class="w-12 h-12 text-primary-900 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Videoseguridad y Trazabilidad</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Monitoreo continuo con evidencia de alta calidad para identificar fallas, prevenir accidentes y reducir perdidas.
+            </p>
+          </article>
+
+          <article class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+            <svg class="w-12 h-12 text-primary-900 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Control de Acceso</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Acceso por perfiles para areas criticas, mayor control interno y protección de personal, activos e informacion sensible.
+            </p>
+          </article>
+
+          <article class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+            <svg class="w-12 h-12 text-primary-900 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+            </svg>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Redes y Ciberseguridad</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Operaciones de administración y producción protegidas contra amenazas que pueden detener su planta.
+            </p>
+          </article>
+
+          <article class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+            <svg class="w-12 h-12 text-primary-900 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Redes Industriales e IoT</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Cableado estructurado, fibra optica y conectividad inalambrica para automatización y mantenimiento predictivo.
+            </p>
+          </article>
+
+          <article class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+            <svg class="w-12 h-12 text-primary-900 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 4v-4z" />
+            </svg>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Comunicaciones Unificadas</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Chats, videollamadas y telefonia IP para coordinar equipos de planta, mantenimiento y administración en tiempo real.
+            </p>
+          </article>
+
+          <article class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+            <svg class="w-12 h-12 text-primary-900 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 21h6m-3-3v3m-7-8h14M5 13V7a2 2 0 012-2h10a2 2 0 012 2v6" />
+            </svg>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Energia y Calidad Electrica</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Supervisamos el consumo y la estabilidad energetica para evitar interrupciones y proteger equipos criticos.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videoseguridad -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Videoseguridad Para Prevención y Mantenimiento Predictivo</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            La videoseguridad industrial aporta visibilidad en cada etapa del proceso productivo. Con analiticos de video y
+            camaras termicas es posible detectar anomalias antes de que deriven en fallas mayores.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-gray-900 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700"><strong>Trazabilidad total:</strong> seguimiento de lotes, turnos y eventos criticos.</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-gray-900 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700"><strong>Reduccion de riesgos:</strong> menos accidentes, daños y retrasos.</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-gray-900 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700"><strong>Mantenimiento preventivo:</strong> detección temprana de sobrecalentamientos y comportamiento anormal.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="relative h-96 rounded-2xl shadow-2xl overflow-hidden">
+          <video src={videoSeguridad} autoplay loop muted playsinline class="w-full h-full object-cover">
+            Tu navegador no soporta videos.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Infraestructura -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1 relative h-96 rounded-2xl shadow-2xl overflow-hidden">
+          <img src={redImg.src} alt="Infraestructura y redes industriales" class="w-full h-full object-cover" />
+        </div>
+        <div class="order-1 lg:order-2">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Infraestructura Robusta Para Operacion Continua</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            Una red industrial bien disenada sostiene la automatización, integra dispositivos IoT y facilita la comunicación
+            entre lineas de producción, almacenes y areas administrativas.
+          </p>
+          <div class="space-y-4">
+            <div class="bg-white p-4 rounded-lg">
+              <h3 class="font-bold text-gray-900 mb-1">Red Empresarial y OT Segura</h3>
+              <p class="text-gray-600">Segmentación, monitoreo y controles para proteger sistemas criticos de producción.</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg">
+              <h3 class="font-bold text-gray-900 mb-1">Conectividad de Alto Rendimiento</h3>
+              <p class="text-gray-600">Cableado estructurado y fibra para datos en tiempo real y menor latencia operativa.</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg">
+              <h3 class="font-bold text-gray-900 mb-1">Energia de Calidad</h3>
+              <p class="text-gray-600">Estabilidad electrica y gestion energetica para disminuir paros y fallas en equipos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="section-padding bg-primary-900 text-white">
+    <div class="container-custom">
+      <div class="text-center max-w-4xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Beneficios de Trabajar Con Proyectos CSI</h2>
+        <p class="text-xl text-primary-100">
+          Integramos seguridad, conectividad y productividad para que su planta opere con mayor control y rentabilidad.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white/10 rounded-xl p-6">
+          <svg class="w-10 h-10 text-white mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">Mas Productividad</h3>
+          <p class="text-primary-100">Menos interrupciones y mejores tiempos de respuesta en linea de producción.</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6">
+          <svg class="w-10 h-10 text-white mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">Mayor Seguridad</h3>
+          <p class="text-primary-100">Protección de personal, activos e información con enfoque preventivo.</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6">
+          <svg class="w-10 h-10 text-white mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">Decisiones Rapidas</h3>
+          <p class="text-primary-100">Datos y video en tiempo real para actuar con precisión ante cualquier evento.</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6">
+          <svg class="w-10 h-10 text-white mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">Continuidad Operativa</h3>
+          <p class="text-primary-100">Ciberseguridad y calidad de energia que reducen el riesgo de paros no programados.</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6">
+          <svg class="w-10 h-10 text-white mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7H5v12h12V9m0-2h2a2 2 0 012 2v12a2 2 0 01-2 2h-2.5" />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">Escalabilidad</h3>
+          <p class="text-primary-100">Infraestructura lista para crecer junto con sus metas de produccion.</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6">
+          <svg class="w-10 h-10 text-white mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 19H9a6 6 0 0112 0v1H9v-1a6 6 0 016-6" />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">Colaboracion Efectiva</h3>
+          <p class="text-primary-100">Equipos conectados por chat, videoconferencia y telefonia IP en toda la organización.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom text-center">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Transforme Su Planta Con Tecnología Que Si Genera Resultados</h2>
+        <p class="text-xl md:text-2xl text-gray-700 mb-10 leading-relaxed">
+          Descubra como nuestras soluciones de videoseguridad, control de acceso, redes, ciberseguridad y comunicaciones
+          pueden elevar la eficiencia de su operación.
+        </p>
+        <a
+          href="/contacto"
+          class="inline-flex items-center gap-3 bg-primary-900 text-white px-12 py-5 rounded-xl font-bold text-lg hover:bg-primary-800 transition-all shadow-2xl transform hover:scale-105"
+        >
+          <span>Solicitar Consultoria Gratuita</span>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
