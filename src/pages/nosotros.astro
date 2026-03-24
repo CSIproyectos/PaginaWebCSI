@@ -1,23 +1,411 @@
 ---
-import Layout from '@/layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Layout from "@/layouts/Layout.astro";
+import portadaImg from "@/img/nosotros/fondo-nosotros.svg";
+import CruzAzul from '../img/nosotros/cruzAzul.webp';
 ---
 
 <Layout
-  title="Nosotros - Proyectos CSI"
-  description="Página en desarrollo."
+  title="Contacto | Proyectos CSI"
+  description="Contáctanos para soluciones tecnológicas personalizadas. Estamos disponibles para atender tus consultas y ayudarte a transformar tu negocio."
 >
-  <section class="min-h-screen flex items-center justify-center bg-gray-50">
-    <div class="container-custom text-center">
-      <div class="max-w-2xl mx-auto">
-        <h1 class="mb-6 text-primary-900">Página en Desarrollo</h1>
-        <p class="text-xl text-gray-600 mb-8">
-          Estamos trabajando en esta sección. Pronto estará disponible.
+  <!-- Hero -->
+  <section
+    class="relative h-80 md:h-96 flex items-center justify-center overflow-hidden"
+    style={`background-image: url(${portadaImg.src}); background-size: cover; background-position: 25% 40%;`}
+  >
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative text-center text-white px-4 max-w-3xl z-10">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+        Nosotros
+      </h1>
+      <p class="text-lg md:text-xl text-gray-100 drop-shadow">
+        Tu aliado estratégico en tecnología, infraestructura y seguridad.      
+      </p>
+    </div>
+  </section>
+
+  <!-- Información de Contacto -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Especialistas en Integración Tecnológica        
+        </h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6 text-justify">
+          Somos una empresa especializada en la integración de proyectos de
+          tecnología de la información (TI), y nuestra principal misión es
+          ofrecer soluciones innovadoras adaptadas a las necesidades de empresas
+          que operan en diversos sectores. Entre estos sectores se incluyen el
+          portuario, la manufactura, la alimentación, corporativos, recintos
+          fiscales, logística y hospitalidad. Nuestro objetivo fundamental es
+          ayudar a las organizaciones a mantenerse actualizadas con los avances
+          tecnológicos, proporcionando herramientas de colaboración y
+          comunicación que faciliten la conexión entre todos los miembros del
+          equipo.
         </p>
-        <a href="/" class="btn-primary">
-          Volver al Inicio
+        <p class="text-lg text-gray-700 leading-relaxed mb-6 text-justify">
+          Nos comprometemos a proteger la información valiosa de nuestros
+          clientes, asegurando que se distribuya de manera segura, ya sea a
+          través de conexiones por cable o de forma inalámbrica. De esta manera,
+          todos los involucrados en las operaciones diarias de la empresa pueden
+          acceder a la información necesaria para desempeñar sus funciones de
+          manera efectiva.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6 text-justify">
+          Además, nos preocupamos por cuidar los activos, el capital humano y
+          los procesos de nuestros clientes mediante la implementación de
+          sistemas de seguridad electrónica avanzados. Esta atención a la
+          seguridad no solo protege los recursos de las empresas, sino que
+          también garantiza que sus operaciones se realicen de manera más segura
+          y eficiente. Como resultado, esto contribuye a optimizar su
+          rendimiento y a aumentar la productividad general, permitiendo que
+          nuestras soluciones tengan un impacto positivo y duradero en el éxito
+          de las organizaciones que servimos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- trabajar con nosotros -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center max-w-4xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-5">
+          Ventajas de colaborar con Proyectos CSI
+        </h2>
+        <p class="text-xl text-gray-700">
+          En líneas generales, entre las ventajas más determinantes de colaborar
+          con Proyectos CSI están las siguientes:
+        </p>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-6xl mx-auto"
+      >
+        <div class="text-center">
+          <div
+            class="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 18L9 11.25l4.306 4.307a.512.512 0 00.73 0L21.75 8.25m-10.5 6L21.75 3m0 0h-5.25m5.25 0v5.25"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Reducción de costos
+          </h3>
+          <p class="text-gray-600">Optimización de recursos financieros.</p>
+        </div>
+        <div class="text-center">
+          <div
+            class="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Mayor productividad
+          </h3>
+          <p class="text-gray-600">Procesos de trabajo más eficientes.</p>
+        </div>
+        <div class="text-center">
+          <div
+            class="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Mejor Retorno de Inversión (ROI)
+          </h3>
+          <p class="text-gray-600">Maximización del capital invertido.</p>
+        </div>
+        <div class="text-center">
+          <div
+            class="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Diferenciación competitiva
+          </h3>
+          <p class="text-gray-600">Destaca en el mercado y atrae clientes.</p>
+        </div>
+        <div class="text-center">
+          <div
+            class="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Satisfacción del cliente
+          </h3>
+          <p class="text-gray-600">Fidelización y crecimiento a largo plazo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mision, vision y Valores -->
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      
+      <div class="card-container">
+        <div class="card">
+            <h2>Misión</h2>
+            <p>Nuestra misión es ofrecer soluciones de vanguardia en tecnología de la información y la comunicación (TIC) para todos nuestros clientes, tanto los que ya confían en nosotros como aquellos que están por venir. Queremos brindar un servicio excepcional, lleno de propuestas sólidas, innovadoras y creativas que realmente marquen la diferencia. Nuestro objetivo es crear soluciones integrales que impulsen el éxito de los proyectos de nuestros clientes.</p>        </div>
+
+        <div class="card">
+            <h2>Visión</h2>
+            <p>Aspiramos a ser una empresa líder en el desarrollo de tecnologías de última generación a nivel nacional. Nos comprometemos a adaptarnos a las cambiantes condiciones del mercado y a las necesidades de nuestros clientes, siempre buscando estar un paso adelante.</p>
+        </div>
+
+        <div class="card">
+            <h2>Valores</h2>
+            <ul>
+                <li>Aplicación continua del conocimiento</li>
+                <li>Trabajo en Equipo.</li>
+                <li>Búsqueda de mejora constante.</li>
+                <li>Respeto por la Ecología.</li>
+                <li>Lealtad a nuestros clientes y proveedores.</li>
+            </ul>
+        </div>
+    </div>
+
+
+    </div>
+  </section>
+
+
+   <!-- Casos de exito -->
+  <section class="section-padding bg-gray-50">
+    <div class="container">
+        <h1 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-5">Casos de Éxito</h1>
+        
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h3>Modernización de la red en CYCNA de Oriente</h3>
+                <p>
+                    Optimizamos la infraestructura de red en CYCNA de Oriente, mejorando 
+                    la transmisión de datos y fortaleciendo la seguridad con tecnología de 
+                    fibra óptica y switches avanzados. Ahora, la planta está lista para la 
+                    digitalización y expansión de su conectividad sin interrupciones.
+                </p>
+                
+                <ul class="features-list">
+                    <li><strong>Optimización de red</strong> con fibra óptica y switches avanzados.</li>
+                    <li><strong>Mayor velocidad y estabilidad</strong> en la transmisión de datos.</li>
+                    <li><strong>Seguridad reforzada</strong> para la infraestructura digital.</li>
+                    <li><strong>Listos para la digitalización</strong> y expansión tecnológica.</li>
+                </ul>
+                
+                <a href="#" class="btn-more">Ver mas</a>
+            </div>
+
+            <div class="image-content">
+                <Image
+                  src={CruzAzul}
+                  alt="Planta Cementera Cruz Azul"
+                  loading="lazy"
+                  class="w-full h-auto object-cover lg:h-[650px] lg:scale-105"
+                />
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="section-padding bg-gray-900 text-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          ¿Listo para Transformar tu Negocio?
+        </h2>
+        <p class="text-xl text-gray-300 mb-10">
+          Contáctanos hoy y descubre cómo nuestras soluciones pueden ayudarte a
+          alcanzar tus objetivos.
+        </p>
+        <a
+          href="#contactForm"
+          class="inline-block bg-white text-gray-900 px-8 py-3 md:px-10 md:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+        >
+          Ir al Formulario
         </a>
       </div>
     </div>
   </section>
 </Layout>
 
+<script type="module">
+  const contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Enviando...";
+
+      try {
+        const formData = {
+          nombre: document.getElementById("nombre").value.trim(),
+          email: document.getElementById("email").value.trim(),
+          telefono: document.getElementById("telefono").value.trim(),
+          asunto: document.getElementById("asunto").value.trim(),
+          mensaje: document.getElementById("mensaje").value.trim(),
+        };
+
+        // Validar que no estén vacíos
+        if (
+          !formData.nombre ||
+          !formData.email ||
+          !formData.telefono ||
+          !formData.asunto ||
+          !formData.mensaje
+        ) {
+          alert("Por favor completa todos los campos requeridos.");
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+          return;
+        }
+
+        const nombreParts = formData.nombre.split(" ");
+        const firstname = nombreParts[0];
+        const lastname = nombreParts.slice(1).join(" ") || "";
+
+        const hsData = {
+          fields: [
+            { name: "firstname", value: firstname },
+            { name: "lastname", value: lastname },
+            { name: "email", value: formData.email },
+            { name: "phone", value: formData.telefono },
+            { name: "subject", value: formData.asunto },
+            { name: "message", value: formData.mensaje },
+          ],
+          context: {
+            pageUri: window.location.href,
+            pageName: "Contacto - Proyectos CSI",
+          },
+        };
+
+        const portalId = "48200776";
+        const formId = "1f9de24a-9e8a-4c7c-8c5e-4d9cf2356f20";
+
+        const response = await fetch(
+          `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(hsData),
+            mode: "cors",
+          },
+        );
+
+        if (response.ok) {
+          alert(
+            "¡Gracias! Hemos recibido tu mensaje. Nos pondremos en contacto pronto.",
+          );
+          contactForm.reset();
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        } else if (response.status === 400) {
+          // Error de validación en HubSpot
+          const errorData = await response.json().catch(() => ({}));
+          console.error("Error de validación:", errorData);
+          alert(
+            "Hubo un error con los datos. Por favor verifica y intenta de nuevo.",
+          );
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        } else {
+          alert(
+            "Hubo un error al enviar el formulario. Por favor intenta de nuevo.",
+          );
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }
+      } catch (error) {
+        console.error("Error al enviar:", error);
+        alert(
+          "Error de conexión. Por favor verifica tu conexión a internet e intenta de nuevo.",
+        );
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  }
+</script>
+
+<style>
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+</style>
