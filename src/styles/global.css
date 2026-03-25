@@ -214,6 +214,8 @@ img {
     border-radius: 8px;
     font-weight: bold;
     transition: background 0.3s;
+    margin-top: 70px; 
+    padding: 12px 35px;
 }
 
 .btn-more:hover {
