@@ -1,6 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import portadaImg from "@/img/nosotros/fondo-nosotros.svg";
+import portadaImg from "@/img/casos-de-exito/fondoCasosDeExito.webp";
 
 // 1. Leemos todos los PDFs de la carpeta. Vite nos devolverá las URLs públicas.
 const pdfFiles = import.meta.glob('/src/casos-de-exito/*.pdf', { query: '?url', import: 'default', eager: true });
@@ -36,20 +36,30 @@ const casosExito = Object.entries(pdfFiles).map(([path, url]) => {
     class="relative h-80 md:h-96 flex items-center justify-center overflow-hidden"
     style={`background-image: url(${portadaImg.src}); background-size: cover; background-position: 25% 40%;`}
   >
-    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 bg-black/30"></div>
     <div class="relative text-center text-white px-4 max-w-3xl z-10">
       <h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
         Casos de Éxito
       </h1>
       <p class="text-lg md:text-xl text-gray-100 drop-shadow">
-        Tu aliado estratégico en tecnología, infraestructura y seguridad.      
+        Resultados Reales con Nuestros Clientes      
       </p>
     </div>
   </section>
 
   <section class="section-padding bg-gray-50 py-16">
     <div class="container-custom mx-auto px-4 max-w-6xl">
-      
+      <div class="max-w-4xl mx-auto text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Conoce los proyectos en los que generamos soluciones reales y medibles para nuestros clientes.
+        </h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6 text-justify">
+          En nuestra empresa, cada proyecto representa una oportunidad para generar valor real. A través de estos casos de éxito, podrás conocer cómo hemos implementado soluciones tecnológicas adaptadas a distintas necesidades, logrando resultados eficientes, escalables y confiables.
+        </p>
+         
+      </div>
+
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {casosExito.map((caso) => (
           <a 
