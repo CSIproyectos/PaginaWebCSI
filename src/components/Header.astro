@@ -488,18 +488,32 @@ const isHomePage = currentPath === '/';
     const desktopDropdown = document.querySelector('.soluciones-dropdown');
     const desktopMenu = desktopDropdown?.querySelector('.dropdown-menu');
     const desktopArrow = desktopDropdown?.querySelector('.dropdown-arrow');
+    const desktopLink = desktopDropdown?.querySelector('a');
+    let isDesktopOpen = false;
 
-    if (desktopDropdown && desktopMenu) {
-      desktopDropdown.addEventListener('mouseenter', () => {
-        desktopMenu.classList.remove('opacity-0', 'invisible');
-        desktopMenu.classList.add('opacity-100', 'visible');
-        desktopArrow?.classList.add('rotate-180');
+    if (desktopDropdown && desktopMenu && desktopLink) {
+      desktopLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        isDesktopOpen = !isDesktopOpen;
+        if (isDesktopOpen) {
+          desktopMenu.classList.remove('opacity-0', 'invisible');
+          desktopMenu.classList.add('opacity-100', 'visible');
+          desktopArrow?.classList.add('rotate-180');
+        } else {
+          desktopMenu.classList.add('opacity-0', 'invisible');
+          desktopMenu.classList.remove('opacity-100', 'visible');
+          desktopArrow?.classList.remove('rotate-180');
+        }
       });
 
-      desktopDropdown.addEventListener('mouseleave', () => {
-        desktopMenu.classList.add('opacity-0', 'invisible');
-        desktopMenu.classList.remove('opacity-100', 'visible');
-        desktopArrow?.classList.remove('rotate-180');
+      // Cerrar al hacer clic fuera
+      document.addEventListener('click', (e) => {
+        if (e.target && !desktopDropdown.contains(e.target as Node)) {
+          desktopMenu.classList.add('opacity-0', 'invisible');
+          desktopMenu.classList.remove('opacity-100', 'visible');
+          desktopArrow?.classList.remove('rotate-180');
+          isDesktopOpen = false;
+        }
       });
     }
 
@@ -507,18 +521,32 @@ const isHomePage = currentPath === '/';
     const desktopSectoresDropdown = document.querySelector('.sectores-dropdown');
     const desktopSectoresMenu = desktopSectoresDropdown?.querySelector('.dropdown-menu');
     const desktopSectoresArrow = desktopSectoresDropdown?.querySelector('.dropdown-arrow');
+    const desktopSectoresLink = desktopSectoresDropdown?.querySelector('a');
+    let isDesktopSectoresOpen = false;
 
-    if (desktopSectoresDropdown && desktopSectoresMenu) {
-      desktopSectoresDropdown.addEventListener('mouseenter', () => {
-        desktopSectoresMenu.classList.remove('opacity-0', 'invisible');
-        desktopSectoresMenu.classList.add('opacity-100', 'visible');
-        desktopSectoresArrow?.classList.add('rotate-180');
+    if (desktopSectoresDropdown && desktopSectoresMenu && desktopSectoresLink) {
+      desktopSectoresLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        isDesktopSectoresOpen = !isDesktopSectoresOpen;
+        if (isDesktopSectoresOpen) {
+          desktopSectoresMenu.classList.remove('opacity-0', 'invisible');
+          desktopSectoresMenu.classList.add('opacity-100', 'visible');
+          desktopSectoresArrow?.classList.add('rotate-180');
+        } else {
+          desktopSectoresMenu.classList.add('opacity-0', 'invisible');
+          desktopSectoresMenu.classList.remove('opacity-100', 'visible');
+          desktopSectoresArrow?.classList.remove('rotate-180');
+        }
       });
 
-      desktopSectoresDropdown.addEventListener('mouseleave', () => {
-        desktopSectoresMenu.classList.add('opacity-0', 'invisible');
-        desktopSectoresMenu.classList.remove('opacity-100', 'visible');
-        desktopSectoresArrow?.classList.remove('rotate-180');
+      // Cerrar al hacer clic fuera
+      document.addEventListener('click', (e) => {
+        if (e.target && !desktopSectoresDropdown.contains(e.target as Node)) {
+          desktopSectoresMenu.classList.add('opacity-0', 'invisible');
+          desktopSectoresMenu.classList.remove('opacity-100', 'visible');
+          desktopSectoresArrow?.classList.remove('rotate-180');
+          isDesktopSectoresOpen = false;
+        }
       });
     }
 
