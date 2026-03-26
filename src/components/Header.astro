@@ -269,7 +269,7 @@ const isHomePage = currentPath === '/';
     </div>
 
     <!-- Mobile menu -->
-    <div class="mobile-menu hidden md:hidden" id="mobile-menu">
+    <div class="mobile-menu hidden md:hidden bg-blue-50" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1">
         <!-- Inicio -->
         <a
@@ -291,8 +291,8 @@ const isHomePage = currentPath === '/';
             class:list={[
               'w-full text-left px-3 py-2 rounded-md text-base font-medium flex items-center justify-between',
               currentPath === '/soluciones'
-                ? 'bg-gray-100 text-black font-semibold'
-                : 'text-gray-700 hover:bg-gray-100 hover:text-black'
+                ? 'bg-white text-black font-semibold'
+                : 'text-gray-900 hover:bg-white hover:text-black'
             ]}
           >
             Soluciones
@@ -304,14 +304,14 @@ const isHomePage = currentPath === '/';
           <div class="mobile-dropdown-content hidden pl-6 mt-1 space-y-1">
             <a
               href="/soluciones"
-              class="block px-3 py-2 rounded-md text-sm font-semibold text-gray-800 hover:bg-gray-100 hover:text-black"
+              class="block px-3 py-2 rounded-md text-sm font-semibold text-gray-900 hover:bg-white hover:text-black"
             >
               Ver todas las soluciones
             </a>
             {solucionesDropdown.map((item) => (
               <a
                 href={item.href}
-                class="block px-3 py-2 rounded-md text-sm text-gray-600 hover:bg-gray-100 hover:text-black"
+                class="block px-3 py-2 rounded-md text-sm text-gray-800 hover:bg-white hover:text-black"
               >
                 {item.name}
               </a>
@@ -339,8 +339,8 @@ const isHomePage = currentPath === '/';
             class:list={[
               'w-full text-left px-3 py-2 rounded-md text-base font-medium flex items-center justify-between',
               currentPath === '/sectores'
-                ? 'bg-gray-100 text-black font-semibold'
-                : 'text-gray-700 hover:bg-gray-100 hover:text-black'
+                ? 'bg-white text-black font-semibold'
+                : 'text-gray-900 hover:bg-white hover:text-black'
             ]}
           >
             Sectores
@@ -352,14 +352,14 @@ const isHomePage = currentPath === '/';
           <div class="mobile-dropdown-content hidden pl-6 mt-1 space-y-1">
             <a
               href="/sectores"
-              class="block px-3 py-2 rounded-md text-sm font-semibold text-gray-800 hover:bg-gray-100 hover:text-black"
+              class="block px-3 py-2 rounded-md text-sm font-semibold text-gray-900 hover:bg-white hover:text-black"
             >
               Ver todos los sectores
             </a>
             {sectoresDropdown.map((item) => (
               <a
                 href={item.href}
-                class="block px-3 py-2 rounded-md text-sm text-gray-600 hover:bg-gray-100 hover:text-black"
+                class="block px-3 py-2 rounded-md text-sm text-gray-800 hover:bg-white hover:text-black"
               >
                 {item.name}
               </a>
@@ -376,8 +376,8 @@ const isHomePage = currentPath === '/';
             class:list={[
               'block px-3 py-2 rounded-md text-base font-medium',
               currentPath === item.href
-                ? 'bg-gray-100 text-black font-semibold'
-                : 'text-gray-700 hover:bg-gray-100 hover:text-black'
+                ? 'bg-white text-black font-semibold'
+                : 'text-gray-900 hover:bg-white hover:text-black'
             ]}
           >
             {item.name}
