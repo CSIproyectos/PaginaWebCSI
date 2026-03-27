@@ -360,7 +360,7 @@ import imageElegirnos from '../img/soluciones/cableadoEstructurado/elegirnos.web
       
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
         <!-- CEDIS logístico en Querétaro -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <!-- Frente -->
             <div class="flip-card-front">
@@ -410,7 +410,7 @@ import imageElegirnos from '../img/soluciones/cableadoEstructurado/elegirnos.web
         </div>
 
         <!-- Hotel en Guadalajara -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <!-- Frente -->
             <div class="flip-card-front">
@@ -460,7 +460,7 @@ import imageElegirnos from '../img/soluciones/cableadoEstructurado/elegirnos.web
         </div>
 
         <!-- Terminal portuaria en Manzanillo -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <!-- Frente -->
             <div class="flip-card-front">
@@ -510,7 +510,7 @@ import imageElegirnos from '../img/soluciones/cableadoEstructurado/elegirnos.web
         </div>
 
         <!-- Planta Cementera en tecoman -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <!-- Frente -->
             <div class="flip-card-front">
@@ -703,14 +703,18 @@ import imageElegirnos from '../img/soluciones/cableadoEstructurado/elegirnos.web
       transform-style: preserve-3d;
     }
 
-    @media (hover: hover) {
+    /* Desktop: flip con hover */
+    @media (min-width: 768px) {
       .flip-card:hover .flip-card-inner {
         transform: rotateY(180deg);
       }
     }
 
-    .flip-card.flipped .flip-card-inner {
-      transform: rotateY(180deg);
+    /* Mobile: flip con clase .flipped (agregada por JavaScript) */
+    @media (max-width: 767px) {
+      .flip-card.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+      }
     }
 
     .flip-card-front, .flip-card-back {
@@ -802,6 +806,16 @@ import imageElegirnos from '../img/soluciones/cableadoEstructurado/elegirnos.web
     window.moveCarousel = moveCarousel;
     // @ts-ignore
     window.goToSlide = goToSlide;
+
+    // Toggle para tarjetas flip
+    document.addEventListener('DOMContentLoaded', () => {
+      const flipCards = document.querySelectorAll('.flip-card');
+      flipCards.forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('flipped');
+        });
+      });
+    });
   </script>
 
   <!-- CTA Final -->

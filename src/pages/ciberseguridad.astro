@@ -180,7 +180,7 @@ import logistico from '../img/soluciones/ciberseguridad/Terminal-Logistics.webp'
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Caso 1: Recinto Fiscal Manzanillo -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
@@ -232,7 +232,7 @@ import logistico from '../img/soluciones/ciberseguridad/Terminal-Logistics.webp'
         </div>
 
         <!-- Caso 2: Terminal AIFA -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
@@ -284,7 +284,7 @@ import logistico from '../img/soluciones/ciberseguridad/Terminal-Logistics.webp'
         </div>
 
         <!-- Caso 3: Empresa Manufacturera -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
@@ -337,7 +337,7 @@ import logistico from '../img/soluciones/ciberseguridad/Terminal-Logistics.webp'
         </div>
 
         <!-- Caso 4: Operador Logístico -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
@@ -639,6 +639,16 @@ import logistico from '../img/soluciones/ciberseguridad/Terminal-Logistics.webp'
   window.moveComponentesCarousel = moveComponentesCarousel;
   // @ts-ignore
   window.goToComponenteSlide = goToComponenteSlide;
+
+  // Toggle para tarjetas flip
+  document.addEventListener('DOMContentLoaded', () => {
+    const flipCards = document.querySelectorAll('.flip-card');
+    flipCards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+  });
 </script>
 
 <style>
@@ -655,9 +665,18 @@ import logistico from '../img/soluciones/ciberseguridad/Terminal-Logistics.webp'
     transform-style: preserve-3d;
   }
 
-  .flip-card:hover .flip-card-inner,
-  .flip-card.flipped .flip-card-inner {
-    transform: rotateY(180deg);
+  /* Desktop: flip con hover */
+  @media (min-width: 768px) {
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+  }
+
+  /* Mobile: flip con clase .flipped (agregada por JavaScript) */
+  @media (max-width: 767px) {
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
   }
 
   .flip-card-front,
@@ -676,9 +695,16 @@ import logistico from '../img/soluciones/ciberseguridad/Terminal-Logistics.webp'
     transform: rotateY(180deg);
   }
 
-  .flip-card:hover,
-  .flip-card.flipped {
-    z-index: 10;
+  @media (min-width: 768px) {
+    .flip-card:hover {
+      z-index: 10;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .flip-card.flipped {
+      z-index: 10;
+    }
   }
 
   @keyframes pulse {

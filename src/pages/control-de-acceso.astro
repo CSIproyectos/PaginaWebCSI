@@ -270,7 +270,7 @@ import casoIndustria from '../img/soluciones/controlDeAcceso/industriAlimenticia
       
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
         <!-- Recinto fiscal (AIFA - CDMX) -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <!-- Frente -->
             <div class="flip-card-front">
@@ -320,7 +320,7 @@ import casoIndustria from '../img/soluciones/controlDeAcceso/industriAlimenticia
         </div>
 
         <!-- CEDIS en Zapopan, Jalisco -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <!-- Frente -->
             <div class="flip-card-front">
@@ -370,7 +370,7 @@ import casoIndustria from '../img/soluciones/controlDeAcceso/industriAlimenticia
         </div>
 
         <!-- Aeropuerto de Querétaro -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <!-- Frente -->
             <div class="flip-card-front">
@@ -420,7 +420,7 @@ import casoIndustria from '../img/soluciones/controlDeAcceso/industriAlimenticia
         </div>
 
         <!-- Industria alimenticia (CDMX) -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <!-- Frente -->
             <div class="flip-card-front">
@@ -491,15 +491,17 @@ import casoIndustria from '../img/soluciones/controlDeAcceso/industriAlimenticia
     }
 
     /* Hover flip en desktop */
-    @media (hover: hover) {
+    @media (min-width: 768px) {
       .flip-card:hover .flip-card-inner {
         transform: rotateY(180deg);
       }
     }
 
-    /* Click flip (móvil y desktop) */
-    .flip-card.flipped .flip-card-inner {
-      transform: rotateY(180deg);
+    /* Click flip en mobile */
+    @media (max-width: 767px) {
+      .flip-card.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+      }
     }
 
     .flip-card-front, .flip-card-back {
@@ -518,9 +520,16 @@ import casoIndustria from '../img/soluciones/controlDeAcceso/industriAlimenticia
     }
 
     /* Z-index para evitar superposiciones */
-    .flip-card:hover,
-    .flip-card.flipped {
-      z-index: 10;
+    @media (min-width: 768px) {
+      .flip-card:hover {
+        z-index: 10;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .flip-card.flipped {
+        z-index: 10;
+      }
     }
 
     /* Animación de aparición del icono */
@@ -651,5 +660,17 @@ import casoIndustria from '../img/soluciones/controlDeAcceso/industriAlimenticia
     </div>
   </section>
 </Layout>
+
+<script>
+  // Toggle para tarjetas flip
+  document.addEventListener('DOMContentLoaded', () => {
+    const flipCards = document.querySelectorAll('.flip-card');
+    flipCards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+  });
+</script>
 
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>

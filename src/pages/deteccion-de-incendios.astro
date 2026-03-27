@@ -275,7 +275,7 @@ import controlAcceso from '../img/soluciones/deteccionDeIncendios/IMG_0220.webp'
 
       <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <!-- Caso 1: Planta Industrial Tecomán -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
@@ -328,7 +328,7 @@ import controlAcceso from '../img/soluciones/deteccionDeIncendios/IMG_0220.webp'
         </div>
 
         <!-- Caso 2: Mantenimiento Integral Querétaro -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
@@ -381,7 +381,7 @@ import controlAcceso from '../img/soluciones/deteccionDeIncendios/IMG_0220.webp'
         </div>
 
         <!-- Caso 3: Terminal Manzanillo -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <div class="h-full rounded-2xl relative overflow-hidden shadow-lg">
@@ -544,6 +544,18 @@ import controlAcceso from '../img/soluciones/deteccionDeIncendios/IMG_0220.webp'
   </section>
 </Layout>
 
+<script>
+  // Toggle para tarjetas flip
+  document.addEventListener('DOMContentLoaded', () => {
+    const flipCards = document.querySelectorAll('.flip-card');
+    flipCards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+  });
+</script>
+
 <style>
   .flip-card {
     perspective: 1000px;
@@ -558,9 +570,18 @@ import controlAcceso from '../img/soluciones/deteccionDeIncendios/IMG_0220.webp'
     transform-style: preserve-3d;
   }
 
-  .flip-card:hover .flip-card-inner,
-  .flip-card.flipped .flip-card-inner {
-    transform: rotateY(180deg);
+  /* Desktop: flip con hover */
+  @media (min-width: 768px) {
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+  }
+
+  /* Mobile: flip con clase .flipped */
+  @media (max-width: 767px) {
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
   }
 
   .flip-card-front,
@@ -579,9 +600,16 @@ import controlAcceso from '../img/soluciones/deteccionDeIncendios/IMG_0220.webp'
     transform: rotateY(180deg);
   }
 
-  .flip-card:hover,
-  .flip-card.flipped {
-    z-index: 10;
+  @media (min-width: 768px) {
+    .flip-card:hover {
+      z-index: 10;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .flip-card.flipped {
+      z-index: 10;
+    }
   }
 
   @keyframes pulse {

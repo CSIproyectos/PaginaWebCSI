@@ -226,7 +226,7 @@ import casoPlanta from '../img/casos/Planta-de-cemento-tecoman.webp';
       
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
         <!-- Terminal portuaria -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <!-- Frente -->
             <div class="flip-card-front">
@@ -276,7 +276,7 @@ import casoPlanta from '../img/casos/Planta-de-cemento-tecoman.webp';
         </div>
 
         <!-- Hotel -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <!-- Frente -->
             <div class="flip-card-front">
@@ -326,7 +326,7 @@ import casoPlanta from '../img/casos/Planta-de-cemento-tecoman.webp';
         </div>
 
         <!-- Recinto fiscal -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <!-- Frente -->
             <div class="flip-card-front">
@@ -376,7 +376,7 @@ import casoPlanta from '../img/casos/Planta-de-cemento-tecoman.webp';
         </div>
 
         <!-- Planta de cemento -->
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card">
           <div class="flip-card-inner">
             <!-- Frente -->
             <div class="flip-card-front">
@@ -448,15 +448,17 @@ import casoPlanta from '../img/casos/Planta-de-cemento-tecoman.webp';
     }
 
     /* Hover flip en desktop */
-    @media (hover: hover) {
+    @media (min-width: 768px) {
       .flip-card:hover .flip-card-inner {
         transform: rotateY(180deg);
       }
     }
 
-    /* Click flip (móvil y desktop) */
-    .flip-card.flipped .flip-card-inner {
-      transform: rotateY(180deg);
+    /* Click flip en mobile */
+    @media (max-width: 767px) {
+      .flip-card.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+      }
     }
 
     .flip-card-front, .flip-card-back {
@@ -475,9 +477,16 @@ import casoPlanta from '../img/casos/Planta-de-cemento-tecoman.webp';
     }
 
     /* Z-index para evitar superposiciones */
-    .flip-card:hover,
-    .flip-card.flipped {
-      z-index: 10;
+    @media (min-width: 768px) {
+      .flip-card:hover {
+        z-index: 10;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .flip-card.flipped {
+        z-index: 10;
+      }
     }
 
     /* Animación de aparición del icono */
@@ -608,3 +617,15 @@ import casoPlanta from '../img/casos/Planta-de-cemento-tecoman.webp';
     </div>
   </section>
 </Layout>
+
+<script>
+  // Toggle para tarjetas flip
+  document.addEventListener('DOMContentLoaded', () => {
+    const flipCards = document.querySelectorAll('.flip-card');
+    flipCards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+  });
+</script>
