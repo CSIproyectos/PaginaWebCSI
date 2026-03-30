@@ -99,6 +99,12 @@ const isHomePage = currentPath === '/';
           </a>
           
           <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg py-2 opacity-0 invisible transition-all duration-200 border border-gray-200">
+            <a
+              href="/soluciones"
+              class="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-100 hover:text-black transition-colors border-b border-gray-200"
+            >
+              Ver todas las soluciones
+            </a>
             {solucionesDropdown.map((item) => (
               <a
                 href={item.href}
@@ -142,6 +148,12 @@ const isHomePage = currentPath === '/';
           </a>
           
           <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 opacity-0 invisible transition-all duration-200 border border-gray-200">
+            <a
+              href="/sectores"
+              class="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-100 hover:text-black transition-colors border-b border-gray-200"
+            >
+              Ver todos los sectores
+            </a>
             {sectoresDropdown.map((item) => (
               <a
                 href={item.href}
