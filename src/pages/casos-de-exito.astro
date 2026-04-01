@@ -73,6 +73,8 @@ const casosExito = Object.entries(pdfFiles).map(([path, url]) => {
                 id={`pdf-canvas-${caso.id}`} 
                 data-pdf-url={caso.url} 
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+
               ></canvas>
               
               <div class="absolute inset-0 flex items-center justify-center text-gray-400 text-sm loading-text pointer-events-none">
