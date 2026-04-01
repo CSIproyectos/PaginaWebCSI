@@ -1,0 +1,515 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+// Generar rutas estáticas para todos los ebooks
+export function getStaticPaths() {
+  const pdfFiles = import.meta.glob('../../ebooks/*.pdf', { query: '?url', import: 'default', eager: true });
+  
+  const ebooksMap = new Map();
+  Object.entries(pdfFiles).forEach(([path, url]) => {
+    const fileNameConExtension = path.split('/').pop() || '';
+    const fileName = fileNameConExtension.replace('.pdf', '');
+    const titulo = fileName.trim();
+    
+    const slug = titulo
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/[\s_-]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+
+    ebooksMap.set(slug, {
+      titulo: titulo,
+      slug: slug,
+      url: url as string
+    });
+  });
+  
+  const paths = Array.from(ebooksMap.values()).map(ebook => ({
+    params: { slug: ebook.slug }
+  }));
+  
+  return paths;
+}
+
+// Obtener todos los PDFs de ebooks para uso en el layout
+const pdfFiles = import.meta.glob('../../ebooks/*.pdf', { query: '?url', import: 'default', eager: true });
+
+// Información descriptiva de cada ebook
+const ebooksInfo: Record<string, { descripcion: string; beneficios: string[] }> = {
+  'e-book-desarrollo-de-software-el-fin-de-las-hojas-de-clculo-gua-para-directivos': {
+    descripcion: 'Guía completa para directivos sobre cómo las soluciones de software moderno pueden reemplazar los procesos manuales en Excel.',
+    beneficios: [
+      'Reduce errores en cálculos manuales',
+      'Mejora la eficiencia operativa',
+      'Implementación escalable y segura',
+      'Casos reales de transformación digital'
+    ]
+  },
+  'ebook-back-office-a-medida': {
+    descripcion: 'Soluciones personalizadas de back-office diseñadas para optimizar tus procesos administrativos y operacionales.',
+    beneficios: [
+      'Automatización de procesos',
+      'Reducción de costos operacionales',
+      'Integración con sistemas existentes',
+      'Mejora en tiempos de respuesta'
+    ]
+  },
+  'ebook-cableado-estructurado-1': {
+    descripcion: 'Guía técnica sobre la implementación correcta de infraestructura de cableado estructurado en empresas.',
+    beneficios: [
+      'Mejora de conectividad',
+      'Mayor confiabilidad de red',
+      'Escalabilidad futura',
+      'Cumplimiento de estándares internacionales'
+    ]
+  },
+  'ebook-cableado-estructurado-2': {
+    descripcion: 'Continuación de la guía de cableado estructurado con casos avanzados y mejores prácticas.',
+    beneficios: [
+      'Optimización de rendimiento',
+      'Reducción de interferencias',
+      'Gestión eficiente de infraestructura',
+      'Monitoreo y mantenimiento'
+    ]
+  },
+  'ebook-ngfw': {
+    descripcion: 'Análisis completo sobre Next-Generation Firewalls y su importancia en la seguridad moderna.',
+    beneficios: [
+      'Protección contra amenazas avanzadas',
+      'Control granular de aplicaciones',
+      'Inspección profunda de paquetes',
+      'Visibilidad total de red'
+    ]
+  },
+  'ebook-wireless': {
+    descripcion: 'Guía definitiva para implementar redes inalámbricas seguras y de alto rendimiento.',
+    beneficios: [
+      'Conectividad en cualquier lugar',
+      'Seguridad de datos inalámbrica',
+      'Rendimiento optimizado',
+      'Cobertura sin puntos muertos'
+    ]
+  },
+  'el-sistema-nervioso-de-la-manufactura': {
+    descripcion: 'Documento técnico sobre la importancia de la conectividad en operaciones de manufactura.',
+    beneficios: [
+      'Aumento de productividad',
+      'Control de calidad mejorado',
+      'Reducción de tiempos de paro',
+      'Datos en tiempo real'
+    ]
+  },
+  'guia-ciberseguridad': {
+    descripcion: 'Guía completa de estrategias y mejores prácticas de ciberseguridad para empresas.',
+    beneficios: [
+      'Protección integral de datos',
+      'Cumplimiento normativo',
+      'Respuesta a incidentes',
+      'Concientización de empleados'
+    ]
+  },
+  'guia-completa-para-elegir-el-sistema-de-control-de-acceso-ideal': {
+    descripcion: 'Análisis detallado para seleccionar e implementar el sistema de control de acceso adecuado.',
+    beneficios: [
+      'Seguridad física mejorada',
+      'Control de asistencia automatizado',
+      'Auditoría de movimientos',
+      'Integración con otros sistemas'
+    ]
+  }
+};
+
+// Obtener el ebook actual (lado servidor)
+function getEbooksMap() {
+  const ebooksMap = new Map();
+  Object.entries(pdfFiles).forEach(([path, url]) => {
+    const fileNameConExtension = path.split('/').pop() || '';
+    const fileName = fileNameConExtension.replace('.pdf', '');
+    const titulo = fileName.trim();
+    
+    const slug = titulo
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/[\s_-]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+
+    const info = ebooksInfo[slug] || {
+      descripcion: 'E-book especializado con contenido técnico de valor para tu empresa.',
+      beneficios: ['Conocimiento experto', 'Casos prácticos', 'Mejores prácticas', 'Implementación segura']
+    };
+
+    ebooksMap.set(slug, {
+      titulo: titulo,
+      slug: slug,
+      url: url as string,
+      descripcion: info.descripcion,
+      beneficios: info.beneficios
+    });
+  });
+  return ebooksMap;
+}
+
+const { slug } = Astro.params;
+const ebooksMap = getEbooksMap();
+const ebook = ebooksMap.get(slug!);
+
+// Si no existe el ebook, retornar 404
+if (!ebook) {
+  return Astro.redirect('/ebooks');
+}
+---
+
+<Layout
+  title={`${ebook.titulo} | E-books | Proyectos CSI`}
+  description="Acceso a e-book exclusivo de Proyectos CSI"
+>
+  <section class="min-h-screen bg-gray-50 py-12">
+    <div class="container-custom mx-auto px-4 max-w-4xl">
+      <!-- Botón Atrás -->
+      <a href="/ebooks" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-8 font-semibold">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Volver a E-books
+      </a>
+
+      <!-- Contenedor Principal -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+          <!-- Lado Izquierdo: Formulario -->
+          <div class="p-8 lg:p-10 flex flex-col justify-center border-r border-gray-200">
+            <div class="mb-6">
+              <h1 class="text-3xl font-bold text-gray-900 mb-2">
+                {ebook.titulo}
+              </h1>
+              <p class="text-gray-600 mb-2">
+                Completa el formulario para acceder a este e-book exclusivo
+              </p>
+              <p class="text-sm text-blue-600 font-medium">✓ 100% gratuito y acceso inmediato</p>
+            </div>
+
+            <!-- Formulario Personalizado -->
+            <form id="ebook-form" class="space-y-4">
+              <!-- Nombre -->
+              <div>
+                <label for="firstname" class="block text-sm font-medium text-gray-700 mb-1">
+                  Nombre *
+                </label>
+                <input
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
+                  placeholder="Tu nombre"
+                />
+              </div>
+
+              <!-- Correo -->
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
+                  Correo *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
+                  placeholder="tu@correo.com"
+                />
+              </div>
+
+              <!-- Teléfono -->
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">
+                  Teléfono *
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
+                  placeholder="+52 33 XXXX XXXX"
+                />
+              </div>
+
+              <!-- Botón Enviar -->
+              <button
+                type="submit"
+                class="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center justify-center gap-2"
+              >
+                <span id="submit-text">Enviar</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </button>
+
+              <!-- Mensaje de estado -->
+              <div id="form-message" class="hidden p-4 rounded-lg text-center text-sm font-medium" role="alert"></div>
+
+              <!-- Botón de Descargar (inicialmente oculto) -->
+              <div id="download-section" class="hidden pt-4 border-t border-gray-300 mt-6">
+                <p class="text-sm text-green-600 font-medium mb-3 text-center">
+                  ✓ Tu acceso ha sido confirmado
+                </p>
+                <button
+                  id="download-btn"
+                  type="button"
+                  disabled
+                  class="block w-full px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors font-semibold text-center flex items-center justify-center gap-2"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  Descargar PDF
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Lado Derecho: Información del E-book y Descarga -->
+          <div 
+            class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 lg:p-10 flex flex-col justify-center items-start min-h-96"
+            id="pdf-container"
+          >
+            <div class="w-full">
+              <!-- Título -->
+              <div class="mb-6">
+                <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full mb-2">
+                  E-BOOK DESCARGABLE
+                </div>
+                <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                  {ebook.titulo}
+                </h2>
+              </div>
+
+              <!-- Descripción -->
+              <div class="mb-8">
+                <p class="text-gray-700 leading-relaxed">
+                  {ebook.descripcion}
+                </p>
+              </div>
+
+              <!-- Beneficios -->
+              <div class="mb-8">
+                <h3 class="text-lg font-bold text-gray-900 mb-4">Lo que aprenderás:</h3>
+                <ul class="space-y-3">
+                  {ebook.beneficios && ebook.beneficios.map((beneficio: string) => (
+                    <li class="flex items-start gap-3">
+                      <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                      </svg>
+                      <span class="text-gray-700">{beneficio}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <!-- Previsualización del PDF -->
+              <div class="w-full rounded-lg overflow-hidden shadow-lg border border-blue-200 bg-white">
+                <div class="relative bg-gray-100 flex items-center justify-center" style="max-height: 500px;">
+                  <canvas 
+                    id="pdf-preview-canvas"
+                    data-pdf-url={ebook.url}
+                    class="max-w-full max-h-full"
+                  ></canvas>
+                  <div id="pdf-loading" class="absolute inset-0 flex items-center justify-center text-gray-500 text-sm font-medium bg-gray-100">
+                    Cargando previsualización...
+                  </div>
+                </div>
+              </div>
+
+              <!-- Info adicional -->
+              <div class="mt-8 p-4 bg-white bg-opacity-60 rounded-lg border border-blue-200">
+                <p class="text-sm text-gray-600">
+                  ✓ Contenido 100% gratuito | ✓ Acceso inmediato | ✓ PDF descargable
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Información adicional -->
+      <div class="mt-12 bg-white rounded-xl shadow-lg p-8">
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Acerca de este E-book</h3>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Este e-book contiene información valiosa y exclusiva sobre tecnología, infraestructura y soluciones empresariales. 
+          Es un recurso completo diseñado para profesionales y ejecutivos que buscan optimizar sus operaciones.
+        </p>
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div class="py-4 border-r border-gray-200">
+            <p class="text-2xl font-bold text-blue-600">100%</p>
+            <p class="text-sm text-gray-600">Gratuito</p>
+          </div>
+          <div class="py-4 border-r border-gray-200">
+            <p class="text-2xl font-bold text-blue-600">PDF</p>
+            <p class="text-sm text-gray-600">Descargable</p>
+          </div>
+          <div class="py-4">
+            <p class="text-2xl font-bold text-blue-600">✓</p>
+            <p class="text-sm text-gray-600">Acceso Inmediato</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+</Layout>
+
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script is:inline>
+  // Configurar PDF.js
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Cargar vista previa del PDF
+    const canvas = document.getElementById('pdf-preview-canvas');
+    if (canvas) {
+      const url = canvas.getAttribute('data-pdf-url');
+      const ctx = canvas.getContext('2d');
+      const loadingText = document.getElementById('pdf-loading');
+
+      pdfjsLib.getDocument(url).promise.then(pdf => {
+        return pdf.getPage(1);
+      }).then(page => {
+        const viewport = page.getViewport({ scale: 2 });
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        const renderContext = {
+          canvasContext: ctx,
+          viewport: viewport
+        };
+        
+        page.render(renderContext).promise.then(() => {
+          if (loadingText) loadingText.style.display = 'none';
+        });
+      }).catch(err => {
+        console.error("Error al cargar vista previa del PDF:", err);
+        if (loadingText) loadingText.textContent = 'Error al cargar vista previa';
+      });
+    }
+  });
+</script>
+
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script define:vars={{ ebookSlug: slug, ebookUrl: ebook.url }}>
+  // Manejar el envío del formulario personalizado
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('ebook-form');
+    const formMessage = document.getElementById('form-message');
+    const downloadSection = document.getElementById('download-section');
+    const downloadBtn = document.getElementById('download-btn');
+
+    if (!form) {
+      console.error('Formulario no encontrado');
+      return;
+    }
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const submitText = document.getElementById('submit-text');
+
+    // Evento de descarga
+    if (downloadBtn) {
+      downloadBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const link = document.createElement('a');
+        link.href = ebookUrl;
+        link.download = true;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+    }
+
+    // Evento del formulario
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Validar campos
+      const firstname = document.getElementById('firstname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+
+      if (!firstname || !email || !phone) {
+        formMessage.classList.remove('hidden', 'bg-green-50', 'text-green-700');
+        formMessage.classList.add('bg-red-50', 'text-red-700');
+        formMessage.textContent = '⚠ Por favor completa todos los campos';
+        return;
+      }
+
+      // Desabilitar el botón durante el envío
+      submitBtn.disabled = true;
+      submitText.textContent = 'Enviando...';
+
+      try {
+        // Enviar a HubSpot usando su API de formularios
+        const response = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/48200776/8488f40a-76c2-4521-a143-89c7d47857bc', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            fields: [
+              { name: 'firstname', value: firstname },
+              { name: 'email', value: email },
+              { name: 'phone', value: phone }
+            ]
+          })
+        });
+
+        if (response.ok) {
+          // Marcar como completado en localStorage
+          localStorage.setItem(`ebook_${ebookSlug}`, 'completed');
+          
+          // Mostrar mensaje de éxito
+          formMessage.classList.remove('hidden', 'bg-red-50', 'text-red-700');
+          formMessage.classList.add('bg-green-50', 'text-green-700');
+          formMessage.textContent = '✓ Datos registrados correctamente';
+
+          // Mostrar la sección de descarga
+          downloadSection.classList.remove('hidden');
+          
+          // Habilitar el botón de descarga
+          downloadBtn.disabled = false;
+          
+          // Desabilitar el formulario
+          submitBtn.disabled = true;
+          submitText.textContent = '✓ Formulario enviado';
+          
+          // Desabilitar inputs del formulario
+          form.querySelectorAll('input').forEach(input => {
+            input.disabled = true;
+          });
+        } else {
+          throw new Error(`Error ${response.status}`);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        formMessage.classList.remove('hidden', 'bg-green-50', 'text-green-700');
+        formMessage.classList.add('bg-red-50', 'text-red-700');
+        formMessage.textContent = 'Error al procesar tu solicitud. Por favor intenta de nuevo.';
+        
+        // Reabilitar el botón
+        submitBtn.disabled = false;
+        submitText.textContent = 'Enviar';
+      }
+    });
+
+    // Verificar si ya completó el formulario antes (al cargar la página)
+    const formCompleted = localStorage.getItem(`ebook_${ebookSlug}`) === 'completed';
+    if (formCompleted) {
+      downloadSection.classList.remove('hidden');
+      downloadBtn.disabled = false;
+      submitBtn.disabled = true;
+      submitText.textContent = '✓ Formulario enviado';
+      form.querySelectorAll('input').forEach(input => {
+        input.disabled = true;
+      });
+    }
+  });
+</script>

@@ -1,10 +1,8 @@
 ---
 const navItems = [
   { name: 'Inicio', href: '/' },
-  { name: 'Nosotros', href: '/nosotros' },
-  { name: 'Financiamiento', href: '/financiamiento' },
-  { name: 'Contacto', href: '/contacto' },
   { name: 'Soporte', href: '/soporte' },
+  { name: 'E-books', href: '/ebooks' },
   { name: 'Blog', href: 'https://blog.proyectoscsi.mx/' },
 ];
 
@@ -15,6 +13,12 @@ const solucionesDropdown = [
   { name: 'Ciberseguridad', href: '/ciberseguridad' },
   { name: 'Detección de Incendios', href: '/deteccion-de-incendios' },
   { name: 'Desarrollo de Software', href: '/desarrollo-de-software' },
+];
+
+const nosotrosDropdown = [
+  { name: 'Nosotros', href: '/nosotros' },
+  { name: 'Financiamiento', href: '/financiamiento' },
+  { name: 'Casos de Éxito', href: '/casos-de-exito' },
 ];
 
 const sectoresDropdown = [
@@ -116,19 +120,34 @@ const isHomePage = currentPath === '/';
           </div>
         </div>
         
-        <!-- Nosotros -->
-        <a
-          href="/nosotros"
-          class:list={[
-            'nav-link text-sm lg:text-base font-medium transition-colors',
-            currentPath === '/nosotros'
-              ? 'text-black font-semibold'
-              : 'text-gray-700 hover:text-black'
-          ]}
-          aria-current={currentPath === '/nosotros' ? 'page' : undefined}
-        >
-          Nosotros
-        </a>
+        <!-- Nosotros Dropdown -->
+        <div class="relative nosotros-dropdown">
+          <a
+            href="/nosotros"
+            class:list={[
+              'nav-link text-sm lg:text-base font-medium transition-colors flex items-center gap-1',
+              ['/nosotros', '/financiamiento', '/casos-de-exito'].includes(currentPath)
+                ? 'text-black font-semibold'
+                : 'text-gray-700 hover:text-black'
+            ]}
+          >
+            Nosotros
+            <svg class="w-4 h-4 transition-transform dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          
+          <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg py-2 opacity-0 invisible transition-all duration-200 border border-gray-200">
+            {nosotrosDropdown.map((item) => (
+              <a
+                href={item.href}
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black transition-colors"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+        </div>
         
         <!-- Sectores Dropdown -->
         <div class="relative sectores-dropdown">
@@ -165,8 +184,21 @@ const isHomePage = currentPath === '/';
           </div>
         </div>
         
+        <!-- Contacto -->
+        <a
+          href="/contacto"
+          class:list={[
+            'nav-link text-sm lg:text-base font-medium transition-colors',
+            currentPath === '/contacto'
+              ? 'text-black font-semibold'
+              : 'text-gray-700 hover:text-black'
+          ]}
+        >
+          Contacto
+        </a>
+        
         <!-- Resto de enlaces -->
-        {navItems.slice(2).map((item) => (
+        {navItems.slice(1).map((item) => (
           <a
             href={item.href}
             target={item.href.startsWith('http') ? '_blank' : undefined}
@@ -331,18 +363,34 @@ const isHomePage = currentPath === '/';
           </div>
         </div>
         
-        <!-- Nosotros -->
-        <a
-          href="/nosotros"
-          class:list={[
-            'block px-3 py-2 rounded-md text-base font-medium',
-            currentPath === '/nosotros'
-              ? 'bg-gray-100 text-black font-semibold'
-              : 'text-gray-700 hover:bg-gray-100 hover:text-black'
-          ]}
-        >
-          Nosotros
-        </a>
+        <!-- Nosotros Mobile Dropdown -->
+        <div class="mobile-nosotros-dropdown">
+          <button
+            type="button"
+            class:list={[
+              'w-full text-left px-3 py-2 rounded-md text-base font-medium flex items-center justify-between',
+              ['/nosotros', '/financiamiento', '/casos-de-exito'].includes(currentPath)
+                ? 'bg-white text-black font-semibold'
+                : 'text-gray-900 hover:bg-white hover:text-black'
+            ]}
+          >
+            Nosotros
+            <svg class="w-4 h-4 transition-transform mobile-dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          
+          <div class="mobile-dropdown-content hidden pl-6 mt-1 space-y-1">
+            {nosotrosDropdown.map((item) => (
+              <a
+                href={item.href}
+                class="block px-3 py-2 rounded-md text-sm text-gray-800 hover:bg-white hover:text-black"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+        </div>
         
         <!-- Sectores Mobile Dropdown -->
         <div class="mobile-sectores-dropdown">
@@ -379,8 +427,21 @@ const isHomePage = currentPath === '/';
           </div>
         </div>
         
+        <!-- Contacto Mobile -->
+        <a
+          href="/contacto"
+          class:list={[
+            'block px-3 py-2 rounded-md text-base font-medium',
+            currentPath === '/contacto'
+              ? 'bg-white text-black font-semibold'
+              : 'text-gray-900 hover:bg-white hover:text-black'
+          ]}
+        >
+          Contacto
+        </a>
+        
         <!-- Resto de enlaces -->
-        {navItems.slice(2).map((item) => (
+        {navItems.slice(1).map((item) => (
           <a
             href={item.href}
             target={item.href.startsWith('http') ? '_blank' : undefined}
@@ -562,6 +623,39 @@ const isHomePage = currentPath === '/';
       });
     }
 
+    // Desktop Nosotros Dropdown
+    const desktopNosotrosDropdown = document.querySelector('.nosotros-dropdown');
+    const desktopNosotrosMenu = desktopNosotrosDropdown?.querySelector('.dropdown-menu');
+    const desktopNosotrosArrow = desktopNosotrosDropdown?.querySelector('.dropdown-arrow');
+    const desktopNosotrosLink = desktopNosotrosDropdown?.querySelector('a');
+    let isDesktopNosotrosOpen = false;
+
+    if (desktopNosotrosDropdown && desktopNosotrosMenu && desktopNosotrosLink) {
+      desktopNosotrosLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        isDesktopNosotrosOpen = !isDesktopNosotrosOpen;
+        if (isDesktopNosotrosOpen) {
+          desktopNosotrosMenu.classList.remove('opacity-0', 'invisible');
+          desktopNosotrosMenu.classList.add('opacity-100', 'visible');
+          desktopNosotrosArrow?.classList.add('rotate-180');
+        } else {
+          desktopNosotrosMenu.classList.add('opacity-0', 'invisible');
+          desktopNosotrosMenu.classList.remove('opacity-100', 'visible');
+          desktopNosotrosArrow?.classList.remove('rotate-180');
+        }
+      });
+
+      // Cerrar al hacer clic fuera
+      document.addEventListener('click', (e) => {
+        if (e.target && !desktopNosotrosDropdown.contains(e.target as Node)) {
+          desktopNosotrosMenu.classList.add('opacity-0', 'invisible');
+          desktopNosotrosMenu.classList.remove('opacity-100', 'visible');
+          desktopNosotrosArrow?.classList.remove('rotate-180');
+          isDesktopNosotrosOpen = false;
+        }
+      });
+    }
+
     // Mobile Soluciones Dropdown
     const mobileDropdown = document.querySelector('.mobile-soluciones-dropdown');
     const mobileButton = mobileDropdown?.querySelector('button');
@@ -572,6 +666,19 @@ const isHomePage = currentPath === '/';
       mobileButton.addEventListener('click', () => {
         mobileContent.classList.toggle('hidden');
         mobileArrow?.classList.toggle('rotate-180');
+      });
+    }
+
+    // Mobile Nosotros Dropdown
+    const mobileNosotrosDropdown = document.querySelector('.mobile-nosotros-dropdown');
+    const mobileNosotrosButton = mobileNosotrosDropdown?.querySelector('button');
+    const mobileNosotrosContent = mobileNosotrosDropdown?.querySelector('.mobile-dropdown-content');
+    const mobileNosotrosArrow = mobileNosotrosDropdown?.querySelector('.mobile-dropdown-arrow');
+
+    if (mobileNosotrosButton && mobileNosotrosContent) {
+      mobileNosotrosButton.addEventListener('click', () => {
+        mobileNosotrosContent.classList.toggle('hidden');
+        mobileNosotrosArrow?.classList.toggle('rotate-180');
       });
     }
 

@@ -1,0 +1,143 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import portadaImg from "@/img/ebooks/portada.webp";
+
+// 1. Leemos todos los PDFs de la carpeta de ebooks. Vite nos devolverá las URLs públicas.
+const pdfFiles = import.meta.glob('/src/ebooks/*.pdf', { query: '?url', import: 'default', eager: true });
+
+// 2. Procesamos los nombres de los archivos para extraer Título
+const ebooks = Object.entries(pdfFiles).map(([path, url]) => {
+  // Extraemos el nombre del archivo
+  const fileNameConExtension = path.split('/').pop() || '';
+  const fileName = fileNameConExtension.replace('.pdf', '');
+  
+  // El título es el nombre del archivo (sin .pdf)
+  const titulo = fileName.trim();
+  
+  // Crear un slug desde el título
+  const slug = titulo
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+  return {
+    titulo: titulo,
+    slug: slug,
+    url: url as string,
+    // Generamos un ID único para enlazar el canvas con el script de abajo
+    id: Math.random().toString(36).substring(7) 
+  };
+});
+
+// Ordenar alfabéticamente los ebooks
+ebooks.sort((a, b) => a.titulo.localeCompare(b.titulo, 'es'));
+---
+
+<Layout
+  title="E-books | Proyectos CSI"
+  description="Descarga nuestros e-books con guías, manuales y mejores prácticas en tecnología."
+>
+  <section
+    class="relative h-80 md:h-96 flex items-center justify-center overflow-hidden"
+    style={`background-image: url(${portadaImg.src}); background-size: cover; background-position: 25% 40%;`}
+  >
+    <div class="absolute inset-0 bg-black/30"></div>
+    <div class="relative text-center text-white px-4 max-w-3xl z-10">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+        E-books
+      </h1>
+      <p class="text-lg md:text-xl text-gray-100 drop-shadow">
+        Guías, Manuales y Mejores Prácticas      
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding bg-gray-50 py-16">
+    <div class="container-custom mx-auto px-4 max-w-6xl">
+      <div class="max-w-4xl mx-auto text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Accede a Recursos Técnicos de Valor
+        </h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6 text-justify">
+          Descarga nuestros e-books gratuitos diseñados para brindarte conocimientos especializados en tecnología, infraestructura de red, seguridad, control de acceso y más. Cada guía ha sido elaborada basada en años de experiencia en implementación de soluciones tecnológicas.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {ebooks.map((ebook) => (
+          <a 
+            href={`/ebook/${ebook.slug}`}
+            class="block group bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
+          >
+            <div class="relative h-72 w-full overflow-hidden bg-gray-200 border-b border-gray-200 flex items-center justify-center">
+              <canvas 
+                id={`pdf-canvas-${ebook.id}`} 
+                data-pdf-url={ebook.url} 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              ></canvas>
+              
+              <div class="absolute inset-0 flex items-center justify-center text-gray-400 text-sm loading-text pointer-events-none">
+                Cargando portada...
+              </div>
+            </div>
+
+            <div class="p-6 flex-grow">
+              <h3 class="text-lg font-bold mb-2 text-gray-800 group-hover:text-blue-600 transition-colors line-clamp-3">
+                {ebook.titulo}
+              </h3>
+              <div class="flex items-center gap-2 text-blue-600 text-sm font-semibold mt-4">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Ver E-book
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </section>
+</Layout>
+
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script is:inline>
+  // Configurar el worker de PDF.js
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const canvases = document.querySelectorAll('canvas[data-pdf-url]');
+    
+    canvases.forEach(canvas => {
+      const url = canvas.getAttribute('data-pdf-url');
+      const ctx = canvas.getContext('2d');
+      const loadingText = canvas.nextElementSibling; // Selecciona el div de "Cargando..."
+
+      // Cargar el documento PDF
+      pdfjsLib.getDocument(url).promise.then(pdf => {
+        // Obtener la página 1
+        return pdf.getPage(1);
+      }).then(page => {
+        // Ajustar la escala de renderizado
+        const viewport = page.getViewport({ scale: 1.5 });
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        const renderContext = {
+          canvasContext: ctx,
+          viewport: viewport
+        };
+        
+        // Dibujar el PDF en el canvas
+        page.render(renderContext).promise.then(() => {
+          // Ocultar el texto de carga cuando termine de dibujar
+          if (loadingText) loadingText.style.display = 'none';
+        });
+      }).catch(err => {
+        console.error("Error al cargar la portada del PDF:", err);
+        if (loadingText) loadingText.textContent = 'Error al cargar vista previa';
+      });
+    });
+  });
+</script>
