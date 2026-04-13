@@ -1,7 +1,10 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import { Image } from 'astro:assets';
 import portadaImg from '@/img/sectores/mineria/portada.jpg';
 import sensoresImg from '@/img/sectores/mineria/sensores.webp';
+import mineria1Img from '@/img/sectores/mineria/mineria1.jpeg';
+import mineria2Img from '@/img/sectores/mineria/mineria2.jpeg';
 
 export const prerender = true;
 ---
@@ -16,17 +19,47 @@ export const prerender = true;
     </div>
   </section>
 
-  <!-- Introducción -->
+  <!-- Introducción con Galería -->
   <section class="section-padding bg-white">
     <div class="container-custom">
-      <div class="max-w-4xl mx-auto text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">En Minería La Seguridad Es Fundamental</h2>
-        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-          En Proyectos CSI ofrecemos soluciones innovadoras que transforman la operación minera. Integramos <strong>sistemas de seguridad electrónica avanzada, control de acceso inteligente, infraestructura de red sólida y conectividad inalámbrica</strong> para garantizar protección, eficiencia y continuidad operativa en cada aspecto de tu operación.
-        </p>
-        <p class="text-lg text-gray-600 leading-relaxed">
-          Con tecnología de vanguardia adaptada a entornos mineros desafiantes, diseñamos soluciones que mejoran la seguridad del personal, optimizan procesos y permiten toma de decisiones en tiempo real.
-        </p>
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">En Minería La Seguridad Es Fundamental</h2>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            En Proyectos CSI ofrecemos soluciones innovadoras que transforman la operación minera. Integramos <strong>sistemas de seguridad electrónica avanzada, control de acceso inteligente, infraestructura de red sólida y conectividad inalámbrica</strong> para garantizar protección, eficiencia y continuidad operativa en cada aspecto de tu operación.
+          </p>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Con tecnología de vanguardia adaptada a entornos mineros desafiantes, diseñamos soluciones que mejoran la seguridad del personal, optimizan procesos y permiten toma de decisiones en tiempo real.
+          </p>
+        </div>
+
+        <!-- Galería de Imágenes Integrada -->
+        <div class="mt-16 grid md:grid-cols-2 gap-12">
+          <div class="text-center">
+            <div class="rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 group">
+              <Image
+                src={mineria1Img}
+                alt="Operaciones mineras de seguridad"
+                class="w-full h-80 md:h-96 object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <p class="mt-6 text-lg font-semibold text-gray-900">Operaciones Mineras Seguras</p>
+            <p class="mt-2 text-gray-600">Infraestructura integrada para monitoreo y control de operaciones en tiempo real</p>
+          </div>
+          <div class="text-center">
+            <div class="rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 group">
+              <Image
+                src={mineria2Img}
+                alt="Infraestructura de seguridad minera"
+                class="w-full h-80 md:h-96 object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <p class="mt-6 text-lg font-semibold text-gray-900">Tecnología de Vigilancia Avanzada</p>
+            <p class="mt-2 text-gray-600">Sistemas especializados para áreas críticas y acceso controlado</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

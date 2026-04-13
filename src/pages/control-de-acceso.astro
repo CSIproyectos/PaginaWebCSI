@@ -10,6 +10,7 @@ import casoAifa from '../img/soluciones/controlDeAcceso/areopuertoQueretaro.webp
 import casoCedis from '../img/soluciones/controlDeAcceso/cediszapopan.webp';
 import casoAeropuerto from '../img/casos/aifa-1.webp';
 import casoIndustria from '../img/soluciones/controlDeAcceso/industriAlimenticia.webp';
+import controlImage from '../img/soluciones/controlDeAcceso/control.jpg';
 ---
 
 <Layout 
@@ -177,11 +178,14 @@ import casoIndustria from '../img/soluciones/controlDeAcceso/industriAlimenticia
         <h2 class="text-center mb-12 text-gray-900">Tipos de Control de Acceso</h2>
         
         <div class="grid md:grid-cols-2 gap-12 items-center">
-          <!-- GIF de Control de Acceso -->
+          <!-- Imagen de Control de Acceso -->
           <div class="flex justify-center">
-            <div class="tenor-gif-embed" data-postid="26164816" data-share-method="host" data-aspect-ratio="1" data-width="100%">
-              <a href="https://tenor.com/view/access-control-and-readers-visitor-management-solution-gif-26164816">Access Control And Readers Visitor Management Solution GIF</a> from <a href="https://tenor.com/search/access+control+and+readers-gifs">Access Control And Readers GIFs</a>
-            </div>
+            <Image
+              src={controlImage}
+              alt="Sistema de Control de Acceso"
+              class="w-full h-auto rounded-lg shadow-lg"
+              loading="lazy"
+            />
           </div>
           
           <!-- Información de tipos de control -->
@@ -673,4 +677,3 @@ import casoIndustria from '../img/soluciones/controlDeAcceso/industriAlimenticia
   });
 </script>
 
-<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
