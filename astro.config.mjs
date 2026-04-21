@@ -1,15 +1,14 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
-// import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://proyectoscsi.mx',
+  trailingSlash: 'never',
   integrations: [
     tailwind(),
     react(),
-    // sitemap(), // Deshabilitado - error de lectura de rutas
   ],
   output: 'static',
   compressHTML: true,

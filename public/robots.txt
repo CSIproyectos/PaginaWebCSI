@@ -5,7 +5,7 @@ Allow: /
 # Disallow: /admin/
 
 # Sitemap
-Sitemap: https://proyectoscsi.mx/sitemap-index.xml
+Sitemap: https://proyectoscsi.mx/sitemap.xml
 
 # Crawl delay
 Crawl-delay: 0
