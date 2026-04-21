@@ -21,6 +21,8 @@ const ebooks = Object.entries(pdfFiles).map(([path, url]) => {
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
 
+
+
   return {
     titulo: titulo,
     slug: slug,
@@ -28,6 +30,8 @@ const ebooks = Object.entries(pdfFiles).map(([path, url]) => {
     // Generamos un ID único para enlazar el canvas con el script de abajo
     id: Math.random().toString(36).substring(7) 
   };
+
+
 });
 
 // Ordenar alfabéticamente los ebooks
