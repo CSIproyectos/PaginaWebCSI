@@ -109,7 +109,7 @@ const ebooksInfo: Record<string, { descripcion: string; beneficios: string[] }> 
     ]
   },
   'guia-completa-para-elegir-el-sistema-de-control-de-acceso-ideal': {
-    descripcion: 'Análisis detallado para seleccionar e implementar el sistema de control de acceso adecuado.',
+    descripcion: 'Compara marcas líderes, analiza costos vs. beneficios y elige la solución perfecta según tus requerimientos.',
     beneficios: [
       'Seguridad física mejorada',
       'Control de asistencia automatizado',
@@ -127,7 +127,7 @@ const ebooksInfo: Record<string, { descripcion: string; beneficios: string[] }> 
     ]
   },
   'ebook-deteccion-de-incendio-1': {
-    descripcion: 'Guía técnica completa sobre sistemas de detección de incendios modernos y su implementación.',
+    descripcion: 'Detectores de humo, sensores de temperatura e integración con sistemas: tecnología moderna para proteger vidas.',
     beneficios: [
       'Detección temprana de fuegos',
       'Reducción de daños',
@@ -145,7 +145,7 @@ const ebooksInfo: Record<string, { descripcion: string; beneficios: string[] }> 
     ]
   },
   'guia-basica-control-de-acceso-los-elementos-esenciales': {
-    descripcion: 'Guía esencial sobre los elementos clave para implementar sistemas de control de acceso efectivos.',
+    descripcion: 'Aprende los componentes técnicos fundamentales: lectores biométricos, cerraduras electrónicas, servidores y cableado.',
     beneficios: [
       'Componentes necesarios',
       'Arquitectura segura',
@@ -154,7 +154,7 @@ const ebooksInfo: Record<string, { descripcion: string; beneficios: string[] }> 
     ]
   },
   'guia-basica-de-control-de-acceso': {
-    descripcion: 'Introducción completa a los sistemas de control de acceso para empresas modernas.',
+    descripcion: 'Tutorial paso a paso: implementa tu primer sistema desde la planificación inicial hasta la puesta en marcha.',
     beneficios: [
       'Seguridad de acceso',
       'Gestión centralizada',
@@ -172,7 +172,7 @@ const ebooksInfo: Record<string, { descripcion: string; beneficios: string[] }> 
     ]
   },
   'guia-ejecutiva-tco-trazabilidad-y-ahorro-para-sistemas-de-deteccion': {
-    descripcion: 'Análisis ejecutivo de TCO, trazabilidad y ahorro en sistemas de detección de incendios.',
+    descripcion: 'Justifica inversiones: analiza ROI, mantenimiento anual, auditorías y cumplimiento normativo completo.',
     beneficios: [
       'Reducción de costos',
       'Transparencia total',
@@ -181,7 +181,7 @@ const ebooksInfo: Record<string, { descripcion: string; beneficios: string[] }> 
     ]
   },
   'guia-para-seleccion-ngfw': {
-    descripcion: 'Guía práctica para seleccionar el Next-Generation Firewall adecuado para tu empresa.',
+    descripcion: 'NGFW vs. firewalls clásicos: diferencias clave, criterios de evaluación y matriz de decisión por presupuesto.',
     beneficios: [
       'Comparativa de opciones',
       'Criterios de selección',
@@ -190,7 +190,7 @@ const ebooksInfo: Record<string, { descripcion: string; beneficios: string[] }> 
     ]
   },
   'guia-para-unificar-video-accesos': {
-    descripcion: 'Estrategia integrada para unificar sistemas de videovigilancia y control de acceso.',
+    descripcion: 'Una sola plataforma: sincroniza cámaras, control de acceso, alarmas y monitoreo 360° desde cualquier dispositivo.',
     beneficios: [
       'Plataforma única',
       'Sincronización perfecta',
@@ -199,7 +199,7 @@ const ebooksInfo: Record<string, { descripcion: string; beneficios: string[] }> 
     ]
   },
   'guia-practica-para-optimizar-tu-infraestructura-de-red': {
-    descripcion: 'Guía práctica con estrategias para optimizar y mejorar el rendimiento de tu infraestructura de red.',
+    descripcion: 'Diagnóstico, mejora de bandwidth, reducción de latencia: casos reales de empresas que optimizaron su red.',
     beneficios: [
       'Mayor velocidad',
       'Confiabilidad mejorada',
@@ -235,7 +235,7 @@ const ebooksInfo: Record<string, { descripcion: string; beneficios: string[] }> 
     ]
   },
   'tendencias-tecnologias-clave-y-buenas-practicas-para-una-red-de-alto-rendimiento-en-2025': {
-    descripcion: 'Análisis de tendencias tecnológicas y mejores prácticas para redes de alto rendimiento en 2025.',
+    descripcion: 'Wi-Fi 7, edge computing, 5G empresarial: prepara tu infraestructura para las tendencias clave de 2025.',
     beneficios: [
       'Visión futura de tecnología',
       'Estrategias para 2025',
@@ -244,7 +244,7 @@ const ebooksInfo: Record<string, { descripcion: string; beneficios: string[] }> 
     ]
   },
   'videoanalisis-en-seguridad-industrial': {
-    descripcion: 'Tecnología de videoanalisis avanzado para aplicaciones de seguridad industrial.',
+    descripcion: 'IA y machine learning: detección automática de intrusos, objetos abandonados y acceso a zonas prohibidas.',
     beneficios: [
       'Detección automática',
       'Análisis inteligente',
@@ -253,7 +253,7 @@ const ebooksInfo: Record<string, { descripcion: string; beneficios: string[] }> 
     ]
   },
   'video-seguridad-tofu': {
-    descripcion: 'Solución TOFU de videovigilancia para seguridad total en instalaciones críticas.',
+    descripcion: 'Solución TOFU: grabación HD/4K sin pérdida, acceso remoto seguro y análisis forense en tiempo real.',
     beneficios: [
       'Cobertura completa',
       'Resolución HD/4K',
@@ -262,7 +262,7 @@ const ebooksInfo: Record<string, { descripcion: string; beneficios: string[] }> 
     ]
   },
   'whitepaper-pentest-en-logistica': {
-    descripcion: 'Whitepaper: Análisis de vulnerabilidades mediante pentest en operaciones logísticas.',
+    descripcion: 'Auditoría de seguridad: pruebas de penetración reales en almacenes, transporte y sistemas TI logísticos.',
     beneficios: [
       'Identificación de riesgos',
       'Mejora de seguridad',
@@ -296,7 +296,7 @@ function getEbooksMap() {
       .replace(/^-+|-+$/g, '');
 
     const info = ebooksInfo[slug] || {
-      descripcion: 'E-book especializado con contenido técnico de valor para tu empresa.',
+      descripcion: `Descubre todo sobre ${titulo.replace(/[\-\_]/g, ' ')}: soluciones técnicas, implementación y mejores prácticas.`,
       beneficios: ['Conocimiento experto', 'Casos prácticos', 'Mejores prácticas', 'Implementación segura']
     };
 
