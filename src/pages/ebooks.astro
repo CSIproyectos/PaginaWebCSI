@@ -67,7 +67,7 @@ ebooks.sort((a, b) => a.titulo.localeCompare(b.titulo, 'es'));
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {ebooks.map((ebook) => (
           <a 
-            href={`/ebook/${ebook.slug}`}
+            href={`/ebook/${ebook.slug}/`}
             class="block group bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
           >
             <div class="relative h-72 w-full overflow-hidden bg-gray-200 border-b border-gray-200 flex items-center justify-center">

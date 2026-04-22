@@ -1,32 +1,32 @@
 ---
 const navItems = [
   { name: 'Inicio', href: '/' },
-  { name: 'Soporte', href: '/soporte' },
-  { name: 'E-books', href: '/ebooks' },
+  { name: 'Soporte', href: '/soporte/' },
+  { name: 'E-books', href: '/ebooks/' },
   { name: 'Blog', href: 'https://blog.proyectoscsi.mx/' },
 ];
 
 const solucionesDropdown = [
-  { name: 'Videovigilancia', href: '/videovigilancia' },
-  { name: 'Control de Acceso', href: '/control-de-acceso' },
-  { name: 'Cableado Estructurado', href: '/cableado-estructurado' },
-  { name: 'Ciberseguridad', href: '/ciberseguridad' },
-  { name: 'Detección de Incendios', href: '/deteccion-de-incendios' },
-  { name: 'Desarrollo de Software', href: '/desarrollo-de-software' },
+  { name: 'Videovigilancia', href: '/videovigilancia/' },
+  { name: 'Control de Acceso', href: '/control-de-acceso/' },
+  { name: 'Cableado Estructurado', href: '/cableado-estructurado/' },
+  { name: 'Ciberseguridad', href: '/ciberseguridad/' },
+  { name: 'Detección de Incendios', href: '/deteccion-de-incendios/' },
+  { name: 'Desarrollo de Software', href: '/desarrollo-de-software/' },
 ];
 
 const nosotrosDropdown = [
-  { name: 'Nosotros', href: '/nosotros' },
-  { name: 'Financiamiento', href: '/financiamiento' },
-  { name: 'Casos de Éxito', href: '/casos-de-exito' },
+  { name: 'Nosotros', href: '/nosotros/' },
+  { name: 'Financiamiento', href: '/financiamiento/' },
+  { name: 'Casos de Éxito', href: '/casos-de-exito/' },
 ];
 
 const sectoresDropdown = [
-  { name: 'Corporativo', href: '/sectores/corporativo' },
-  { name: 'Hospitalidad', href: '/sectores/hospitalidad' },
-  { name: 'Logística y Recintos Fiscales', href: '/sectores/logistica-recintos-fiscales' },
-  { name: 'Industria y Producción', href: '/sectores/industria-y-produccion' },
-  { name: 'Minería', href: '/sectores/mineria' },
+  { name: 'Corporativo', href: '/sectores/corporativo/' },
+  { name: 'Hospitalidad', href: '/sectores/hospitalidad/' },
+  { name: 'Logística y Recintos Fiscales', href: '/sectores/logistica-recintos-fiscales/' },
+  { name: 'Industria y Producción', href: '/sectores/industria-y-produccion/' },
+  { name: 'Minería', href: '/sectores/mineria/' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -87,11 +87,11 @@ const isHomePage = currentPath === '/';
         
         <!-- Soluciones Dropdown -->
         <div class="relative soluciones-dropdown">
-          <a
-            href="/soluciones"
+          <button
+            type="button"
             class:list={[
-              'nav-link text-sm lg:text-base font-medium transition-colors flex items-center gap-1',
-              currentPath === '/soluciones'
+              'nav-link text-sm lg:text-base font-medium transition-colors flex items-center gap-1 cursor-pointer',
+              currentPath === '/soluciones/'
                 ? 'text-black font-semibold'
                 : 'text-gray-700 hover:text-black'
             ]}
@@ -100,11 +100,11 @@ const isHomePage = currentPath === '/';
             <svg class="w-4 h-4 transition-transform dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
-          </a>
+          </button>
           
           <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg py-2 opacity-0 invisible transition-all duration-200 border border-gray-200">
             <a
-              href="/soluciones"
+              href="/soluciones/"
               class="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-100 hover:text-black transition-colors border-b border-gray-200"
             >
               Ver todas las soluciones
@@ -122,11 +122,11 @@ const isHomePage = currentPath === '/';
         
         <!-- Nosotros Dropdown -->
         <div class="relative nosotros-dropdown">
-          <a
-            href="/nosotros"
+          <button
+            type="button"
             class:list={[
-              'nav-link text-sm lg:text-base font-medium transition-colors flex items-center gap-1',
-              ['/nosotros', '/financiamiento', '/casos-de-exito'].includes(currentPath)
+              'nav-link text-sm lg:text-base font-medium transition-colors flex items-center gap-1 cursor-pointer',
+              ['/nosotros/', '/financiamiento/', '/casos-de-exito/'].includes(currentPath)
                 ? 'text-black font-semibold'
                 : 'text-gray-700 hover:text-black'
             ]}
@@ -135,7 +135,7 @@ const isHomePage = currentPath === '/';
             <svg class="w-4 h-4 transition-transform dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
-          </a>
+          </button>
           
           <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg py-2 opacity-0 invisible transition-all duration-200 border border-gray-200">
             {nosotrosDropdown.map((item) => (
@@ -151,11 +151,11 @@ const isHomePage = currentPath === '/';
         
         <!-- Sectores Dropdown -->
         <div class="relative sectores-dropdown">
-          <a
-            href="/sectores"
+          <button
+            type="button"
             class:list={[
-              'nav-link text-sm lg:text-base font-medium transition-colors flex items-center gap-1',
-              currentPath === '/sectores'
+              'nav-link text-sm lg:text-base font-medium transition-colors flex items-center gap-1 cursor-pointer',
+              currentPath === '/sectores/'
                 ? 'text-black font-semibold'
                 : 'text-gray-700 hover:text-black'
             ]}
@@ -164,11 +164,11 @@ const isHomePage = currentPath === '/';
             <svg class="w-4 h-4 transition-transform dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
-          </a>
+          </button>
           
           <div class="dropdown-menu absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 opacity-0 invisible transition-all duration-200 border border-gray-200">
             <a
-              href="/sectores"
+              href="/sectores/"
               class="block px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-100 hover:text-black transition-colors border-b border-gray-200"
             >
               Ver todos los sectores
@@ -186,10 +186,10 @@ const isHomePage = currentPath === '/';
         
         <!-- Contacto -->
         <a
-          href="/contacto"
+          href="/contacto/"
           class:list={[
             'nav-link text-sm lg:text-base font-medium transition-colors',
-            currentPath === '/contacto'
+            currentPath === '/contacto/'
               ? 'text-black font-semibold'
               : 'text-gray-700 hover:text-black'
           ]}
@@ -334,7 +334,7 @@ const isHomePage = currentPath === '/';
             type="button"
             class:list={[
               'w-full text-left px-3 py-2 rounded-md text-base font-medium flex items-center justify-between',
-              currentPath === '/soluciones'
+              currentPath === '/soluciones/'
                 ? 'bg-white text-black font-semibold'
                 : 'text-gray-900 hover:bg-white hover:text-black'
             ]}
@@ -347,7 +347,7 @@ const isHomePage = currentPath === '/';
           
           <div class="mobile-dropdown-content hidden pl-6 mt-1 space-y-1">
             <a
-              href="/soluciones"
+              href="/soluciones/"
               class="block px-3 py-2 rounded-md text-sm font-semibold text-gray-900 hover:bg-white hover:text-black"
             >
               Ver todas las soluciones
@@ -369,7 +369,7 @@ const isHomePage = currentPath === '/';
             type="button"
             class:list={[
               'w-full text-left px-3 py-2 rounded-md text-base font-medium flex items-center justify-between',
-              ['/nosotros', '/financiamiento', '/casos-de-exito'].includes(currentPath)
+              ['/nosotros/', '/financiamiento/', '/casos-de-exito/'].includes(currentPath)
                 ? 'bg-white text-black font-semibold'
                 : 'text-gray-900 hover:bg-white hover:text-black'
             ]}
@@ -398,7 +398,7 @@ const isHomePage = currentPath === '/';
             type="button"
             class:list={[
               'w-full text-left px-3 py-2 rounded-md text-base font-medium flex items-center justify-between',
-              currentPath === '/sectores'
+              currentPath === '/sectores/'
                 ? 'bg-white text-black font-semibold'
                 : 'text-gray-900 hover:bg-white hover:text-black'
             ]}
@@ -411,7 +411,7 @@ const isHomePage = currentPath === '/';
           
           <div class="mobile-dropdown-content hidden pl-6 mt-1 space-y-1">
             <a
-              href="/sectores"
+              href="/sectores/"
               class="block px-3 py-2 rounded-md text-sm font-semibold text-gray-900 hover:bg-white hover:text-black"
             >
               Ver todos los sectores
@@ -429,10 +429,10 @@ const isHomePage = currentPath === '/';
         
         <!-- Contacto Mobile -->
         <a
-          href="/contacto"
+          href="/contacto/"
           class:list={[
             'block px-3 py-2 rounded-md text-base font-medium',
-            currentPath === '/contacto'
+            currentPath === '/contacto/'
               ? 'bg-white text-black font-semibold'
               : 'text-gray-900 hover:bg-white hover:text-black'
           ]}
@@ -457,7 +457,7 @@ const isHomePage = currentPath === '/';
           </a>
         ))}
         
-        <a href="/contacto" class="block w-full mt-4">
+        <a href="/contacto/" class="block w-full mt-4">
           <span class="btn-primary w-full text-center">Cotizar Proyecto</span>
         </a>
       </div>
@@ -557,104 +557,96 @@ const isHomePage = currentPath === '/';
       });
     }
 
-    // Desktop Soluciones Dropdown
-    const desktopDropdown = document.querySelector('.soluciones-dropdown');
-    const desktopMenu = desktopDropdown?.querySelector('.dropdown-menu');
-    const desktopArrow = desktopDropdown?.querySelector('.dropdown-arrow');
-    const desktopLink = desktopDropdown?.querySelector('a');
-    let isDesktopOpen = false;
+    // Desktop Soluciones Dropdown - Click to toggle
+    const solucionesDropdown = document.querySelector('.soluciones-dropdown');
+    const solucionesBtn = solucionesDropdown?.querySelector('button');
+    const solucionesMenu = solucionesDropdown?.querySelector('.dropdown-menu');
+    const solucionesArrow = solucionesDropdown?.querySelector('.dropdown-arrow');
+    let solucionesOpen = false;
 
-    if (desktopDropdown && desktopMenu && desktopLink) {
-      desktopLink.addEventListener('click', (e) => {
+    if (solucionesBtn && solucionesMenu) {
+      solucionesBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        isDesktopOpen = !isDesktopOpen;
-        if (isDesktopOpen) {
-          desktopMenu.classList.remove('opacity-0', 'invisible');
-          desktopMenu.classList.add('opacity-100', 'visible');
-          desktopArrow?.classList.add('rotate-180');
+        solucionesOpen = !solucionesOpen;
+        if (solucionesOpen) {
+          solucionesMenu.classList.remove('opacity-0', 'invisible');
+          solucionesMenu.classList.add('opacity-100', 'visible');
+          solucionesArrow?.classList.add('rotate-180');
         } else {
-          desktopMenu.classList.add('opacity-0', 'invisible');
-          desktopMenu.classList.remove('opacity-100', 'visible');
-          desktopArrow?.classList.remove('rotate-180');
-        }
-      });
-
-      // Cerrar al hacer clic fuera
-      document.addEventListener('click', (e) => {
-        if (e.target && !desktopDropdown.contains(e.target as Node)) {
-          desktopMenu.classList.add('opacity-0', 'invisible');
-          desktopMenu.classList.remove('opacity-100', 'visible');
-          desktopArrow?.classList.remove('rotate-180');
-          isDesktopOpen = false;
+          solucionesMenu.classList.add('opacity-0', 'invisible');
+          solucionesMenu.classList.remove('opacity-100', 'visible');
+          solucionesArrow?.classList.remove('rotate-180');
         }
       });
     }
 
-    // Desktop Sectores Dropdown
-    const desktopSectoresDropdown = document.querySelector('.sectores-dropdown');
-    const desktopSectoresMenu = desktopSectoresDropdown?.querySelector('.dropdown-menu');
-    const desktopSectoresArrow = desktopSectoresDropdown?.querySelector('.dropdown-arrow');
-    const desktopSectoresLink = desktopSectoresDropdown?.querySelector('a');
-    let isDesktopSectoresOpen = false;
+    // Desktop Nosotros Dropdown - Click to toggle
+    const nosotrosDropdown = document.querySelector('.nosotros-dropdown');
+    const nosotrosBtn = nosotrosDropdown?.querySelector('button');
+    const nosotrosMenu = nosotrosDropdown?.querySelector('.dropdown-menu');
+    const nosotrosArrow = nosotrosDropdown?.querySelector('.dropdown-arrow');
+    let nosotrosOpen = false;
 
-    if (desktopSectoresDropdown && desktopSectoresMenu && desktopSectoresLink) {
-      desktopSectoresLink.addEventListener('click', (e) => {
+    if (nosotrosBtn && nosotrosMenu) {
+      nosotrosBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        isDesktopSectoresOpen = !isDesktopSectoresOpen;
-        if (isDesktopSectoresOpen) {
-          desktopSectoresMenu.classList.remove('opacity-0', 'invisible');
-          desktopSectoresMenu.classList.add('opacity-100', 'visible');
-          desktopSectoresArrow?.classList.add('rotate-180');
+        nosotrosOpen = !nosotrosOpen;
+        if (nosotrosOpen) {
+          nosotrosMenu.classList.remove('opacity-0', 'invisible');
+          nosotrosMenu.classList.add('opacity-100', 'visible');
+          nosotrosArrow?.classList.add('rotate-180');
         } else {
-          desktopSectoresMenu.classList.add('opacity-0', 'invisible');
-          desktopSectoresMenu.classList.remove('opacity-100', 'visible');
-          desktopSectoresArrow?.classList.remove('rotate-180');
-        }
-      });
-
-      // Cerrar al hacer clic fuera
-      document.addEventListener('click', (e) => {
-        if (e.target && !desktopSectoresDropdown.contains(e.target as Node)) {
-          desktopSectoresMenu.classList.add('opacity-0', 'invisible');
-          desktopSectoresMenu.classList.remove('opacity-100', 'visible');
-          desktopSectoresArrow?.classList.remove('rotate-180');
-          isDesktopSectoresOpen = false;
+          nosotrosMenu.classList.add('opacity-0', 'invisible');
+          nosotrosMenu.classList.remove('opacity-100', 'visible');
+          nosotrosArrow?.classList.remove('rotate-180');
         }
       });
     }
 
-    // Desktop Nosotros Dropdown
-    const desktopNosotrosDropdown = document.querySelector('.nosotros-dropdown');
-    const desktopNosotrosMenu = desktopNosotrosDropdown?.querySelector('.dropdown-menu');
-    const desktopNosotrosArrow = desktopNosotrosDropdown?.querySelector('.dropdown-arrow');
-    const desktopNosotrosLink = desktopNosotrosDropdown?.querySelector('a');
-    let isDesktopNosotrosOpen = false;
+    // Desktop Sectores Dropdown - Click to toggle
+    const sectoresDropdown = document.querySelector('.sectores-dropdown');
+    const sectoresBtn = sectoresDropdown?.querySelector('button');
+    const sectoresMenu = sectoresDropdown?.querySelector('.dropdown-menu');
+    const sectoresArrow = sectoresDropdown?.querySelector('.dropdown-arrow');
+    let sectoresOpen = false;
 
-    if (desktopNosotrosDropdown && desktopNosotrosMenu && desktopNosotrosLink) {
-      desktopNosotrosLink.addEventListener('click', (e) => {
+    if (sectoresBtn && sectoresMenu) {
+      sectoresBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        isDesktopNosotrosOpen = !isDesktopNosotrosOpen;
-        if (isDesktopNosotrosOpen) {
-          desktopNosotrosMenu.classList.remove('opacity-0', 'invisible');
-          desktopNosotrosMenu.classList.add('opacity-100', 'visible');
-          desktopNosotrosArrow?.classList.add('rotate-180');
+        sectoresOpen = !sectoresOpen;
+        if (sectoresOpen) {
+          sectoresMenu.classList.remove('opacity-0', 'invisible');
+          sectoresMenu.classList.add('opacity-100', 'visible');
+          sectoresArrow?.classList.add('rotate-180');
         } else {
-          desktopNosotrosMenu.classList.add('opacity-0', 'invisible');
-          desktopNosotrosMenu.classList.remove('opacity-100', 'visible');
-          desktopNosotrosArrow?.classList.remove('rotate-180');
-        }
-      });
-
-      // Cerrar al hacer clic fuera
-      document.addEventListener('click', (e) => {
-        if (e.target && !desktopNosotrosDropdown.contains(e.target as Node)) {
-          desktopNosotrosMenu.classList.add('opacity-0', 'invisible');
-          desktopNosotrosMenu.classList.remove('opacity-100', 'visible');
-          desktopNosotrosArrow?.classList.remove('rotate-180');
-          isDesktopNosotrosOpen = false;
+          sectoresMenu.classList.add('opacity-0', 'invisible');
+          sectoresMenu.classList.remove('opacity-100', 'visible');
+          sectoresArrow?.classList.remove('rotate-180');
         }
       });
     }
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+      if (solucionesDropdown && !solucionesDropdown.contains(e.target as Node)) {
+        solucionesMenu?.classList.add('opacity-0', 'invisible');
+        solucionesMenu?.classList.remove('opacity-100', 'visible');
+        solucionesArrow?.classList.remove('rotate-180');
+        solucionesOpen = false;
+      }
+      if (nosotrosDropdown && !nosotrosDropdown.contains(e.target as Node)) {
+        nosotrosMenu?.classList.add('opacity-0', 'invisible');
+        nosotrosMenu?.classList.remove('opacity-100', 'visible');
+        nosotrosArrow?.classList.remove('rotate-180');
+        nosotrosOpen = false;
+      }
+      if (sectoresDropdown && !sectoresDropdown.contains(e.target as Node)) {
+        sectoresMenu?.classList.add('opacity-0', 'invisible');
+        sectoresMenu?.classList.remove('opacity-100', 'visible');
+        sectoresArrow?.classList.remove('rotate-180');
+        sectoresOpen = false;
+      }
+    });
 
     // Mobile Soluciones Dropdown
     const mobileDropdown = document.querySelector('.mobile-soluciones-dropdown');
