@@ -322,7 +322,7 @@ if (!ebook) {
 ---
 
 <Layout
-  title={ebook.titulo}
+  title=`${ebook.titulo}`
   description={ebook.descripcion}
 >
   <section class="min-h-screen bg-gray-50 py-12">
@@ -342,7 +342,7 @@ if (!ebook) {
           <div class="p-8 lg:p-10 flex flex-col justify-center border-r border-gray-200">
             <div class="mb-6">
               <h1 class="text-3xl font-bold text-gray-900 mb-2">
-                {ebook.titulo}
+                {ebook.titulo} <br> Ebook
               </h1>
               <p class="text-gray-600 mb-2">
                 Completa el formulario para acceder a este e-book exclusivo
@@ -517,7 +517,31 @@ if (!ebook) {
         </div>
       </div>
     </div>
+
+
   </section>
+
+  <section class="py-12 bg-blue-50 border-t border-blue-100">
+  <div class="container-custom mx-auto px-4 max-w-4xl text-center">
+    <p class="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Recursos gratuitos</p>
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+      ¿Quieres seguir aprendiendo sobre tecnología y seguridad empresarial?
+    </h2>
+    <p class="text-gray-600 text-base leading-relaxed mb-8 max-w-2xl mx-auto">
+      En nuestro blog publicamos contenido actualizado sobre ciberseguridad, redes, videovigilancia, 
+      control de acceso e Industria 4.0. Ideal para directivos y equipos de TI que buscan estar siempre un paso adelante.
+    </p>
+    <a 
+      href="https://blog.proyectoscsi.mx/" 
+      class="inline-flex items-center gap-2 bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+    >
+      Visitar el Blog
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </a>
+  </div>
+</section>
 </Layout>
 
 </Layout>
