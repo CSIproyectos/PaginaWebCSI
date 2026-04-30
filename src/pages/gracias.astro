@@ -1,0 +1,198 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Gracias por tu mensaje',
+  description: 'Página de confirmación de contacto - Proyectos CSI',
+};
+---
+
+<Layout
+  title="¡Gracias! - Proyectos CSI"
+  description="Gracias por ponerte en contacto con nosotros. Pronto nos comunicaremos contigo."
+  schema={schema}
+>
+  <!-- Hero Section Agradecimiento -->
+  <section class="relative text-white py-24 md:py-32 overflow-hidden bg-gradient-to-b from-black to-gray-900">
+    <div class="container-custom text-center">
+      <div class="mb-8">
+        <svg class="w-24 h-24 md:w-32 md:h-32 mx-auto text-green-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+      
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
+        ¡Gracias por contestar el formulario!
+      </h1>
+      
+      <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
+        Hemos recibido correctamente tu información. Nos pondremos en contacto contigo en las próximas 24 horas para atender tu solicitud.
+      </p>
+      
+      <div class="inline-block bg-white text-black px-8 py-4 rounded-lg shadow-lg mb-8"
+      
+      >
+        <p class="font-semibold text-lg">
+          En Proyectos CSI estamos comprometidos con tu éxito
+        </p>
+      </div>
+
+      
+    </div>
+  </section>
+
+  <!-- Sección de confirmación -->
+  <section class="section-padding bg-white">
+    <div class="container-custom max-w-3xl mx-auto">
+      <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-8 md:p-12 rounded-xl border-l-4 border-blue-600">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">¿Qué sigue?</h2>
+        
+        <div class="space-y-6">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center h-10 w-10 rounded-full bg-blue-600 text-white font-bold">
+                1
+              </div>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-lg font-semibold text-gray-900">Análisis de tu solicitud</h3>
+              <p class="mt-2 text-gray-700">Nuestro equipo especializado analizará tu consulta para brindarte la solución más adecuada.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center h-10 w-10 rounded-full bg-blue-600 text-white font-bold">
+                2
+              </div>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-lg font-semibold text-gray-900">Contacto personalizado</h3>
+              <p class="mt-2 text-gray-700">Te contactaremos para discutir tus necesidades específicas y proporcionar una propuesta adaptada.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center h-10 w-10 rounded-full bg-blue-600 text-white font-bold">
+                3
+              </div>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-lg font-semibold text-gray-900">Inicio del proyecto</h3>
+              <p class="mt-2 text-gray-700">Trabajaremos juntos para implementar la solución que transformará tu operación.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preview de soluciones -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestras Soluciones Principales</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Mientras esperas nuestro contacto, descubre cómo podemos potenciar tu negocio
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Solución 1: Videovigilancia -->
+        <a href="/videovigilancia/" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <img src="/img/sectores/hospitalidad/seguridadElec.JPEG" alt="Videovigilancia Inteligente" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Videovigilancia Inteligente</h3>
+            <p class="text-gray-600 text-sm mb-4">Sistemas de seguridad con análisis de video avanzado.</p>
+            <div class="flex items-center text-blue-600 font-semibold text-sm group-hover:translate-x-2 transition-transform">
+              Explorar →
+            </div>
+          </div>
+        </a>
+
+        <!-- Solución 2: Ciberseguridad -->
+        <a href="/ciberseguridad/" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <img src="/img/gracias/cibergracias.webp" alt="Ciberseguridad" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Ciberseguridad</h3>
+            <p class="text-gray-600 text-sm mb-4">Protección integral contra amenazas digitales.</p>
+            <div class="flex items-center text-blue-600 font-semibold text-sm group-hover:translate-x-2 transition-transform">
+              Explorar →
+            </div>
+          </div>
+        </a>
+
+        <!-- Solución 3: Control de Acceso -->
+        <a href="/control-de-acceso/" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <img src="/img/gracias/acceso.jpg" alt="Control de Acceso" class="w-full h-48 object-cover object-top" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Control de Acceso</h3>
+            <p class="text-gray-600 text-sm mb-4">Gestión inteligente de accesos y seguridad.</p>
+            <div class="flex items-center text-blue-600 font-semibold text-sm group-hover:translate-x-2 transition-transform">
+              Explorar →
+            </div>
+          </div>
+        </a>
+
+        <!-- Solución 4: Cableado Estructurado -->
+        <a href="/cableado-estructurado/" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <img src="/img/gracias/cable.JPEG" alt="Cableado Estructurado" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Cableado Estructurado</h3>
+            <p class="text-gray-600 text-sm mb-4">Infraestructura de red confiable y eficiente.</p>
+            <div class="flex items-center text-blue-600 font-semibold text-sm group-hover:translate-x-2 transition-transform">
+              Explorar →
+            </div>
+          </div>
+        </a>
+
+        <!-- Solución 5: Desarrollo de Software -->
+        <a href="/desarrollo-de-software/" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <img src="/img/gracias/codigo.jpg" alt="Desarrollo de Software" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Desarrollo de Software</h3>
+            <p class="text-gray-600 text-sm mb-4">Soluciones personalizadas para tu negocio.</p>
+            <div class="flex items-center text-blue-600 font-semibold text-sm group-hover:translate-x-2 transition-transform">
+              Explorar →
+            </div>
+          </div>
+        </a>
+
+        <!-- Solución 6: Sectores -->
+        <a href="/sectores/" class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <img src="/img/gracias/sectores.JPEG" alt="Por Sectores" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Por Sectores</h3>
+            <p class="text-gray-600 text-sm mb-4">Soluciones especializadas por industria.</p>
+            <div class="flex items-center text-blue-600 font-semibold text-sm group-hover:translate-x-2 transition-transform">
+              Explorar →
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="section-padding bg-gradient-to-r from-blue-800 to-blue-900 text-white">
+    <div class="container-custom max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        ¿Listo para transformar tu negocio?
+      </h2>
+      <p class="text-xl text-blue-100 mb-8">
+        Explora nuestras soluciones y descubre cómo podemos ayudarte.
+      </p>
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <a href="/soluciones/" class="px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors">
+          Ver todas las soluciones
+        </a>
+        <a href="/contacto/" class="px-8 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
+          Contacta con nosotros
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

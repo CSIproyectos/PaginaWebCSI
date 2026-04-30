@@ -357,10 +357,8 @@ import portadaImg from '@/img/sectores/contacto/portada.jpg';
         });
         
         if (response.ok) {
-          alert('¡Gracias! Hemos recibido tu mensaje. Nos pondremos en contacto pronto.');
-          contactForm.reset();
-          submitBtn.disabled = false;
-          submitBtn.textContent = originalText;
+          // Redirigir a la página de agradecimiento
+          window.location.href = '/gracias/';
         } else if (response.status === 400) {
           // Error de validación en HubSpot
           const errorData = await response.json().catch(() => ({}));
