@@ -18,7 +18,7 @@ const routes = [
   '/desarrollo-de-software/',
   '/energias-alternativas/',
   '/casos-de-exito/',
-  '/garantias/',
+  '/politica-de-garantia/',
   '/aviso-de-privacidad/',
   '/sectores/corporativo/',
   '/sectores/hospitalidad/',
